@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7193803a0df449d2a2ee8fe680ed007, type: 3}
+  m_Name: Face Database
+  m_EditorClassIdentifier: 
+  facesMen:
+  - {fileID: 21300000, guid: 5e6cb59cd6ff84a7b8f6972b8cd5e1b6, type: 3}
+  - {fileID: 21300000, guid: 131c63002b7a84f089c950a2fbbea7d3, type: 3}
+  - {fileID: 21300000, guid: cba7cbb6105b14908b768b8a2e30b1bb, type: 3}
+  - {fileID: 21300000, guid: fdf1cdd80d60643cca4c4547add5fc27, type: 3}
+  - {fileID: 21300000, guid: 103c294998c6343b992b24d94231ec47, type: 3}
+  eyesMen:
+  - {fileID: 21300000, guid: 4554bc4fa87384a05be7a6a4e18be1eb, type: 3}
+  - {fileID: 21300000, guid: 4522736c9463645f78f0a47bdac77f09, type: 3}
+  - {fileID: 21300000, guid: f49d8ce42d90f40f5b012741dedcf537, type: 3}
+  - {fileID: 21300000, guid: a5a4529ba297a4e4dacbd57ecb9b4e65, type: 3}
+  - {fileID: 21300000, guid: 0ba8d894f0f014d5da3d4f0b3baa6686, type: 3}
+  - {fileID: 21300000, guid: d749e603dae894fdc8af22bb99aa34b8, type: 3}
+  - {fileID: 21300000, guid: a5e2879306c234d3380b44e47a24453f, type: 3}
+  - {fileID: 21300000, guid: c34c25d169af44071a6055d61c4e5591, type: 3}
+  - {fileID: 21300000, guid: e6af3042de66f41a194770ee82ae3182, type: 3}
+  hairMen:
+  - {fileID: 21300000, guid: a67853724a715457597beb1e283b8dc0, type: 3}
+  - {fileID: 21300000, guid: 5d3dae0f17a3d40ab906bc28eb9b28d7, type: 3}
+  - {fileID: 21300000, guid: 21ebf9505263b403fa66e01a8716424b, type: 3}
+  - {fileID: 21300000, guid: dccdb0ccd41d8441aaf51653c1556fd7, type: 3}
+  - {fileID: 21300000, guid: dd87b20048b1e4f81bc2bbeba1278e60, type: 3}
+  facesWomen:
+  - {fileID: 21300000, guid: 5071ae5bfa15a4c7699b7c59dcb6c4cd, type: 3}
+  - {fileID: 21300000, guid: 62dbc0e642340487e8c00e3c96c0813d, type: 3}
+  - {fileID: 21300000, guid: 08498e8d277f646c496460a790acef44, type: 3}
+  - {fileID: 21300000, guid: f2d07e5915c714d4cab25d73d114bdf7, type: 3}
+  - {fileID: 21300000, guid: d898a47ba8b4447a2842fc16bc2fa679, type: 3}
+  eyesWomen:
+  - {fileID: 21300000, guid: 475b5cb07f3094536acb23414d5e461c, type: 3}
+  - {fileID: 21300000, guid: 39ae09ccd46974135bdb5c336e5f4d94, type: 3}
+  - {fileID: 21300000, guid: 9c965beea72544ba99cdcb3a9bd35bac, type: 3}
+  - {fileID: 21300000, guid: 939c3a37c81fa45f0a0fd53b6683aeef, type: 3}
+  - {fileID: 21300000, guid: c6c555c8abba14d52bdf2e2d74ca018b, type: 3}
+  - {fileID: 21300000, guid: 763ef4793b6704dc8a1906261ce3ca88, type: 3}
+  - {fileID: 21300000, guid: de14b035d20ec4abebe7b7d982c120c1, type: 3}
+  - {fileID: 21300000, guid: c211b4cacd8694b0881f18ba02243fdc, type: 3}
+  hairWomen:
+  - {fileID: 21300000, guid: a67853724a715457597beb1e283b8dc0, type: 3}
+  - {fileID: 21300000, guid: 5d3dae0f17a3d40ab906bc28eb9b28d7, type: 3}
+  - {fileID: 21300000, guid: 21ebf9505263b403fa66e01a8716424b, type: 3}
+  - {fileID: 21300000, guid: dd87b20048b1e4f81bc2bbeba1278e60, type: 3}
+  mouths:
+  - {fileID: 21300000, guid: 0ed17b8da67ba487f952493ff7d19d58, type: 3}
+  - {fileID: 21300000, guid: 0ee0a181d43f24dc483b3809ea1a04cc, type: 3}
+  nose:
+  - {fileID: 21300000, guid: 5103095b8a4df4a63825ca8f32f8e8fd, type: 3}
+  - {fileID: 21300000, guid: 58635089f3c6547d68888501423c3c85, type: 3}
+  - {fileID: 21300000, guid: d1ece585b111c4a1b96f6e8b0f721ce4, type: 3}
