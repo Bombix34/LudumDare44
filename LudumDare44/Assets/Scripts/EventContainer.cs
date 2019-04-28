@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 [Serializable]
 public class EventContainer
@@ -12,25 +13,120 @@ public class EventContainer
     public EventProposal ProposalTwo;
     public EventProposal ProposalSpecial;
     public Inheritor Inheritor { get; set; }
+    
+
+    public bool AreConditionValid(){
+        List<Inheritor> inheritors = null;
+        foreach (var condition in Conditions)
+        {
+            bool? specialConditionSuccess = null;
+            var newInheritors = new List<Inheritor>();
+            switch (condition.Condition)
+            {
+                case(EventConditionContainer.EventCondition.HAVE_TRAIT):
+                    break;
+                case(EventConditionContainer.EventCondition.FAMILY_MORE_THAN):
+                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, false, false, condition.IsWomen());
+                    break;
+                case(EventConditionContainer.EventCondition.CHILD_MORE_THAN):
+                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, true, true, condition.IsWomen());
+                    break;
+                case(EventConditionContainer.EventCondition.HAVE_MORE_GOLD_THAN):
+                    if(true){
+                        specialConditionSuccess = true;
+                    }
+                    break;
+                case(EventConditionContainer.EventCondition.HAVE_MORE_INFLUENCE_THAN):
+                    if(true){
+                        specialConditionSuccess = true;
+                    }
+                    break;
+                case(EventConditionContainer.EventCondition.CHILD_AT_POSITION):
+                    var isWomen = condition.IsWomen();
+                    var childrens = GameManager.Instance.FamilyMaster.Childrens.Where(q => q.IsAlive);
+                    if(isWomen != null){
+                        childrens.Where(q => q.isWomen == isWomen);
+                    }
+                    if(childrens.Count() > condition.ConditionValue){
+                        newInheritors.Add(childrens.ElementAt(condition.ConditionValue));
+                    }
+
+                    break;
+                case(EventConditionContainer.EventCondition.IS_MARRIED):
+                    
+                    break;                
+                default:
+                    break;
+            }
+
+            if(specialConditionSuccess.HasValue){
+                if(!specialConditionSuccess.Value){
+                    inheritors = new List<Inheritor>();
+                }
+            }   else
+            {
+                if (inheritors == null)
+                {
+                    inheritors = newInheritors;
+                }
+                else
+                {
+                    inheritors = inheritors.Intersect(newInheritors).ToList();
+                }
+            }
+        }
+
+        return inheritors.Count > 0;
+    }
 }
 [Serializable]
 public class EventConditionContainer{
-
+    public enum InheritorCondition
+    {
+        ANY,
+        WOMEN,
+        MEN,
+        STRONG_SEXE,
+        LOW_SEX
+    }
     public enum EventCondition
     {
-        LESS_THAN_X_CHILD,
-        MORE_THAN_X_CHILD,
-        LESS_THAN_X_CHILD_STRONG_SEX,
-        MORE_THAN_X_CHILD_STRONG_SEX,
-        LESS_THAN_X_CHILD_LOW_SEX,
-        MORE_THAN_X_CHILD_LOW_SEX,
-        LESS_THAN_X_CHILD_WOMEN,
-        MORE_THAN_X_CHILD_WOMAN,
-        LESS_THAN_X_CHILD_MAN,
-        MORE_THAN_X_CHILD_MAN,
-        MORE_THAN_X_ALIVE,
-    }
-    public EventCondition Conditon;
-    public int ConditionValue;
+        HAVE_TRAIT,
+        FAMILY_MORE_THAN,
+        CHILD_MORE_THAN,
+        HAVE_MORE_GOLD_THAN,
+        HAVE_MORE_INFLUENCE_THAN,
+        CHILD_AT_POSITION,
+        IS_MARRIED
 
+    }
+    public EventCondition Condition;
+    public int ConditionValue;
+    public bool ConditionBoolValue;
+    public InheritorCondition inheritorCondition;
+    public bool? IsWomen(){
+        bool? result;
+        switch (this.inheritorCondition)
+        {
+            case(InheritorCondition.ANY):
+                result = null;
+                break;
+            case(InheritorCondition.WOMEN):
+                result = true;
+                break;
+            case(InheritorCondition.MEN):
+                result = false;
+                break;
+            case(InheritorCondition.STRONG_SEXE):
+                result = GameManager.Instance.IsWomenStrongSex;
+                break;
+            case(InheritorCondition.LOW_SEX):
+                result = !GameManager.Instance.IsWomenStrongSex;
+                break;
+            default:
+                result = null;
+                break;
+        }
+        return result;
+    }
 }

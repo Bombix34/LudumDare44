@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -13,12 +14,13 @@ public class GameManager : Singleton<GameManager>
     public int GoldCoins { get; set; }
     public int InfluencePoints { get; set; }
     public Inheritor FamilyMaster { get; set; }
-    public bool ManIsStrongSex { get; set; }
+    public bool IsWomenStrongSex { get; set; }
+    public EventsScriptableObject EventsScriptableObject;
 
     void Start()
     {
         //debug
-        ManIsStrongSex = true;
+        IsWomenStrongSex = false;
     }
 
     void Update()
@@ -26,6 +28,8 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-
+    private List<EventContainer> GetListAvailableEvents(){
+        return EventsScriptableObject.events.Where(q => q.AreConditionValid()).ToList();
+    }
 
 }

@@ -48,8 +48,8 @@ public class DescentContainer : Singleton<DescentContainer>
             this.Origin.Childrens.Add(            new Inheritor()
         {
             Name = "Child",
-            isWomen = true,
-            IsAlive = false,
+            isWomen = false,
+            IsAlive = true,
             Parent = this.Origin,
         });
             this.UpdateView();

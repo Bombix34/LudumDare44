@@ -21,12 +21,12 @@ public class Inheritor
         RendererFaces = new List<SpriteRenderer>();
     }
 
-    public List<Inheritor> FindAllLegitimateChild(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false){
-        if(this.IsAlive){
+    public List<Inheritor> FindAll(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false, bool fromParent = false, bool? isWomen = null){
+        if(this.IsAlive && (isWomen == null || this.isWomen == isWomen)){
             inheritors.Add(this);
         }
         if(!fromChildren && this.Childrens.Count > 0){
-            this.Childrens.First().FindAllLegitimateChild(ref inheritors);
+            this.Childrens.First().FindAll(ref inheritors, false, false, true, isWomen);
         }
 
         if(!fromBrother){
@@ -37,14 +37,15 @@ public class Inheritor
                         if(brother == this){
                             continue;
                         }
-                        this.Childrens.First().FindAllLegitimateChild(ref inheritors);
+                        brother.FindAll(ref inheritors, false, true, false, isWomen);
                     }
                 }
+                if(!fromParent){
+                    this.Parent.FindAll(ref inheritors, true, false, false, isWomen);
+                }
             }
+
         }
-
-
-
         return inheritors;
     }
 }
