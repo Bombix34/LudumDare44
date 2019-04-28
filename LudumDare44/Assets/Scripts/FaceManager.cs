@@ -51,9 +51,9 @@ public class FaceManager : MonoBehaviour
     {
     }
 
-    public void InitRandomFace()
+    public void InitRandomFace(bool isWoman)
     {
-        sprites = database.GetCharacter(System.Convert.ToBoolean(Random.Range(0,2)));
+        sprites = database.GetCharacter(isWoman);
 
         Color hairColor = ColorManager.instance.HairColor.GetRandColor();
         Color eyesColor = ColorManager.instance.EyesColor.GetRandColor();
@@ -117,11 +117,13 @@ public class FaceManager : MonoBehaviour
         Color randFaceColor = ColorManager.instance.SkinColor.GetRandColor();
         Color randNoseColor = ColorManager.instance.NoseColor.GetRandColor() * randFaceColor;
 
+        bool isWoman = manager.CharacterInfos.isWomen;
+
         //BOUCHE______________________________
         int rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
-            if(rand<80)
+            if (rand < 80)
                 mouth.sprite = momFace[0].sprite;
             else
                 mouth.sprite = randomFace[0];
@@ -134,19 +136,21 @@ public class FaceManager : MonoBehaviour
                 mouth.sprite = randomFace[0];
         }
         rand = (int)Random.Range(0f, 99f);
-        if(rand<45)
+        if (rand < 45)
         {
             mouth.color = momFace[0].color;
-        }else if(rand<90)
+        }
+        else if (rand < 90)
         {
             mouth.color = dadFace[0].color;
-        }else
+        }
+        else
         {
             mouth.color = ColorManager.instance.MouthColor.GetRandColor();
         }
         //CHEVEUX____________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 hair.sprite = momFace[1].sprite;
@@ -175,7 +179,7 @@ public class FaceManager : MonoBehaviour
         }
         //NEZ_______________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 nose.sprite = momFace[2].sprite;
@@ -204,7 +208,7 @@ public class FaceManager : MonoBehaviour
         }
         //VISAGE_______________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 face.sprite = momFace[3].sprite;
@@ -222,25 +226,18 @@ public class FaceManager : MonoBehaviour
         {
             face.color = randFaceColor;
         }
-        else
+        else if (nose.color == momFace[2].color)
         {
-            rand = (int)Random.Range(0f, 99f);
-            if (rand < 45)
-            {
-                face.color = momFace[3].color;
-            }
-            else if (rand < 90)
-            {
-                face.color = dadFace[3].color;
-            }
-            else
-            {
-                face.color = randFaceColor;
-            }
+            face.color = momFace[3].color;
         }
+        else if (nose.color == dadFace[2].color)
+        { 
+            face.color = dadFace[3].color;
+        }
+        
         //YEUX_______________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 eyes.sprite = momFace[4].sprite;
@@ -269,7 +266,7 @@ public class FaceManager : MonoBehaviour
         }
         //SOURCILS__________________________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 sourcils.sprite = momFace[5].sprite;
@@ -286,7 +283,7 @@ public class FaceManager : MonoBehaviour
         sourcils.color = hair.color;
         //BARBES_______________________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             barbe.sprite = null;
         }
@@ -300,7 +297,7 @@ public class FaceManager : MonoBehaviour
         barbe.color = hair.color;
         //BUSTE_______________________________________
         rand = (int)Random.Range(0f, 99f);
-        if (manager.CharacterInfos.isWomen)
+        if (isWoman)
         {
             if (rand < 80)
                 buste.sprite = momFace[7].sprite;
@@ -315,6 +312,7 @@ public class FaceManager : MonoBehaviour
                 buste.sprite = randomFace[7];
         }
         buste.color = face.color;
+
     }
 
     public List<Sprite> GetFace()

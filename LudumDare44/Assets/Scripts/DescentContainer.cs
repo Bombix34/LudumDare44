@@ -154,7 +154,7 @@ public class DescentContainer : Singleton<DescentContainer>
                 inheritorCharacterManager.Face.InitSpriteRendererAccess(inheritorCharacterManager);
                 
                 if(inheritor.Parent == null){
-                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace(inheritor.isWomen);
                 }   else
                 {
                     inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitHeritanceFace();
@@ -169,7 +169,7 @@ public class DescentContainer : Singleton<DescentContainer>
                 if(inheritorSpouseCharacterManager.CharacterInfos == null){
                     inheritorSpouseCharacterManager.CharacterInfos = inheritor.Spouse;
                     inheritorSpouseCharacterManager.Face.InitSpriteRendererAccess(inheritorSpouseCharacterManager);
-                    inheritor.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+                    inheritor.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace(inheritorSpouseCharacterManager.CharacterInfos.isWomen);
                 }            
             }
 
