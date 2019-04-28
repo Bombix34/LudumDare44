@@ -13,8 +13,9 @@ public class DescentContainer : Singleton<DescentContainer>
     public Dictionary<Inheritor, GameObject> InheritorsView { get; set; }
     private Dictionary<int, List<Inheritor>> layers;
     public Vector4 SpaceUsed;
-    // Start is called before the first frame update
-    void Start()
+
+
+    void Awake()
     {
         this.Origin = new Inheritor(){
             Name = "Joe",
@@ -22,90 +23,45 @@ public class DescentContainer : Singleton<DescentContainer>
             Reigning = true,
             Spouse = null,
         };
-        this.Origin.Childrens = new List<Inheritor>(){
-                new Inheritor
-                {
-                    Name = "John",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = this.Origin,
-                    Childrens = new List<Inheritor>()
-                },
-                new Inheritor
-                {
-                    Name = "Pierre",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = this.Origin,
-                    Childrens = new List<Inheritor>()
-                },
-                new Inheritor
-                {
-                    Name = "Pierre",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = this.Origin,
-                    Childrens = new List<Inheritor>()
-                }
-            };
-        int index = 0;
-        foreach (var item in this.Origin.Childrens)
-        {
-            index++;
-            if(index == 2){
-                continue;
-            }
-            item.Childrens = new List<Inheritor>(){
-                new Inheritor
-                {
-                    Name = "John",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = item,
-                    Childrens = new List<Inheritor>()
-                },
-                new Inheritor
-                {
-                    Name = "Pierre",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = item,
-                    Childrens = new List<Inheritor>()
-                },
-                new Inheritor
-                {
-                    Name = "Pierre",
-                    isWomen = false,
-                    Reigning = true,
-                    Spouse = null,
-                    Parent = item,
-                    Childrens = new List<Inheritor>()
-                }
-            };
-        }
-        
-        this.InheritorsView = new Dictionary<Inheritor, GameObject>();
+
         this.UpdateView();
+
+        this.Origin.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown("r"))
+        {
+            this.Origin.Spouse = new Inheritor()
+            {
+                Name = "Wife",
+                isWomen = true,
+                Reigning = false,
+                Parent = null,
+                Spouse = this.Origin
+            };
+
+            this.UpdateView();
+            this.Origin.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+        }
     }
 
-    public void UpdateView(){
+    public void UpdateView()
+    {
+        if (this.InheritorsView != null)
+        {
+            foreach (var item in this.InheritorsView.Values)
+            {
+                Destroy(item);
+            }
+        }
+        this.InheritorsView = new Dictionary<Inheritor, GameObject>();
         this.layers = new Dictionary<int, List<Inheritor>>();
         this.createLayers(0, ref this.layers, new List<Inheritor>() { this.Origin });
         this.setLayer(this.layers.Count - 1);        
 
-        
-        
         float maxX = 0;
         float minX = 0;
         float maxY = 0;
@@ -190,9 +146,19 @@ public class DescentContainer : Singleton<DescentContainer>
             this.InheritorsView.Add(inheritor, inheritorView);
 
             inheritorView.GetComponent<CharacterManager>().CharacterInfos = inheritor;
-            inheritorView.GetComponentInChildren<CharacterManager>().CharacterInfos = inheritor.Spouse;
-            
-            if(inheritor.Childrens.Count > 0){
+            inheritorView.GetComponent<CharacterManager>().Face.InitSpriteRendererAccess(inheritorView.GetComponent<CharacterManager>());
+
+            Debug.Log(inheritorView.GetComponent<CharacterManager>().CharacterInfos.RendererFaces[0].transform.parent.parent);
+
+            if (inheritor.Spouse!=null)
+            {
+                inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().CharacterInfos = inheritor.Spouse;
+                inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().Face.InitSpriteRendererAccess(inheritorView.transform.GetChild(1).GetComponent<CharacterManager>());
+
+                Debug.Log(inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().CharacterInfos.RendererFaces[0].transform.parent.parent);
+            }
+
+            if (inheritor.Childrens.Count > 0){
                 foreach (var children in inheritor.Childrens)
                 {
                     var link = Instantiate(LinkGameObject, inheritorView.transform);
