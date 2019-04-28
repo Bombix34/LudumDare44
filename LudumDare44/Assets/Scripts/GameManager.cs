@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : ObjectManagerSingleton<GameManager>
+public class GameManager : Singleton<GameManager>
 {
     enum TurnState
     {
