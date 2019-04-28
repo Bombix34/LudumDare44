@@ -165,6 +165,9 @@ public class DescentContainer : MonoBehaviour
 
             var inheritorView = Instantiate(InheritorViewGameObject, position.Value, Quaternion.identity);
             this.InheritorsView.Add(inheritor, inheritorView);
+
+            inheritorView.GetComponent<CharacterManager>().CharacterInfos = inheritor;
+            inheritorView.GetComponentInChildren<CharacterManager>().CharacterInfos = inheritor.Spouse;
             
             if(inheritor.Childrens.Count > 0){
                 foreach (var children in inheritor.Childrens)

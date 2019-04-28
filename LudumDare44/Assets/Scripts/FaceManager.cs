@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FaceManager : MonoBehaviour
 {
+
+    List<Sprite> sprites;
+
     [SerializeField]
     FaceDatabase database;
 
@@ -17,7 +20,24 @@ public class FaceManager : MonoBehaviour
     SpriteRenderer face;
     [SerializeField]
     SpriteRenderer eyes;
+    [SerializeField]
+    SpriteRenderer sourcils;
+    [SerializeField]
+    SpriteRenderer barbe;
+    [SerializeField]
+    SpriteRenderer buste;
 
+    [SerializeField]
+    SpriteRenderer background;
+
+    // mouth -> 0
+    // hair -> 1
+    // nose -> 2
+    // face -> 3
+    // eyes -> 4
+    // sourcils -> 5
+    // barbes -> 6
+    // buste -> 7
 
     void Start()
     {
@@ -34,13 +54,41 @@ public class FaceManager : MonoBehaviour
 
     public void InitRandomFace()
     {
-        List<Sprite> result = database.GetCharacter(System.Convert.ToBoolean(Random.Range(0,2)));
-        mouth.sprite = result[0];
-        hair.sprite = result[1];
-        hair.color = Random.ColorHSV(0f, 1f, 0f, 1f, 0f, 1f, 1f,1F);
-        nose.sprite = result[2];
-        face.sprite = result[3];
-        eyes.sprite = result[4];
-        eyes.color = Random.ColorHSV(0f, 1f, 0f, 1f, 0f, 1f, 1f, 1F);
+        sprites = database.GetCharacter(System.Convert.ToBoolean(Random.Range(0,2)));
+
+        Color hairColor = ColorManager.instance.HairColor.GetRandColor();
+        Color eyesColor = ColorManager.instance.EyesColor.GetRandColor();
+        Color faceColor = ColorManager.instance.SkinColor.GetRandColor();
+        Color noseColor = ColorManager.instance.NoseColor.GetRandColor()*faceColor;
+        Color mouthColor = ColorManager.instance.MouthColor.GetRandColor();
+
+        mouth.sprite = sprites[0];
+        mouth.color = mouthColor;
+
+        hair.sprite = sprites[1];
+        hair.color = hairColor;
+
+        nose.sprite = sprites[2];
+        nose.color = noseColor;
+
+        face.sprite = sprites[3];
+        face.color = faceColor;
+
+        eyes.sprite = sprites[4];
+        eyes.color = eyesColor;
+
+        sourcils.sprite = sprites[5];
+        sourcils.color = hairColor;
+
+        barbe.sprite = sprites[6];
+        barbe.color = hairColor;
+
+        buste.sprite = sprites[7];
+        buste.color = faceColor;
+    }
+
+    public List<Sprite> GetFace()
+    {
+        return sprites;
     }
 }
