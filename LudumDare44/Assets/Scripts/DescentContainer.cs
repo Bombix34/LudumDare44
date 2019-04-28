@@ -135,8 +135,6 @@ public class DescentContainer : MonoBehaviour
         
         var inheritors = this.layers[layer];
 
-        print(inheritors.Count);
-
         float distanceFromCenterX = (WidthBetween / 2f * (inheritors.Count - 1));
 
         for (int i = 0; i < inheritors.Count; i++)
@@ -144,7 +142,6 @@ public class DescentContainer : MonoBehaviour
             var inheritor = inheritors[i];
 
             if(inheritor == null){
-                print(inheritor);
                 continue;
             }
 
