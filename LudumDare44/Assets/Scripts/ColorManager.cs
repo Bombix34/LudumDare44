@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    [SerializeField]
+    //[SerializeField]
     public ColorPicker EyesColor;
-    [SerializeField]
+   // [SerializeField]
     public ColorPicker HairColor;
-    [SerializeField]
+  //  [SerializeField]
     public ColorPicker MouthColor;
-    [SerializeField]
+  //  [SerializeField]
     public ColorPicker NoseColor;
-    [SerializeField]
+   // [SerializeField]
     public ColorPicker SkinColor;
-
 
     //SINGLETON________________________________________________________________________________________________
     private static ColorManager s_Instance = null;
 
     // This defines a static instance property that attempts to find the manager object in the scene and
     // returns it to the caller.
-    public static ColorManager instance
+    public static ColorManager Instance
     {
         get
         {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : ObjectManagerSingleton<GameManager>
 {
     enum TurnState
     {
@@ -12,15 +12,19 @@ public class GameManager : Singleton<GameManager>
     public int Turn { get; set; }
     public int GoldCoins { get; set; }
     public int InfluencePoints { get; set; }
-    // Start is called before the first frame update
+    public bool ManIsStrongSex { get; set; }
+
     void Start()
     {
-        
+        //debug
+        ManIsStrongSex = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
+
+
 }
