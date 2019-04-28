@@ -17,6 +17,8 @@ public class DescentContainer : Singleton<DescentContainer>
 
     void Awake()
     {
+        
+        this.InheritorsView = new Dictionary<Inheritor, GameObject>();
         this.Origin = new Inheritor(){
             Name = "Joe",
             isWomen = false,
@@ -24,9 +26,16 @@ public class DescentContainer : Singleton<DescentContainer>
             Spouse = null,
         };
 
-        this.UpdateView();
+        this.Origin.Spouse = new Inheritor()
+        {
+            Name = "Wife",
+            isWomen = true,
+            Reigning = false,
+            Parent = null,
+            Spouse = this.Origin
+        };
 
-        this.Origin.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+        this.UpdateView();
     }
 
     // Update is called once per frame
@@ -34,31 +43,19 @@ public class DescentContainer : Singleton<DescentContainer>
     {
         if(Input.GetKeyDown("r"))
         {
-            this.Origin.Spouse = new Inheritor()
-            {
-                Name = "Wife",
-                isWomen = true,
-                Reigning = false,
-                Parent = null,
-                Spouse = this.Origin
-            };
-
+            this.Origin.Childrens.Add(            new Inheritor()
+        {
+            Name = "Child",
+            isWomen = true,
+            Reigning = false,
+            Parent = this.Origin,
+        });
             this.UpdateView();
-            this.Origin.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
-            this.Origin.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
         }
     }
 
     public void UpdateView()
     {
-        if (this.InheritorsView != null)
-        {
-            foreach (var item in this.InheritorsView.Values)
-            {
-                Destroy(item);
-            }
-        }
-        this.InheritorsView = new Dictionary<Inheritor, GameObject>();
         this.layers = new Dictionary<int, List<Inheritor>>();
         this.createLayers(0, ref this.layers, new List<Inheritor>() { this.Origin });
         this.setLayer(this.layers.Count - 1);        
@@ -143,18 +140,37 @@ public class DescentContainer : Singleton<DescentContainer>
                 position = new Vector3(i * WidthBetween - distanceFromCenterX, -layer * HeightBetween);
             }
 
-            var inheritorView = Instantiate(InheritorViewGameObject, position.Value, Quaternion.identity);
-            this.InheritorsView.Add(inheritor, inheritorView);
+            GameObject inheritorView;
+            if(this.InheritorsView.ContainsKey(inheritor)){
+                inheritorView = this.InheritorsView[inheritor];
+                inheritorView.transform.position = position.Value;
+            }   else
+            {
+                inheritorView = Instantiate(InheritorViewGameObject, position.Value, Quaternion.identity);
+                this.InheritorsView.Add(inheritor, inheritorView);
 
-            inheritorView.GetComponent<CharacterManager>().CharacterInfos = inheritor;
-            inheritorView.GetComponent<CharacterManager>().Face.InitSpriteRendererAccess(inheritorView.GetComponent<CharacterManager>());
+                var inheritorCharacterManager = inheritorView.GetComponent<CharacterManager>();
+                inheritorCharacterManager.CharacterInfos = inheritor;
+                inheritorCharacterManager.Face.InitSpriteRendererAccess(inheritorCharacterManager);
+                
+                if(inheritor.Parent == null){
+                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+                }   else
+                {
+                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitHeritanceFace();
+                }
+            }
 
-            Debug.Log(inheritorView.GetComponent<CharacterManager>().CharacterInfos.RendererFaces[0].transform.parent.parent);
 
             if (inheritor.Spouse!=null)
             {
-                inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().CharacterInfos = inheritor.Spouse;
-                inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().Face.InitSpriteRendererAccess(inheritorView.transform.GetChild(1).GetComponent<CharacterManager>());
+                var inheritorSpouseCharacterManager = inheritorView.GetComponentsInChildren<CharacterManager>().Where(go => go.gameObject != inheritorView).FirstOrDefault();
+
+                if(inheritorSpouseCharacterManager.CharacterInfos == null){
+                    inheritorSpouseCharacterManager.CharacterInfos = inheritor.Spouse;
+                    inheritorSpouseCharacterManager.Face.InitSpriteRendererAccess(inheritorSpouseCharacterManager);
+                    inheritor.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
+                }            
             }
 
             if (inheritor.Childrens.Count > 0){
