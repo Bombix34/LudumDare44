@@ -12,10 +12,10 @@ public class GameManager : Singleton<GameManager>
     public int Turn { get; set; }
     public int GoldCoins { get; set; }
     public int InfluencePoints { get; set; }
+    public Inheritor FamilyMaster { get; set; }
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

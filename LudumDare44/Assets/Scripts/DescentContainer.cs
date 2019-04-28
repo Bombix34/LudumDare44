@@ -22,7 +22,7 @@ public class DescentContainer : Singleton<DescentContainer>
         this.Origin = new Inheritor(){
             Name = "Joe",
             isWomen = false,
-            Reigning = true,
+            IsAlive = true,
             Spouse = null,
         };
 
@@ -30,10 +30,12 @@ public class DescentContainer : Singleton<DescentContainer>
         {
             Name = "Wife",
             isWomen = true,
-            Reigning = false,
+            IsAlive = false,
             Parent = null,
             Spouse = this.Origin
         };
+
+        GameManager.Instance.FamilyMaster = this.Origin;
 
         this.UpdateView();
     }
@@ -47,7 +49,7 @@ public class DescentContainer : Singleton<DescentContainer>
         {
             Name = "Child",
             isWomen = true,
-            Reigning = false,
+            IsAlive = false,
             Parent = this.Origin,
         });
             this.UpdateView();
@@ -173,6 +175,11 @@ public class DescentContainer : Singleton<DescentContainer>
                 }            
             }
 
+            var existingRenderers = inheritorView.GetComponentsInChildren<LineRenderer>();
+            foreach (var item in existingRenderers)
+            {
+                Destroy(item.gameObject);
+            }
             if (inheritor.Childrens.Count > 0){
                 foreach (var children in inheritor.Childrens)
                 {
@@ -186,8 +193,7 @@ public class DescentContainer : Singleton<DescentContainer>
                         new Vector3(childrenPosition.x,inheritorView.transform.position.y - HeightBetween / 2),
                         childrenPosition
                     }.ToArray());
-                }    
-                
+                }
             }
         }
 
