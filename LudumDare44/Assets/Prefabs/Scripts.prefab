@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1356571317393767130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356571317393767131}
+  - component: {fileID: 1356571317393767108}
+  - component: {fileID: 8993420939791880874}
+  m_Layer: 0
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356571317393767131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356571317393767130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.010293, y: -4.390417, z: 0.21595316}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356571317393767108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356571317393767130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff46d8e427a4a4cb68cc1edc64969225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EyesColor: {fileID: 11400000, guid: b3b967acce59649579159fb41f78d4c0, type: 2}
+  HairColor: {fileID: 11400000, guid: d90f0d68fd9ae458f973badb13aece61, type: 2}
+  MouthColor: {fileID: 11400000, guid: 96719be5f3f404179a5ce7269e286755, type: 2}
+  NoseColor: {fileID: 11400000, guid: eef45c664f7e849e4a4576f78cef2c8d, type: 2}
+  SkinColor: {fileID: 11400000, guid: 877ccdf02bb3043b19c5a8169955c99b, type: 2}
+--- !u!114 &8993420939791880874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356571317393767130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cc7da4d23512a4399452feaf6af9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -55,11 +55,11 @@ public class FaceManager : MonoBehaviour
     {
         sprites = database.GetCharacter(isWoman);
 
-        Color hairColor = ColorManager.instance.HairColor.GetRandColor();
-        Color eyesColor = ColorManager.instance.EyesColor.GetRandColor();
-        Color faceColor = ColorManager.instance.SkinColor.GetRandColor();
-        Color noseColor = ColorManager.instance.NoseColor.GetRandColor()*faceColor;
-        Color mouthColor = ColorManager.instance.MouthColor.GetRandColor();
+        Color hairColor = ColorManager.Instance.HairColor.GetRandColor();
+        Color eyesColor = ColorManager.Instance.EyesColor.GetRandColor();
+        Color faceColor = ColorManager.Instance.SkinColor.GetRandColor();
+        Color noseColor = ColorManager.Instance.NoseColor.GetRandColor()*faceColor;
+        Color mouthColor = ColorManager.Instance.MouthColor.GetRandColor();
 
         mouth.sprite = sprites[0];
         mouth.color = mouthColor;
@@ -110,14 +110,15 @@ public class FaceManager : MonoBehaviour
 
     public void InitHeritanceFace()
     {
+        bool isWoman = manager.CharacterInfos.isWomen;
         List<SpriteRenderer> momFace = manager.CharacterInfos.Parent.isWomen ? manager.CharacterInfos.Parent.RendererFaces : manager.CharacterInfos.Parent.Spouse.RendererFaces;
         List<SpriteRenderer> dadFace = !manager.CharacterInfos.Parent.isWomen ? manager.CharacterInfos.Parent.RendererFaces : manager.CharacterInfos.Parent.Spouse.RendererFaces;
-        List<Sprite> randomFace = database.GetCharacter(!manager.CharacterInfos.isWomen);
+        List<Sprite> randomFace = database.GetCharacter(isWoman);
 
-        Color randFaceColor = ColorManager.instance.SkinColor.GetRandColor();
-        Color randNoseColor = ColorManager.instance.NoseColor.GetRandColor() * randFaceColor;
+        print(ColorManager.Instance.SkinColor);
+        Color randFaceColor = ColorManager.Instance.SkinColor.GetRandColor();
+        Color randNoseColor = ColorManager.Instance.NoseColor.GetRandColor() * randFaceColor;
 
-        bool isWoman = manager.CharacterInfos.isWomen;
 
         //BOUCHE______________________________
         int rand = (int)Random.Range(0f, 99f);
@@ -146,7 +147,7 @@ public class FaceManager : MonoBehaviour
         }
         else
         {
-            mouth.color = ColorManager.instance.MouthColor.GetRandColor();
+            mouth.color = ColorManager.Instance.MouthColor.GetRandColor();
         }
         //CHEVEUX____________________________
         rand = (int)Random.Range(0f, 99f);
@@ -175,7 +176,7 @@ public class FaceManager : MonoBehaviour
         }
         else
         {
-            hair.color = ColorManager.instance.HairColor.GetRandColor();
+            hair.color = ColorManager.Instance.HairColor.GetRandColor();
         }
         //NEZ_______________________________
         rand = (int)Random.Range(0f, 99f);
@@ -262,7 +263,7 @@ public class FaceManager : MonoBehaviour
         }
         else
         {
-            eyes.color = ColorManager.instance.EyesColor.GetRandColor();
+            eyes.color = ColorManager.Instance.EyesColor.GetRandColor();
         }
         //SOURCILS__________________________________________
         rand = (int)Random.Range(0f, 99f);
