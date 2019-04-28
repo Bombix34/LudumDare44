@@ -11,4 +11,12 @@ public class Inheritor
 
     public Inheritor Parent { get; set; }
     public List<Inheritor> Childrens { get; set; }
+
+    public List<SpriteRenderer> RendererFaces { get; set; }
+
+    public Inheritor()
+    {
+        Childrens = new List<Inheritor>();
+        RendererFaces = new List<SpriteRenderer>();
+    }
 }
