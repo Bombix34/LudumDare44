@@ -44,6 +44,7 @@ public class DescentContainer : Singleton<DescentContainer>
             };
 
             this.UpdateView();
+            this.Origin.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
             this.Origin.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace();
         }
     }
@@ -154,8 +155,6 @@ public class DescentContainer : Singleton<DescentContainer>
             {
                 inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().CharacterInfos = inheritor.Spouse;
                 inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().Face.InitSpriteRendererAccess(inheritorView.transform.GetChild(1).GetComponent<CharacterManager>());
-
-                Debug.Log(inheritorView.transform.GetChild(1).GetComponent<CharacterManager>().CharacterInfos.RendererFaces[0].transform.parent.parent);
             }
 
             if (inheritor.Childrens.Count > 0){
