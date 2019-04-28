@@ -18,7 +18,6 @@ public class EventConditionContainer{
 
     public enum EventCondition
     {
-        NONE,
         LESS_THAN_X_CHILD,
         MORE_THAN_X_CHILD,
         LESS_THAN_X_CHILD_STRONG_SEX,

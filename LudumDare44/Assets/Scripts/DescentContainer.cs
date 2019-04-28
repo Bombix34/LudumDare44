@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DescentContainer : MonoBehaviour
+public class DescentContainer : Singleton<DescentContainer>
 {
     public GameObject InheritorViewGameObject;
     public GameObject LinkGameObject;
@@ -12,6 +12,7 @@ public class DescentContainer : MonoBehaviour
     public Inheritor Origin { get; set; }
     public Dictionary<Inheritor, GameObject> InheritorsView { get; set; }
     private Dictionary<int, List<Inheritor>> layers;
+    public Vector4 SpaceUsed;
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +103,31 @@ public class DescentContainer : MonoBehaviour
         this.layers = new Dictionary<int, List<Inheritor>>();
         this.createLayers(0, ref this.layers, new List<Inheritor>() { this.Origin });
         this.setLayer(this.layers.Count - 1);        
+
+        
+        
+        float maxX = 0;
+        float minX = 0;
+        float maxY = 0;
+        float minY = 0;
+        foreach (var item in this.InheritorsView.Values)
+        {
+            var pos = item.transform.position;
+            if(pos.x > maxX){
+                maxX = pos.x;
+            }   else if(pos.x < minX)
+            {
+                minX = pos.x;
+            }
+
+            if(pos.y > maxY){
+                maxY = pos.y;
+            }   else if(pos.y < minY)
+            {
+                minY = pos.y;
+            }
+        }
+        SpaceUsed = new Vector4(minX-1, minY-1, maxX+1, maxY+1);
     }
 
     private void createLayers(int layer, ref Dictionary<int, List<Inheritor>> layers, List<Inheritor> inheritors){

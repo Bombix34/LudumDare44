@@ -598,6 +598,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -618,10 +619,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: dd7e7358-0fbd-40b2-8d23-b219a586f2e7
+  cloudProjectId: 43b116b7-d8cc-4e24-a443-bcbeb5bdc527
   framebufferDepthMemorylessMode: 0
-  projectName: LudumDare44
-  organizationId: bombix34
+  projectName: LudumDare44 (1)
+  organizationId: ludumdare-44
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
