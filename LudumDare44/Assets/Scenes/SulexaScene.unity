@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,11 +161,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138873514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: -4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -277,10 +277,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &5520199280352537177
-PrefabInstance:
+--- !u!1 &1837588431
+GameObject:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837588433}
+  - component: {fileID: 1837588432}
+  m_Layer: 0
+  m_Name: Descent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1837588432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -339,7 +355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1886706352
 MonoBehaviour:
@@ -358,130 +374,3 @@ MonoBehaviour:
   MouthColor: {fileID: 11400000, guid: 96719be5f3f404179a5ce7269e286755, type: 2}
   NoseColor: {fileID: 11400000, guid: eef45c664f7e849e4a4576f78cef2c8d, type: 2}
   SkinColor: {fileID: 11400000, guid: 877ccdf02bb3043b19c5a8169955c99b, type: 2}
---- !u!1001 &6358536923295550169
-PrefabInstance:
-  m_ObjectHideFlags: 0
-=======
->>>>>>> Stashed changes
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040024, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-        type: 3}
-      propertyPath: m_Name
-      value: Inheritor
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990166, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
-        type: 3}
-      propertyPath: m_Name
-      value: Descent
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 8050509071865040030, guid: fe9bfd6013459a04faf0bd08cd3f5a07,
-=======
-    - target: {fileID: 5520199281903990152, guid: c39fe5d9c4eb5cb46b4785f5322e1a55,
->>>>>>> Stashed changes
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-<<<<<<< Updated upstream
-  m_SourcePrefab: {fileID: 100100000, guid: fe9bfd6013459a04faf0bd08cd3f5a07, type: 3}
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: c39fe5d9c4eb5cb46b4785f5322e1a55, type: 3}
->>>>>>> Stashed changes
