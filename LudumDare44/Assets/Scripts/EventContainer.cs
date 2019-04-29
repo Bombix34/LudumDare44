@@ -27,15 +27,22 @@ public class EventContainer
                     break;
                 case(EventConditionContainer.EventCondition.FAMILY_MORE_THAN):
                     GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, false, false, condition.IsWomen());
+                    if(newInheritors.Count() < condition.ConditionValue){
+                        newInheritors = new List<Inheritor>();
+                    }
                     break;
                 case(EventConditionContainer.EventCondition.CHILD_MORE_THAN):
                     GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, true, true, condition.IsWomen());
+                    newInheritors.Remove(GameManager.Instance.FamilyMaster);
+                    if(newInheritors.Count() < condition.ConditionValue){
+                        newInheritors = new List<Inheritor>();
+                    }
                     break;
                 case(EventConditionContainer.EventCondition.HAVE_MORE_GOLD_THAN):
-                    specialConditionSuccess = GameManager.Instance.GoldCoins > condition.ConditionValue;
+                    specialConditionSuccess = GameManager.Instance.GoldCoins >= condition.ConditionValue;
                     break;
                 case(EventConditionContainer.EventCondition.HAVE_MORE_INFLUENCE_THAN):
-                    specialConditionSuccess = GameManager.Instance.InfluencePoints > condition.ConditionValue;
+                    specialConditionSuccess = GameManager.Instance.InfluencePoints >= condition.ConditionValue;
                     break;
                 case(EventConditionContainer.EventCondition.CHILD_AT_POSITION):
                     var isWomen = condition.IsWomen();
@@ -43,13 +50,17 @@ public class EventContainer
                     if(isWomen != null){
                         childrens.Where(q => q.isWomen == isWomen);
                     }
-                    if(childrens.Count() > condition.ConditionValue){
-                        newInheritors.Add(childrens.ElementAt(condition.ConditionValue));
+                    if(childrens.Count() >= condition.ConditionValue){
+                        newInheritors.Add(childrens.ElementAt(condition.ConditionValue - 1));
                     }
 
                     break;
                 case(EventConditionContainer.EventCondition.IS_MARRIED):
-                    
+                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, true, true, condition.IsWomen(), condition.ConditionBoolValue);
+                    newInheritors.Remove(GameManager.Instance.FamilyMaster);
+                    if(newInheritors.Count() < condition.ConditionValue){
+                        newInheritors = new List<Inheritor>();
+                    }
                     break;                
                 default:
                     break;

@@ -27,6 +27,10 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         
+        if(Input.GetKeyDown("t"))
+        {
+            this.ChooseEvent();
+        }
     }
 
     public void ChooseEvent(){

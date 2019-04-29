@@ -8,6 +8,7 @@ public class Inheritor
     public string Name { get; set; }
     public bool isWomen { get; set; }
     public bool IsAlive { get; set; }
+    public bool NotBornYet { get; set; }
     public Inheritor Spouse { get; set; }
 
     public Inheritor Parent { get; set; }
@@ -25,12 +26,14 @@ public class Inheritor
         RendererFaces = new List<SpriteRenderer>();
     }
 
-    public List<Inheritor> FindAll(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false, bool fromParent = false, bool? isWomen = null){
-        if(this.IsAlive && (isWomen == null || this.isWomen == isWomen)){
+    public List<Inheritor> FindAll(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false, bool fromParent = false, bool? isWomen = null, bool? isMarried = null){
+        if(this.IsAlive && !this.NotBornYet 
+            && (isWomen == null || this.isWomen == isWomen)
+            && (isMarried == null || ((this.Spouse != null) == isMarried))){
             inheritors.Add(this);
         }
         if(!fromChildren && this.Childrens.Count > 0){
-            this.Childrens.First().FindAll(ref inheritors, false, false, true, isWomen);
+            this.Childrens.First().FindAll(ref inheritors, false, false, true, isWomen, isMarried);
         }
 
         if(!fromBrother){
@@ -41,11 +44,11 @@ public class Inheritor
                         if(brother == this){
                             continue;
                         }
-                        brother.FindAll(ref inheritors, false, true, false, isWomen);
+                        brother.FindAll(ref inheritors, false, true, false, isWomen, isMarried);
                     }
                 }
                 if(!fromParent){
-                    this.Parent.FindAll(ref inheritors, true, false, false, isWomen);
+                    this.Parent.FindAll(ref inheritors, true, false, false, isWomen, isMarried);
                 }
             }
 

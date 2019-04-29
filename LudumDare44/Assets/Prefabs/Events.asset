@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - Conditions:
-    - Condition: 3
-      ConditionValue: -1
+    - Condition: 6
+      ConditionValue: 5
       ConditionBoolValue: 0
       inheritorCondition: 0
     Message: Bonjour le monde
