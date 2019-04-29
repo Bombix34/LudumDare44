@@ -60,8 +60,9 @@ public class DescentContainer : Singleton<DescentContainer>
                 Age = 38,
                 Trait = Inheritor.InheritorTrait.DUMB,
                 isWomen = false,
-                IsAlive = true,
+                IsAlive = false,
                 Parent = this.Origin,
+                NotBornYet = false,
             };
                 
             this.Origin.Spouse.UpdateBlazon();
@@ -113,14 +114,8 @@ public class DescentContainer : Singleton<DescentContainer>
         List<Inheritor> childrens = new List<Inheritor>();
         foreach (var inheritor in inheritors)
         {
-            if(inheritor == null){
-                continue;
-            }
             if(inheritor.Childrens.Count > 0){
                 childrens.AddRange(inheritor.Childrens);
-            }   else
-            {
-                childrens.Add(null);
             }
             
         }
@@ -140,10 +135,6 @@ public class DescentContainer : Singleton<DescentContainer>
         for (int i = 0; i < inheritors.Count; i++)
         {
             var inheritor = inheritors[i];
-
-            if(inheritor == null){
-                continue;
-            }
 
             Vector3? position = null;
 
@@ -207,7 +198,7 @@ public class DescentContainer : Singleton<DescentContainer>
                         inheritorView.transform.position,
                         new Vector3(inheritorView.transform.position.x,inheritorView.transform.position.y - HeightBetween / 2),
                         new Vector3(childrenPosition.x,inheritorView.transform.position.y - HeightBetween / 2),
-                        childrenPosition
+                        new Vector3(childrenPosition.x, childrenPosition.y + 0.5f, childrenPosition.z)
                     }.ToArray());
                 }
             }

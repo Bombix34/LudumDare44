@@ -17,7 +17,7 @@ public class FaceAnimation : MonoBehaviour
     {
         ResetSwhinkChrono();
         breatheAnim.speed = Random.Range(0.85f, 1.1f);
-        LaunchAnim();
+      //  LaunchAnim();
     }
 
     void Update()
@@ -39,8 +39,10 @@ public class FaceAnimation : MonoBehaviour
 
     public void StopAnim()
     {
+        print("arg");
         isStop = true;
         breatheAnim.SetBool("Breathe", false);
+        breatheAnim.speed=0f;
     }
 
     public void LaunchAnim()

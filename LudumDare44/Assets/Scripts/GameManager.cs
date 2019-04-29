@@ -54,11 +54,11 @@ public class GameManager : Singleton<GameManager>
             return;
         }
         var choosenOne = events.OrderBy(x => Guid.NewGuid()).First();
-        EventUI.Instance.CreateView(choosenOne);
+        EventUI.Instance.CreateView(choosenOne.ev);
     }
 
-    private List<EventContainer> GetListAvailableEvents(){
-        return EventsScriptableObject.events.Where(q => q.AreConditionValid()).ToList();
+    private List<EventScriptableObject> GetListAvailableEvents(){
+        return EventsScriptableObject.events.Where(q => q.ev.AreConditionValid()).ToList();
     }
 
 }

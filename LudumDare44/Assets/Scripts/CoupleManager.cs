@@ -29,12 +29,16 @@ public class CoupleManager : MonoBehaviour
 
     void Start()
     {
-        //debug
-        if (firstCharacter.CharacterInfos.Spouse != null)
-            currentState = CoupleState.couple;
-        else
+        if(firstCharacter.CharacterInfos.NotBornYet){
+            currentState = CoupleState.notBornYet;
+        }   else
         {
-            currentState = CoupleState.single;
+            if (firstCharacter.CharacterInfos.Spouse != null)
+                currentState = CoupleState.couple;
+            else
+            {
+                currentState = CoupleState.single;
+            }
         }
 
         infoButon.onClick.AddListener(OnClickInfoFirstCharacter);
@@ -52,9 +56,13 @@ public class CoupleManager : MonoBehaviour
             case CoupleState.notBornYet:
                 infoButon.transform.parent.gameObject.SetActive(false);
                 spouseInfoButon.transform.parent.gameObject.SetActive(false);
-                secondCharacter.Face.transform.gameObject.SetActive(false);
+                firstCharacter.Face.transform.gameObject.SetActive(false);
+                secondCharacter.Face.transform.parent.gameObject.SetActive(false);
                 break;
             case CoupleState.single:
+            
+                firstCharacter.Face.transform.gameObject.SetActive(true);
+                secondCharacter.Face.transform.parent.gameObject.SetActive(true);
                 spouseInfoButon.transform.parent.gameObject.SetActive(false);
                 if (firstCharacter.CharacterInfos.IsAlive)
                 {
@@ -64,13 +72,17 @@ public class CoupleManager : MonoBehaviour
                     {
                         weddingButton.SetActive(true);
                     }
-                }else
+                }else//IF DEAD
                 {
                     secondCharacter.Face.transform.gameObject.SetActive(false);
                     firstCharacter.Face.DieFeedback();
+                    
                 }
                 break;
             case CoupleState.couple:
+            
+                firstCharacter.Face.transform.gameObject.SetActive(true);
+                secondCharacter.Face.transform.parent.gameObject.SetActive(true);
                 infoButon.transform.parent.gameObject.SetActive(true);
                 spouseInfoButon.transform.parent.gameObject.SetActive(true);
                 if (firstCharacter.CharacterInfos.IsAlive)

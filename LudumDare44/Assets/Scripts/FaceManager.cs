@@ -42,9 +42,11 @@ public class FaceManager : MonoBehaviour
     // sourcils -> 5
     // barbes -> 6
     // buste -> 7
+    FaceAnimation faceAnimation;
 
     void Awake()
     {
+        faceAnimation = GetComponent<FaceAnimation>();
     }
 
     private void Start()
@@ -337,6 +339,8 @@ public class FaceManager : MonoBehaviour
         sourcils.color = Color.white;
         barbe.color = Color.white;
         buste.color = Color.white;
+        background.color = Color.gray;
+        faceAnimation.StopAnim();
     }
 
     public List<Sprite> GetFace()
