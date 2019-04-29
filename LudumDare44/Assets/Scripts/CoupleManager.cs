@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoupleManager : MonoBehaviour
 {
@@ -13,31 +14,48 @@ public class CoupleManager : MonoBehaviour
     [SerializeField]
     GameObject weddingButton;
 
+    [SerializeField]
+    Button infoButon;
+
+    [SerializeField]
+    Button spouseInfoButon;
+
     CoupleState currentState;
 
     void Start()
     {
+        //debug
         if (firstCharacter.CharacterInfos.Spouse != null)
             currentState = CoupleState.couple;
         else
         {
             currentState = CoupleState.single;
         }
+
+        infoButon.onClick.AddListener(OnClickInfoFirstCharacter);
+        spouseInfoButon.onClick.AddListener(OnClickInfoSecondCharacter);
+
         UpdateCoupleInterface();
     }
 
-    public void UpdateCoupleInterface()
+   public void UpdateCoupleInterface()
     {
+
         weddingButton.SetActive(false);
+        weddingButton.GetComponentInChildren<Button>().interactable = false;
         switch (currentState)
         {
             case CoupleState.notBornYet:
+                infoButon.transform.parent.gameObject.SetActive(false);
+                spouseInfoButon.transform.parent.gameObject.SetActive(false);
                 secondCharacter.Face.transform.gameObject.SetActive(false);
                 break;
             case CoupleState.single:
+                spouseInfoButon.transform.parent.gameObject.SetActive(false);
                 if (firstCharacter.CharacterInfos.IsAlive)
                 {
                     secondCharacter.Face.transform.gameObject.SetActive(true);
+                    weddingButton.GetComponentInChildren<Button>().interactable = true;
                     if (GameManager.Instance.CurrentState.stateName == "WEDDING_STATE")
                     {
                         weddingButton.SetActive(true);
@@ -49,6 +67,8 @@ public class CoupleManager : MonoBehaviour
                 }
                 break;
             case CoupleState.couple:
+                infoButon.transform.parent.gameObject.SetActive(true);
+                spouseInfoButon.transform.parent.gameObject.SetActive(true);
                 if (firstCharacter.CharacterInfos.IsAlive)
                 {
                 }else
@@ -64,6 +84,16 @@ public class CoupleManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void OnClickInfoFirstCharacter()
+    {
+        print("first");
+    }
+
+    public void OnClickInfoSecondCharacter()
+    {
+        print("second");
     }
 
     public enum CoupleState

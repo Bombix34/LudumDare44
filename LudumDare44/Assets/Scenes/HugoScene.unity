@@ -1546,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af12fc804604e1478a51a266787896c, type: 3}
---- !u!1001 &3566851653320370135
+--- !u!1001 &3708966317768459226
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1619,6 +1619,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3566851652779563142, guid: 24754f26e8d4e4182b21db12f2d5cce4,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 138873516}
+    - target: {fileID: 1103259736960514754, guid: 24754f26e8d4e4182b21db12f2d5cce4,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 138873516}
+    - target: {fileID: 1103259738020205483, guid: 24754f26e8d4e4182b21db12f2d5cce4,
         type: 3}
       propertyPath: m_Camera
       value: 

@@ -9,13 +9,15 @@ public class WeddingButton : MonoBehaviour
     [SerializeField]
     Button bouton;
 
+
     void Start()
     {
-        bouton.onClick.AddListener(OnClick);
+        bouton.onClick.AddListener(OnClickWedding);
     }
 
-    public void OnClick()
+    public void OnClickWedding()
     {
         Debug.Log("clickeu");
     }
+
 }

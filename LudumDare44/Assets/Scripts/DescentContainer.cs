@@ -55,7 +55,7 @@ public class DescentContainer : Singleton<DescentContainer>
             this.UpdateView();
             foreach (var item in this.InheritorsView.Values)
             {
-                item.GetComponent<CoupleManager>().UpdateCoupleInterface();
+            //    item.GetComponent<CoupleManager>().UpdateCoupleInterface();
             }
         }
     }

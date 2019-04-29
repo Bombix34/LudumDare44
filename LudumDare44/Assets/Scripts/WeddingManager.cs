@@ -23,8 +23,6 @@ public class WeddingManager : MonoBehaviour
     private void Start()
     {
         UpdatePool();
-        print(menWedding.Count);
-        print(womenWedding.Count);
     }
 
     public void UpdatePool()
