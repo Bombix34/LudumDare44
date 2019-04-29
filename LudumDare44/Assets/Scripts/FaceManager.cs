@@ -319,6 +319,43 @@ public class FaceManager : MonoBehaviour
 
     }
 
+    public void InitWithValue()
+    {
+        if (manager.CharacterInfos != null)
+        {
+            mouth.sprite = manager.CharacterInfos.pairSpriteColor[0].Sprite;
+            mouth.color = manager.CharacterInfos.pairSpriteColor[0].ElementColor;
+
+            hair.sprite = manager.CharacterInfos.pairSpriteColor[1].Sprite;
+            hair.color = manager.CharacterInfos.pairSpriteColor[1].ElementColor;
+
+
+            nose.sprite = manager.CharacterInfos.pairSpriteColor[2].Sprite;
+            nose.color = manager.CharacterInfos.pairSpriteColor[2].ElementColor;
+
+
+            face.sprite = manager.CharacterInfos.pairSpriteColor[3].Sprite;
+            face.color = manager.CharacterInfos.pairSpriteColor[3].ElementColor;
+
+
+            eyes.sprite = manager.CharacterInfos.pairSpriteColor[4].Sprite;
+            eyes.color = manager.CharacterInfos.pairSpriteColor[4].ElementColor;
+
+
+            sourcils.sprite = manager.CharacterInfos.pairSpriteColor[5].Sprite;
+            sourcils.color = manager.CharacterInfos.pairSpriteColor[5].ElementColor;
+
+
+            barbe.sprite = manager.CharacterInfos.pairSpriteColor[6].Sprite;
+            barbe.color = manager.CharacterInfos.pairSpriteColor[6].ElementColor;
+
+
+            buste.sprite = manager.CharacterInfos.pairSpriteColor[7].Sprite;
+            buste.color = manager.CharacterInfos.pairSpriteColor[7].ElementColor;
+
+        }
+    }
+
     public void DieFeedback()
     {
         if (manager.CharacterInfos.IsAlive)

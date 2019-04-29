@@ -17,7 +17,6 @@ public class DescentContainer : Singleton<DescentContainer>
 
     void Awake()
     {
-        
         this.InheritorsView = new Dictionary<Inheritor, GameObject>();
         this.Origin = new Inheritor(){
             Name = "Joe",
@@ -60,7 +59,7 @@ public class DescentContainer : Singleton<DescentContainer>
                 Age = 38,
                 Trait = Inheritor.InheritorTrait.DUMB,
                 isWomen = false,
-                IsAlive = false,
+                IsAlive = true,
                 Parent = this.Origin,
                 NotBornYet = false,
             };

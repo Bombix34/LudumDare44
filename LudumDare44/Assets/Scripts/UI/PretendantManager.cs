@@ -24,4 +24,12 @@ public class PretendantManager : MonoBehaviour
             pretendantsUI[i].CreateView(pretendants[i],inheritorAttirance);
         }
     }
+
+    public void ResetPretendantColors()
+    {
+        foreach(var item in pretendantsUI)
+        {
+            item.gameObject.GetComponent<Image>().color = Color.white;
+        }
+    }
 }

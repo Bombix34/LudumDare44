@@ -17,6 +17,8 @@ public class WeddingPretendantUI : MonoBehaviour
 
     public PortraitUI portrait;
 
+    public Inheritor Current { get; set; }
+
     public void CreateView(Inheritor pretendant, int inheritorFertility)
     {
         this.Container.SetActive(true);
@@ -30,6 +32,7 @@ public class WeddingPretendantUI : MonoBehaviour
         this.fertility.text = $"Affinity : {inheritorFertility}";
 
         portrait.SetuptFaceUI(pretendant);
+        Current = pretendant;
 
         //Mathf.floor
     }
