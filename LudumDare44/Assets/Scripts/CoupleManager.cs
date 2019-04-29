@@ -74,9 +74,8 @@ public class CoupleManager : MonoBehaviour
                     }
                 }else//IF DEAD
                 {
-                    secondCharacter.Face.transform.gameObject.SetActive(false);
                     firstCharacter.Face.DieFeedback();
-                    
+                    secondCharacter.Face.transform.parent.gameObject.SetActive(false);
                 }
                 break;
             case CoupleState.couple:

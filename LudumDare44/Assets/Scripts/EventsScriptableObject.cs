@@ -7,9 +7,3 @@ public class EventsScriptableObject : ScriptableObject
 {
     public List<EventScriptableObject> events;
 }
-
-[CreateAssetMenu(fileName = "Event", menuName = "ScriptableObject/Event")]
-public class EventScriptableObject : ScriptableObject
-{
-    public EventContainer ev;
-}
