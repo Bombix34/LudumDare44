@@ -30,7 +30,7 @@ MonoBehaviour:
         later, you notice that part of the family has some of the symptoms of the
         plague. You won't last very long in this condition.
       effects:
-      - Effect: 2
+      - Effect: 4
         EffectValue: 0
       - Effect: 3
         EffectValue: 3

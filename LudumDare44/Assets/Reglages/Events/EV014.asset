@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV014
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: You receive a letter from a prominent family in a nearby town, who proposes
+      to organize a banquet.
+    ProposalOne:
+      Choice: 'You agree to participate, and order your servants to prepare the speciality
+        of your house: Mushroom Pie.'
+      Response: Once there, you realize that this banquet was actually just a way
+        to make a fool of yourself by being rude to you all along the party. You can't
+        stand these mockery for long, and go home absolutely furious.
+      effects:
+      - Effect: 0
+        EffectValue: -15
+    ProposalTwo:
+      Choice: You refuse! There is no way you can be seen at a party as rudimentary
+        as theirs, and you send them a letter to make them understand that it is useless
+        to invite you back.
+      Response: In the days to come, rumours will spread that the notable family has
+        been ridiculed by you.
+      effects: []
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
