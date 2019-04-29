@@ -1081,7 +1081,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3566851653263035491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2957906785940533844}
+        m_MethodName: OnClickWedding
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5894861764487682961}
+          m_ObjectArgumentAssemblyTypeName: CharacterManager, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &3566851653263035489
