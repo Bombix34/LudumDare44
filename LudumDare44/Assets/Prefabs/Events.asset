@@ -14,21 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - Conditions:
-    - Conditon: 0
-      ConditionValue: 0
-    Message: 
+    - Condition: 6
+      ConditionValue: 5
+      ConditionBoolValue: 0
+      inheritorCondition: 0
+    Message: Bonjour le monde
     ProposalOne:
-      Choice: okqzdq
-      Response: ajdiazjdoaz
-      Effect: 3
-      EffectValue: 0
+      Choice: ' TEST 1'
+      Response: je suis la response test 1
+      effects:
+      - Effect: 0
+        EffectValue: 10
     ProposalTwo:
-      Choice: 
-      Response: 
-      Effect: 0
-      EffectValue: 0
+      Choice: "TEST 2\t\t"
+      Response: je suis la response test 2
+      effects:
+      - Effect: 1
+        EffectValue: 10
     ProposalSpecial:
       Choice: 
       Response: 
-      Effect: 0
-      EffectValue: 0
+      effects: []

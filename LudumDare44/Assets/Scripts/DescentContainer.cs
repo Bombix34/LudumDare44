@@ -45,13 +45,13 @@ public class DescentContainer : Singleton<DescentContainer>
     {
         if (Input.GetKeyDown("r"))
         {
-            this.Origin.Childrens.Add(new Inheritor()
-            {
-                Name = "Child",
-                isWomen = true,
-                IsAlive = true,
-                Parent = this.Origin,
-            });
+            this.Origin.Childrens.Add(            new Inheritor()
+        {
+            Name = "Child",
+            isWomen = false,
+            IsAlive = true,
+            Parent = this.Origin,
+        });
             this.UpdateView();
             foreach (var item in this.InheritorsView.Values)
             {
