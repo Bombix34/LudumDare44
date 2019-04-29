@@ -34,6 +34,10 @@ public class GameManager : Singleton<GameManager>
         {
             this.ChooseEvent();
         }
+        if(Input.GetKeyDown("y"))
+        {
+            InheritorUI.Instance.CreateView(this.FamilyMaster);
+        }
     }
 
     public void ChangeState(State newState)

@@ -108,7 +108,7 @@ public class EventContainer
     }
 
     public string FormatText(string text){
-        return text.Replace("$charactername", $"{this.Inheritor?.Name} {this.Inheritor?.Name}");
+        return text.Replace("$charactername", $"{this.Inheritor?.Name} {this.Inheritor?.FamilyName}");
     }
 
     public void ChooseProposalOne(){

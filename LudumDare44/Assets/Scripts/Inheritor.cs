@@ -7,6 +7,7 @@ public class Inheritor
 {
     public enum InheritorTrait
     {
+        NONE,
         BELLIQUEUX,
         STRATÈGE,
         ATTARDÉ,
