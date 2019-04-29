@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV021
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: A very influential family, and much richer than yours, sends you a letter
+      proposing that you take a member of your family as a servant, in exchange for
+      a large amount of gold.
+    ProposalOne:
+      Choice: You consider hiring assassins for a few seconds, then you remember that
+        your finances are at their lowest. So you change your mind, and don't answer
+        anything.
+      Response: A few days later, you hear villagers whispering as they tell this
+        story with a lot of fun. You take it upon yourself not to get angry.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalTwo:
+      Choice: In return, you answer them that you are making them exactly the same
+        offer, with all the irony of the world. But you hope they won't accept, because
+        you couldn't pay.
+      Response: The answer to your provocation is not long in coming, and this time
+        the letter is much more threatening.
+      effects:
+      - Effect: 0
+        EffectValue: -20
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

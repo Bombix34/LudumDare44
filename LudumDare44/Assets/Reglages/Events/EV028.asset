@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV028
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: It's been several weeks since you broke your leg. Tonight, for the first
+      time, you plan to start your rehabilitation by walking to the tavern. The expedition
+      is more ambitious than expected, and you arrive at the tavern early in the evening.
+      So you take the opportunity to drink a cervoise, and it is then that a traveller
+      in a strange outfit invites you to share his evening with you.
+    ProposalOne:
+      Choice: You accept, you tell yourself that it could help you return to your
+        property in case of a problem.
+      Response: This was your very last memory of the evening. You woke up two days
+        later in bed, being able to walk without any pain, as if your foot had never
+        been broken. In living memory, this is probably the strangest evening you
+        have ever experienced.
+      effects:
+      - Effect: 0
+        EffectValue: 10
+    ProposalTwo:
+      Choice: You refuse, leave drunk means a risk of injury again and you need to
+        be on your feet as soon as possible.
+      Response: Your rehabilitation will ultimately be much slower than expected,
+        and the doctor's fees far exceed your expectations.
+      effects:
+      - Effect: 0
+        EffectValue: -1000
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

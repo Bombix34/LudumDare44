@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV027
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 3
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: 'You discover that $charactername is an integral part of the thieves''
+      guild in its spare time. This information seemed obvious to you when you saw
+      him leave at late hours at night, hooded, then return with his pockets full
+      of gold before dawn. '
+    ProposalOne:
+      Choice: You use $charactername to create a relationship between your family
+        and the Thief Guild. This will ensure that you do not suffer a burglary and
+        you may even expect lucrative business.
+      Response: 'First surprised, $charactername is quite happy to become an intermediary
+        between your family and the guild. This promises a fruitful collaboration! '
+      effects:
+      - Effect: 0
+        EffectValue: 10
+      - Effect: 1
+        EffectValue: 1000
+    ProposalTwo:
+      Choice: You blackmail $charactername to pay you a percentage of what he earns
+        every time he goes on a night expedition.
+      Response: Dumbfounded that you could prove guilty of such low standards, $charactername
+        reluctantly accepts the market.
+      effects:
+      - Effect: 1
+        EffectValue: 1500
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

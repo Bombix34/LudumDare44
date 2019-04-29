@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV023
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: 'You are a candidate to lead the merchant guild, but the matriarch of
+      a large rival family seems to be much more favorite than you. You cannot let
+      it take such an economic lead over you, at the risk of falling far behind. '
+    ProposalOne:
+      Choice: You know one of the current members of the guild very well and you are
+        complicit enough with him to be able to plan a plan to discredit the said
+        matriarch.
+      Response: The plan only worked halfway, and the discord created divisions within
+        the guild. You have been chosen, but this one is not in its best form.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+      - Effect: 1
+        EffectValue: 1000
+    ProposalTwo:
+      Choice: You use your influence to bring a large number of foreign merchants
+        into the city to create potential new trade routes.
+      Response: Not only have you taken control of the guild, but thanks to these
+        trade routes, you are in an excellent position.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+      - Effect: 0
+        EffectValue: 1500
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
