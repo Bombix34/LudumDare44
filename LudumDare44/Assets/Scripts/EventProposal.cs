@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -28,6 +29,7 @@ public class EventEffectContainer{
         COST_OR_GAIN_INFLUENCE_POINTS,
         COST_OR_GAIN_GOLD,
         INHERITOR_DEATH,
+        INHERITOR_RANDOM_DEATH
     }
     public ProposalEffect Effect;
     public int EffectValue;
@@ -43,6 +45,15 @@ public class EventEffectContainer{
                 break;
             case(ProposalEffect.INHERITOR_DEATH):
                 effectParams.Inheritor?.Kill();
+                break;
+            case(ProposalEffect.INHERITOR_RANDOM_DEATH):
+                var inheritors = new List<Inheritor>();
+                GameManager.Instance.FamilyMaster.FindAll(ref inheritors);
+                inheritors = inheritors.OrderBy(x => Guid.NewGuid()).ToList();
+                for (int i = 0; i < EffectValue && i < inheritors.Count; i++)
+                {
+                    inheritors[i].Kill();   
+                }
                 break;
             
             default:
