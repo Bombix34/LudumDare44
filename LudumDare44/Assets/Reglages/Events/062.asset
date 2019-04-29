@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 062
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    - Condition: 1
+      ConditionValue: 2
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: On returning from a country walk, $charactername is proud to introduce
+      its new pet, an adorable little rodent.
+    ProposalOne:
+      Choice: You pet the cute little animal and go back to your business.
+      Response: You didn't pay attention and the rodent slipped into your office one
+        day, and enjoyed some of your property titles. In an outburst of anger you
+        crush the rodent with one vengeful foot. Since then, $charactername has been
+        completely inconsolable.
+      effects:
+      - Effect: 1
+        EffectValue: -1000
+    ProposalTwo:
+      Choice: You ask him to take it back to where he found it, you wouldn't want
+        to have allergies because of a pet.
+      Response: $charactername shares his sadness with you, then he goes to the forest
+        to let him resume his normal life. Not seeing him come back after a few hours,
+        you will see where he may well be, and there, in a horror vision, you see
+        that he is there, lying on the ground strewn with leaves, his body completely
+        lacerated. He wasn't an arrow, but you would never have thought he could be
+        murdered by a rodent...
+      effects:
+      - Effect: 2
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

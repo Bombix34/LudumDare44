@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 063
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 14
+      inheritorCondition: 0
+    Message: During a banquet organized by a local celebrity, you see $charactername
+      sneak out and then come back with slight bulges in his pockets.
+    ProposalOne:
+      Choice: You have no shame in humiliating him in front of the guests by asking
+        him to empty his pockets.
+      Response: 'Obviously, $charactername panics, and runs through the whole room.
+        In the heat of the moment, you try to catch up with him, which results in
+        a ridiculous scene that makes you lose credibility in everyone''s eyes. '
+      effects:
+      - Effect: 0
+        EffectValue: 15
+    ProposalTwo:
+      Choice: You pretend you didn't see anything.
+      Response: Even if you wanted to be discreet, someone else will do it for you
+        later in the evening, and will scream at the thief. You propose to return
+        his stolen manpower, and to add a small amount of coins in addition....
+      effects:
+      - Effect: 0
+        EffectValue: -10
+      - Effect: 1
+        EffectValue: -1000
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 060
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    - Condition: 1
+      ConditionValue: 2
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: On returning from a country walk, $charactername is proud to introduce
+      its new pet, an adorable little rodent.
+    ProposalOne:
+      Choice: You pet the cute little animal and go back to your business.
+      Response: After spending a few days with his new friend, horrible bubons abound
+        on $charactername's body. You then understand your mistake as the plague spreads
+        through the home.
+      effects:
+      - Effect: 3
+        EffectValue: 0
+    ProposalTwo:
+      Choice: 
+      Response: 
+      effects: []
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
