@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeddingState : GameState
+public class EventState : GameState
 {
-    public WeddingState(GameObject obj) : base(obj)
+    public EventState(GameObject obj) : base(obj)
     {
-        stateName = "WEDDING_STATE";
+        stateName = "EVENT_STATE";
         this.curObject = obj;
         manager = GameManager.Instance;
     }
 
     public override void Enter()
     {
-        manager.Turn++;
+
     }
 
     public override void Execute()

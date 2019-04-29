@@ -20,7 +20,7 @@ public class CoupleManager : MonoBehaviour
     [SerializeField]
     Button spouseInfoButon;
 
-    CoupleState currentState;
+    public CoupleState currentState;
 
     private void Awake()
     {
@@ -99,6 +99,12 @@ public class CoupleManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SetupSecondCharacter(Inheritor character)
+    {
+        secondCharacter.CharacterInfos = character;
+        character.Manager = secondCharacter;
     }
 
     public void OnClickInfoFirstCharacter()
