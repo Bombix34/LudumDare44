@@ -16,8 +16,9 @@ public class CharacterManager : MonoBehaviour
 
     public void Init(Inheritor concerned)
     {
+        CharacterInfos = concerned;
         Face.Manager = this;
-        concerned.Manager = this;
+        CharacterInfos.Manager = this;
     }
 
     public FaceManager Face

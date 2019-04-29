@@ -22,6 +22,11 @@ public class CoupleManager : MonoBehaviour
 
     CoupleState currentState;
 
+    private void Awake()
+    {
+
+    }
+
     void Start()
     {
         //debug
@@ -40,7 +45,6 @@ public class CoupleManager : MonoBehaviour
 
    public void UpdateCoupleInterface()
     {
-
         weddingButton.SetActive(false);
         weddingButton.GetComponentInChildren<Button>().interactable = false;
         switch (currentState)
