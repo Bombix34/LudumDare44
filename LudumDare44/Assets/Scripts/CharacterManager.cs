@@ -25,8 +25,12 @@ public class CharacterManager : MonoBehaviour
         Face.Manager = this;
         concerned.Manager = this;
         BlazonManager = new BlazonManager();
-        BlazonManager.Random(CharacterInfos.FamilyName);
         Blazon2d.BlazonManager = BlazonManager;
+        this.UpdateBlazon();
+    }
+
+    public void UpdateBlazon(){
+        Blazon2d.BlazonManager.Random(CharacterInfos.FamilyName);
         Blazon2d.UpdateBlazon();
     }
 

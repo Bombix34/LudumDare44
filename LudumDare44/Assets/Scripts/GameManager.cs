@@ -24,7 +24,7 @@ public class GameManager : Singleton<GameManager>
     {
         //debug
         ChangeState(new WeddingState(this.gameObject));
-        IsWomenStrongSex = false;
+        IsWomenStrongSex = true;
     }
 
     void Update()
