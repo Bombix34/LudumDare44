@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV058
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 3
+      ConditionValue: 1000
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    - Condition: 2
+      ConditionValue: 4
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    - Condition: 5
+      ConditionValue: 4
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 3
+    Message: '$charactername begs you to listen to his request: He is only your 4th
+      child, and he knows full well that he has little chance of becoming the main
+      heir. He subtly insists that you understand that he would like financial compensation,
+      so that he can still secure his future.'
+    ProposalOne:
+      Choice: Tell him that times are hard, and that a black plague is coming so quickly.
+        He will not have a bronze piece, but you still recognize that he had the audacity
+        to ask for it.
+      Response: With a little smile on his face, he says he suspected your answer.
+        He approaches you and whispers very clear threats, involving the death of
+        your other sons. He is truly convincing, and when in doubt, you prefer to
+        ensure that nothing will happen by paying him a small nest egg.
+      effects:
+      - Effect: 1
+        EffectValue: -500
+    ProposalTwo:
+      Choice: Give him a small nest egg so he can feel like a winner, but not enough
+        to escape your influence.
+      Response: He takes the gold with a big smile and thanks you very much. A little
+        less than two years later, you discover that he has made his money grow in
+        ways that are probably not very good, and that he has taken advantage of it
+        to get out of your influence anyway. You deny it, but it is already a little
+        late, your family has learned how much you have been harmed.
+      effects:
+      - Effect: 1
+        EffectValue: -500
+      - Effect: 2
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
