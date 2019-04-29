@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7b0d1ea6ceb449a89877f49c6f221c, type: 3}
   m_Name: Character Pool
   m_EditorClassIdentifier: 
-  name:
-  - Jose
+  ManName:
   - Robert
   - Alfred
+  WomanName:
+  - "Th\xE9mis"
+  - Sophie
   familyName:
   - Stark
   - Lannister

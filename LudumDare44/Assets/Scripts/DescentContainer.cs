@@ -170,7 +170,6 @@ public class DescentContainer : Singleton<DescentContainer>
                 this.InheritorsView.Add(inheritor, inheritorView);
 
                 var inheritorCharacterManager = inheritorView.GetComponent<CharacterManager>();
-                inheritorCharacterManager.CharacterInfos = inheritor;
                 inheritorCharacterManager.Init(inheritor);
                 
                 if(inheritor.Parent == null){
@@ -187,7 +186,6 @@ public class DescentContainer : Singleton<DescentContainer>
                 var inheritorSpouseCharacterManager = inheritorView.GetComponentsInChildren<CharacterManager>().Where(go => go.gameObject != inheritorView).FirstOrDefault();
 
                 if(inheritorSpouseCharacterManager.CharacterInfos == null){
-                    inheritorSpouseCharacterManager.CharacterInfos = inheritor.Spouse;
                     inheritorSpouseCharacterManager.Init(inheritor.Spouse);
                     inheritorSpouseCharacterManager.Face.InitRandomFace(inheritorSpouseCharacterManager.CharacterInfos.isWomen);
                 }            

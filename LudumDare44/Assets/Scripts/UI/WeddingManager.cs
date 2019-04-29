@@ -9,6 +9,8 @@ public class WeddingManager : MonoBehaviour
 
     public FaceDatabase faceDatabase;
 
+    WeddingUI ui;
+
     [SerializeField]
     List<Inheritor> menWedding;
     [SerializeField]
@@ -18,6 +20,7 @@ public class WeddingManager : MonoBehaviour
     {
         menWedding = new List<Inheritor>();
         womenWedding = new List<Inheritor>();
+        ui = WeddingUI.Instance;
     }
 
     private void Start()
@@ -42,6 +45,15 @@ public class WeddingManager : MonoBehaviour
                 womenWedding.Add(result);
             }
         }
+    }
+
+    public void LaunchWedding(Inheritor concerned)
+    {
+        UpdatePool();
+        if (concerned.isWomen)
+            ui.ShowWeddingPanel(true, concerned, menWedding);
+        else
+            ui.ShowWeddingPanel(true, concerned, womenWedding);
     }
 
     public void RemoveFromPool(Inheritor concerned)

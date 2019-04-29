@@ -10,7 +10,10 @@ public class InheritorUI : Singleton<InheritorUI>
     public Text FamilyName;
     public Text Age;
     public Text Trait;
-    public void CreateView(Inheritor inheritor){
+
+    public void CreateView(Inheritor inheritor)
+    {
+        print(inheritor);
         this.Container.SetActive(true);
         this.Name.text = $"Name : {inheritor.Name}";
         this.FamilyName.text = $"FamilyName : {inheritor.FamilyName}";

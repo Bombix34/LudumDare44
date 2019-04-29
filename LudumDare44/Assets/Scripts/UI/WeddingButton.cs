@@ -9,15 +9,15 @@ public class WeddingButton : MonoBehaviour
     [SerializeField]
     Button bouton;
 
+    //public Inheritor CharacterToMarried { get; set; }
 
     void Start()
     {
-        bouton.onClick.AddListener(OnClickWedding);
     }
 
-    public void OnClickWedding()
+    public void OnClickWedding(CharacterManager character)
     {
-        UiManager.Instance.ShowWeddingPanel(true);
+        GameManager.Instance.GetComponent<WeddingManager>().LaunchWedding(character.CharacterInfos);
     }
 
 }

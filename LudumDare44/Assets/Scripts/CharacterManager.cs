@@ -22,6 +22,7 @@ public class CharacterManager : MonoBehaviour
 
     public void Init(Inheritor concerned)
     {
+        CharacterInfos = concerned;
         Face.Manager = this;
         concerned.Manager = this;
         BlazonManager = new BlazonManager();

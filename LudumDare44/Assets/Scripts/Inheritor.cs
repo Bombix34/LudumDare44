@@ -30,6 +30,7 @@ public class Inheritor
     public bool isWomen { get; set; }
     public bool IsAlive { get; set; }
     public bool NotBornYet { get; set; }
+    public int Attirance { get; set; }
     public Inheritor Spouse { get; set; }
     public InheritorTrait Trait { get; set; }
     public Inheritor Parent { get; set; }
@@ -50,6 +51,7 @@ public class Inheritor
         IsAlive = true;
         Childrens = new List<Inheritor>();
         pairSpriteColor = new List<DuoGraphicElement>();
+        Attirance = (int)Random.Range(1f, 4f);
     }
 
     public void UpdateBlazon(){
