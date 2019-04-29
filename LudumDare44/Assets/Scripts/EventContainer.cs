@@ -16,6 +16,9 @@ public class EventContainer
     
 
     public bool AreConditionValid(){
+        if(Conditions.Count == 0){
+            return true;
+        }
         List<Inheritor> inheritors = null;
         foreach (var condition in Conditions)
         {
