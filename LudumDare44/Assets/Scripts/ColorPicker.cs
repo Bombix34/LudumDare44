@@ -6,7 +6,7 @@ using UnityEngine;
 public class ColorPicker : ScriptableObject
 {
     [SerializeField]
-    List<Color> colors;
+    public List<Color> colors;
 
     public Color GetRandColor()
     {

@@ -6,6 +6,7 @@ using System;
 
 public class GameManager : Singleton<GameManager>
 {
+    public BlazonDatabase BlazonDatabase;
     enum TurnState
     {
         WEDDING,

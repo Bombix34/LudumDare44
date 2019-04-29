@@ -49,6 +49,7 @@ MonoBehaviour:
   MouthColor: {fileID: 11400000, guid: 96719be5f3f404179a5ce7269e286755, type: 2}
   NoseColor: {fileID: 11400000, guid: eef45c664f7e849e4a4576f78cef2c8d, type: 2}
   SkinColor: {fileID: 11400000, guid: 877ccdf02bb3043b19c5a8169955c99b, type: 2}
+  BlazonColor: {fileID: 11400000, guid: 077a4dfccaccb934b93728a7b3b9c19c, type: 2}
 --- !u!114 &8993420939791880874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cc7da4d23512a4399452feaf6af9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlazonDatabase: {fileID: 11400000, guid: b2ade5d1943944549a798f920ab29f9e, type: 2}
+  EventsScriptableObject: {fileID: 11400000, guid: 974e99947a6aee648805ac59aceb51de,
+    type: 2}

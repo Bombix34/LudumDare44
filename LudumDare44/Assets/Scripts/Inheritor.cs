@@ -52,6 +52,11 @@ public class Inheritor
         pairSpriteColor = new List<DuoGraphicElement>();
     }
 
+    public void UpdateBlazon(){
+        var BlazonManager = new BlazonManager();
+        BlazonManager.Random(this.FamilyName);
+    }
+
     public List<Inheritor> FindAll(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false
                                     , bool fromParent = false, bool? isWomen = null, bool? isMarried = null
                                     , InheritorTrait? trait = null){

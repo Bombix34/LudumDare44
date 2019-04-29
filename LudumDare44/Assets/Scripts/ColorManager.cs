@@ -14,6 +14,7 @@ public class ColorManager : MonoBehaviour
     public ColorPicker NoseColor;
    // [SerializeField]
     public ColorPicker SkinColor;
+    public ColorPicker BlazonColor;
 
     //SINGLETON________________________________________________________________________________________________
     private static ColorManager s_Instance = null;

@@ -28,6 +28,7 @@ public class DescentContainer : Singleton<DescentContainer>
             IsAlive = true,
             Spouse = null,
         };
+        this.Origin.UpdateBlazon();
 
         this.Origin.Spouse = new Inheritor()
         {
@@ -40,6 +41,7 @@ public class DescentContainer : Singleton<DescentContainer>
             Parent = null,
             Spouse = this.Origin
         };
+        this.Origin.Spouse.UpdateBlazon();
 
         GameManager.Instance.FamilyMaster = this.Origin;
 
@@ -51,16 +53,19 @@ public class DescentContainer : Singleton<DescentContainer>
     {
         if (Input.GetKeyDown("r"))
         {
-            this.Origin.Childrens.Add(            new Inheritor()
-        {
-            Name = "Child",
-            FamilyName = "URGL",
-            Age = 38,
-            Trait = Inheritor.InheritorTrait.DUMB,
-            isWomen = false,
-            IsAlive = true,
-            Parent = this.Origin,
-        });
+            var children = new Inheritor()
+            {
+                Name = "Child",
+                FamilyName = "URGL",
+                Age = 38,
+                Trait = Inheritor.InheritorTrait.DUMB,
+                isWomen = false,
+                IsAlive = true,
+                Parent = this.Origin,
+            };
+                
+            this.Origin.Spouse.UpdateBlazon();
+            this.Origin.Childrens.Add(children);          
             this.UpdateView();
             foreach (var item in this.InheritorsView.Values)
             {
