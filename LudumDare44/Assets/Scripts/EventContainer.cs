@@ -24,6 +24,7 @@ public class EventContainer
             switch (condition.Condition)
             {
                 case(EventConditionContainer.EventCondition.HAVE_TRAIT):
+                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, false, false, condition.IsWomen(), null, condition.ConditionTrait);
                     break;
                 case(EventConditionContainer.EventCondition.FAMILY_MORE_THAN):
                     GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, false, false, condition.IsWomen());
@@ -56,7 +57,7 @@ public class EventContainer
 
                     break;
                 case(EventConditionContainer.EventCondition.IS_MARRIED):
-                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, true, true, condition.IsWomen(), condition.ConditionBoolValue);
+                    GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, false, false, condition.IsWomen(), condition.ConditionBoolValue);
                     newInheritors.Remove(GameManager.Instance.FamilyMaster);
                     if(newInheritors.Count() < condition.ConditionValue){
                         newInheritors = new List<Inheritor>();
@@ -107,7 +108,7 @@ public class EventContainer
     }
 
     public string FormatText(string text){
-        return text.Replace("$charactername", this.Inheritor?.Name);
+        return text.Replace("$charactername", $"{this.Inheritor?.Name} {this.Inheritor?.Name}");
     }
 
     public void ChooseProposalOne(){
@@ -152,6 +153,7 @@ public class EventConditionContainer{
     public EventCondition Condition;
     public int ConditionValue;
     public bool ConditionBoolValue;
+    public Inheritor.InheritorTrait ConditionTrait;
     public InheritorCondition inheritorCondition;
     public bool? IsWomen(){
         bool? result;
