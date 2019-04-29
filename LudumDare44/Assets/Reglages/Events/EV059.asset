@@ -39,8 +39,10 @@ MonoBehaviour:
         for his crime, but cannot bring yourself to execute him. You don't understand
         where all this hatred came from.
       effects:
-      - Effect: 2
-        EffectValue: 3
+      - Effect: 4
+        EffectValue: 0
+      - Effect: 5
+        EffectValue: 1
     ProposalTwo:
       Choice: You ask him to take it back to where he found it, you wouldn't want
         to have allergies because of a pet.

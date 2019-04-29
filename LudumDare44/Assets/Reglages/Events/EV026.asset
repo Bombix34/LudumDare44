@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV026
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 4
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: You have been hearing rumours for some time now that two members of your
+      family are close. Maybe even too close.
+    ProposalOne:
+      Choice: You summon them to get to the bottom of it.
+      Response: Against all odds, they choose to claim their act, and seem to have
+        taken their courage in both hands to tell you that they love each other to
+        the end. In front of this statement, you have no choice but to deny them from
+        your family, even if you have little against them.
+      effects:
+      - Effect: 3
+        EffectValue: 2
+    ProposalTwo:
+      Choice: You don't take care of them, after all, they don't hurt anyone.
+      Response: A few weeks later, a scandal broke when a villager declared that he
+        had seen the two forbidden lovers fornicating through one of the house's windows.
+        Your reputation is damaged, but you still give the benefit of the doubt.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

@@ -24,10 +24,10 @@ MonoBehaviour:
         impaled himself on one of their spears. From now on, there is no need to worry
         about his fate.
       effects:
+      - Effect: 5
+        EffectValue: 1
       - Effect: 2
-        EffectValue: 0
-      - Effect: 0
-        EffectValue: 0
+        EffectValue: -15
     ProposalTwo:
       Choice: Devastated by the loss of a child, you decide to forgive him so as not
         to lose a second one. You're spreading rumors about the elder's strange disappearance
@@ -38,8 +38,8 @@ MonoBehaviour:
       effects:
       - Effect: 0
         EffectValue: -10
-      - Effect: 0
-        EffectValue: 0
+      - Effect: 5
+        EffectValue: 1
     ProposalSpecial:
       Choice: 
       Response: 

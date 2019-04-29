@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV024
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: 'As you pass the fortifications of the nearest town, you discover a scene
+      of public execution. Your gaze is for a short while on the condemned person
+      who cries out for injustice, then as you look more closely, you notice that
+      this is an old acquaintance of yours, but not the most friendly. '
+    ProposalOne:
+      Choice: 'You intercept the executioner before he does his job, and use your
+        influence to get him released. '
+      Response: 'The executioner is not easily convinced, but when the prisoner is
+        released, he recognizes you and thanks you on his knees. It offers you a fabulous
+        family pendant because without you, it would have been recovered by the executioner. '
+      effects:
+      - Effect: 0
+        EffectValue: -10
+      - Effect: 0
+        EffectValue: 1000
+    ProposalTwo:
+      Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
+      Response: As he takes one last look at the crowd, he sees you and begs you to
+        do something in the name of the "good old days" you may have spent together.
+        When his head is sharply cut off, the crowd's eyes are on you. You're not
+        very proud, but he got what he deserved.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

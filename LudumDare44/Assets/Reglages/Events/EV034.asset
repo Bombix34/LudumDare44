@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV034
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: An old friend tells you that he wants to come and spend a holiday in
+      your kingdom and asks for hospitality.
+    ProposalOne:
+      Choice: You ignore his request.
+      Response: A few days later, you learn that this friend, in front of your silence,
+        has chosen to spend his holidays a few leagues away, in the home of a rival
+        family, which has not let his chance pass. You are sure that they will not
+        fail to grumble at you.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalTwo:
+      Choice: You accept with pleasure, for the sake of the good old days.
+      Response: After a few weeks, you start to wonder if he will ever leave, or if
+        he has decided to be part of your family. One fine morning, you notice that
+        he has simply left, but not without leaving a letter for you. He explains
+        that he is actually a traveller and therefore has no point of landing. His
+        travels have taken him to faraway countries, so he has been able to create
+        a trade route to your city, and promises you spices and other wonders.
+      effects:
+      - Effect: 1
+        EffectValue: 1000
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

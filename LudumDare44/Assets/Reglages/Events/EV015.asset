@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV015
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions:
+    - Condition: 3
+      ConditionValue: 3000
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: During an alcoholic evening in a bar to be raved about with a stranger,
+      he invites you to his daughter's wedding the next day.
+    ProposalOne:
+      Choice: 'Completely drunk, you accept and go buy an expensive tiara to offer
+        the bride. '
+      Response: When you arrive at the ceremony, you realize that the unknown person
+        in question is none other than the king of the neighbouring kingdom. The latter,
+        delighted to see you keep your commitment, spends the day introducing you
+        to his closest friends.
+      effects:
+      - Effect: 1
+        EffectValue: -2000
+      - Effect: 0
+        EffectValue: 20
+    ProposalTwo:
+      Choice: You may be drunk, but you know the difference between a friend and a
+        man out of nowhere. There's no way you're damaging your reputation by officially
+        posting yourself with a stranger!
+      Response: The next day, you learn that one of the continent's most prominent
+        kings is marrying his daughter, and you decompose in front of your fireplace
+        understanding the immense opportunity you have just missed.
+      effects: []
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

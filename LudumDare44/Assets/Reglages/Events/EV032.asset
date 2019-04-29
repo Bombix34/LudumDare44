@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV032
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    Message: A very rich lord of a distant land meets your family, and immediately
+      decides to unite your two dynasties by the sacred bonds of marriage. He offers
+      you to marry $charactername. You barely know him, but while you are sitting
+      at a table next to him, he makes you very subtly understand that if you accept,
+      the reward will be up to the task.
+    ProposalOne:
+      Choice: Refuse! You are not going to exchange a family member for goods.
+      Response: Outraged, the Lord declares that you will hear from him again. You
+        then challenge him to a duel, and to your surprise, he accepts! He is actually
+        a great fencing master, and keeps you busy so fast that your family doesn't
+        even have time to be surprised...
+      effects:
+      - Effect: 4
+        EffectValue: 0
+    ProposalTwo:
+      Choice: Immediately exchange a cup of cervoise with them to celebrate the upcoming
+        wedding! The ambition to become an aristocrat makes you wander a little while
+        while you take a sip.
+      Response: A few days later, a messenger announces a delegation from the Lord.
+        This one is actually a formidable warlord. You understand this when you find
+        yourself in front of whole crates of weapons of all kinds. If you are not
+        served immediately, the rumour will spread that we will have to think about
+        it before insulting you from now on.
+      effects:
+      - Effect: 2
+        EffectValue: 0
+      - Effect: 0
+        EffectValue: 15
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

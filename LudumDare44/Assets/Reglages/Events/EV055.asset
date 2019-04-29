@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV055
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 3
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    Message: You have been hearing rumours for some time now that two members of your
+      family are very close. Maybe even too close.
+    ProposalOne:
+      Choice: You summon them to get to the bottom of it.
+      Response: While you were thinking about the worst, they reveal to you that they
+        both took a passion for politics. They were both working hard to try to sell
+        off a senior position in the local seigneury in order to impose their vision.
+        You take this opportunity to tell them to do so on your behalf, so that they
+        can strengthen your reputation.
+      effects:
+      - Effect: 0
+        EffectValue: 10
+    ProposalTwo:
+      Choice: You don't take care of them, after all, they don't hurt anyone.
+      Response: A few weeks later, you learn that your two relative ones are both
+        leaving to become advisors to a close lord. They seem determined to gain political
+        power, and you almost regret not helping them to be part of the project.
+      effects:
+      - Effect: 0
+        EffectValue: 5
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

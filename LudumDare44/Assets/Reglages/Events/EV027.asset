@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
-  m_Name: EV056
-  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  m_Name: EV027
+  m_EditorClassIdentifier: 
   ev:
     Conditions:
     - Condition: 1
-      ConditionValue: 0
+      ConditionValue: 3
       ConditionBoolValue: 0
-      ConditionTrait: 3
+      ConditionTrait: 0
       inheritorCondition: 0
     Message: 'You discover that $charactername is an integral part of the thieves''
       guild in its spare time. This information seemed obvious to you when you saw
@@ -27,21 +27,21 @@ MonoBehaviour:
       Choice: You use $charactername to create a relationship between your family
         and the Thief Guild. This will ensure that you do not suffer a burglary and
         you may even expect lucrative business.
-      Response: Rather reluctant to see his family universe mix with his secret universe,
-        $charactername categorically refuses. You are obviously not up to the task.
+      Response: 'First surprised, $charactername is quite happy to become an intermediary
+        between your family and the guild. This promises a fruitful collaboration! '
       effects:
       - Effect: 0
-        EffectValue: -10
+        EffectValue: 10
+      - Effect: 1
+        EffectValue: 1000
     ProposalTwo:
       Choice: You blackmail $charactername to pay you a percentage of what he earns
         every time he goes on a night expedition.
-      Response: He seems almost insulted, and does not hesitate for a second to do
-        the same for you. If you ask him for gold again, he will give you up to custody
-        by showing them clear evidence that you are actually the thief. You're very
-        embarrassed and so forget about this story.
+      Response: Dumbfounded that you could prove guilty of such low standards, $charactername
+        reluctantly accepts the market.
       effects:
       - Effect: 1
-        EffectValue: 0
+        EffectValue: 1500
     ProposalSpecial:
       Choice: 
       Response: 

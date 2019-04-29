@@ -10,15 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
-  m_Name: EV057
-  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  m_Name: EV028
+  m_EditorClassIdentifier: 
   ev:
-    Conditions:
-    - Condition: 1
-      ConditionValue: 0
-      ConditionBoolValue: 0
-      ConditionTrait: 3
-      inheritorCondition: 0
+    Conditions: []
     Message: It's been several weeks since you broke your leg. Tonight, for the first
       time, you plan to start your rehabilitation by walking to the tavern. The expedition
       is more ambitious than expected, and you arrive at the tavern early in the evening.
@@ -27,21 +22,21 @@ MonoBehaviour:
     ProposalOne:
       Choice: You accept, you tell yourself that it could help you return to your
         property in case of a problem.
-      Response: 'After hours of drinking, eating and laughing at the world around
-        you, the traveller offers to help you return home. On the way, the traveller
-        stops, and when you ask him why, he explains that he actually came to murder
-        you. Everyone will think you had a simple accident on the road. '
+      Response: This was your very last memory of the evening. You woke up two days
+        later in bed, being able to walk without any pain, as if your foot had never
+        been broken. In living memory, this is probably the strangest evening you
+        have ever experienced.
       effects:
-      - Effect: 4
-        EffectValue: 0
+      - Effect: 0
+        EffectValue: 10
     ProposalTwo:
-      Choice: You refuse, leaving drunk means a risk of injury again and you need
-        to be on your feet as soon as possible.
-      Response: You did well to leave in the middle of the day, the return was difficult,
-        but the last rays of the sun more than helped you.
+      Choice: You refuse, leave drunk means a risk of injury again and you need to
+        be on your feet as soon as possible.
+      Response: Your rehabilitation will ultimately be much slower than expected,
+        and the doctor's fees far exceed your expectations.
       effects:
-      - Effect: 1
-        EffectValue: -500
+      - Effect: 0
+        EffectValue: -1000
     ProposalSpecial:
       Choice: 
       Response: 

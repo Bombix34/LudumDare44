@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV049
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    Message: "As Christmas approaches, the priest comes knocking on your door to ask
+      for a contribution to the construction of the cr\xE8che. "
+    ProposalOne:
+      Choice: You are getting tired of giving money to a cult you don't even believe
+        in and that doesn't bring you anything. You donate the few coins in your pocket
+        and go back to your business without delay.
+      Response: Even if the amount is not large, the priest thanks you very sincerely
+        for your help. Finally, you say to yourself that this institution is not as
+        bad as you imagined. On the other hand, you can see that the construction
+        of nurseries is not their strong suit.
+      effects:
+      - Effect: 0
+        EffectValue: 0
+    ProposalTwo:
+      Choice: You love Christmas and directly propose to build the crib with your
+        own hands.
+      Response: General, the priest explains that it is their pleasure to do the crib,
+        and that they would prefer funds to help them. Despite everything, you choose
+        to make a crib that will be better than theirs, and the whole village will
+        traditionally begin to celebrate each year your rivalry with the church in
+        terms of crib construction.
+      effects:
+      - Effect: 0
+        EffectValue: 10
+      - Effect: 1
+        EffectValue: -500
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
-  m_Name: EV007
-  m_EditorClassIdentifier: 
+  m_Name: EV037
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
   ev:
     Conditions:
     - Condition: 1
-      ConditionValue: 6
+      ConditionValue: 4
       ConditionBoolValue: 0
       ConditionTrait: 0
-      inheritorCondition: 0
+      inheritorCondition: 3
     Message: While walking around the village market, you observe a beggar prowling
       around, looking sick. You don't have time to duck him and let him throw himself
       at you to beg for money. You push it away with a blow of the cuff, but when
@@ -26,19 +26,21 @@ MonoBehaviour:
     ProposalOne:
       Choice: 'You go home, disgusted, and do what is necessary by contacting your
         family to punish the beggar. '
-      Response: You manage to have the beggar executed in public. But a few weeks
-        later, you notice that part of the family has some of the symptoms of the
-        plague. You won't last very long in this condition.
+      Response: All those who were in contact with you after this event became seriously
+        ill and eventually healed. A long time later, it was found that none of these
+        people became ill, in any case. Probably witchcraft...
       effects:
-      - Effect: 4
-        EffectValue: 0
-      - Effect: 3
-        EffectValue: 3
+      - Effect: 0
+        EffectValue: 5
     ProposalTwo:
-      Choice: No one is there to judge you, you don't need to take such a risk.
-      Response: You go home, take a scroll large enough, and write in capital letter
-        "DO NOT ENTER", to stick it on the entrance of the cave.
-      effects: []
+      Choice: You take your annual bath much earlier than expected, and rinse your
+        body thoroughly with hot water.
+      Response: Several days later, you are still infected, and it is very painful
+        for you. You call the family doctor Doctis Imo who diagnoses you with a plague
+        and extorts a large amount of gold from you.
+      effects:
+      - Effect: 1
+        EffectValue: -10
     ProposalSpecial:
       Choice: 
       Response: 
