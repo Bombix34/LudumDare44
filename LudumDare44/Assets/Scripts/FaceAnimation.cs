@@ -39,7 +39,6 @@ public class FaceAnimation : MonoBehaviour
 
     public void StopAnim()
     {
-        print("arg");
         isStop = true;
         breatheAnim.SetBool("Breathe", false);
         breatheAnim.speed=0f;

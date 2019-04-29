@@ -29,12 +29,16 @@ public class EventEffectContainer{
         COST_OR_GAIN_INFLUENCE_POINTS,
         COST_OR_GAIN_GOLD,
         INHERITOR_DEATH,
-        INHERITOR_RANDOM_DEATH
+        INHERITOR_RANDOM_DEATH,
+        KING_DEATH,
+        NEXT_KING_DEATH
     }
     public ProposalEffect Effect;
     public int EffectValue;
 
     public void DoEffect(EffectParams effectParams){
+        
+        var inheritors = new List<Inheritor>();
         switch (this.Effect)
         {
             case(ProposalEffect.COST_OR_GAIN_INFLUENCE_POINTS):
@@ -47,7 +51,6 @@ public class EventEffectContainer{
                 effectParams.Inheritor?.Kill();
                 break;
             case(ProposalEffect.INHERITOR_RANDOM_DEATH):
-                var inheritors = new List<Inheritor>();
                 GameManager.Instance.FamilyMaster.FindAll(ref inheritors);
                 inheritors = inheritors.OrderBy(x => Guid.NewGuid()).ToList();
                 for (int i = 0; i < EffectValue && i < inheritors.Count; i++)
@@ -55,7 +58,15 @@ public class EventEffectContainer{
                     inheritors[i].Kill();   
                 }
                 break;
-            
+            case(ProposalEffect.KING_DEATH):
+                GameManager.Instance.FamilyMaster.Kill();
+                break;
+            case(ProposalEffect.NEXT_KING_DEATH):
+                GameManager.Instance.FamilyMaster.FindAll(ref inheritors);
+                if(inheritors.Count > EffectValue - 1){
+                    inheritors.ElementAt(EffectValue - 1).Kill();
+                }
+                break;
             default:
                 break;
         }
