@@ -88,12 +88,12 @@ public class CoupleManager : MonoBehaviour
 
     public void OnClickInfoFirstCharacter()
     {
-        print("first");
+        InheritorUI.Instance.CreateView(this.firstCharacter.CharacterInfos);
     }
 
     public void OnClickInfoSecondCharacter()
     {
-        print("second");
+        InheritorUI.Instance.CreateView(this.secondCharacter.CharacterInfos);
     }
 
     public enum CoupleState

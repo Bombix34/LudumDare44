@@ -21,6 +21,9 @@ public class DescentContainer : Singleton<DescentContainer>
         this.InheritorsView = new Dictionary<Inheritor, GameObject>();
         this.Origin = new Inheritor(){
             Name = "Joe",
+            FamilyName = "URGL",
+            Age = 43,
+            Trait = Inheritor.InheritorTrait.NONE,
             isWomen = false,
             IsAlive = true,
             Spouse = null,
@@ -29,6 +32,9 @@ public class DescentContainer : Singleton<DescentContainer>
         this.Origin.Spouse = new Inheritor()
         {
             Name = "Wife",
+            FamilyName = "URGL",
+            Age = 38,
+            Trait = Inheritor.InheritorTrait.LÂCHE,
             isWomen = true,
             IsAlive = true,
             Parent = null,
@@ -48,6 +54,9 @@ public class DescentContainer : Singleton<DescentContainer>
             this.Origin.Childrens.Add(            new Inheritor()
         {
             Name = "Child",
+            FamilyName = "URGL",
+            Age = 38,
+            Trait = Inheritor.InheritorTrait.ATTARDÉ,
             isWomen = false,
             IsAlive = true,
             Parent = this.Origin,
