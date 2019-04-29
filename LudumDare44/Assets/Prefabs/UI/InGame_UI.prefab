@@ -2414,6 +2414,7 @@ MonoBehaviour:
   pretendantUI: {fileID: 2134046472}
   portraitConcerned: {fileID: 4359814773953740164}
   validButton: {fileID: 7183192679557368474}
+  poolCharacter: {fileID: 11400000, guid: 27e20b19e3feb4399ab13dead9616726, type: 2}
 --- !u!1 &3436294732084824948
 GameObject:
   m_ObjectHideFlags: 0

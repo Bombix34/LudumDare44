@@ -36,6 +36,9 @@ public class Inheritor
     public Inheritor Parent { get; set; }
     public List<Inheritor> Childrens { get; set; }
 
+    public int MonnaieValue { get; set; }
+    public int InfluenceValue { get; set; }
+
    //public List<SpriteRenderer> RendererFaces { get; set; }
 
     public List<DuoGraphicElement> pairSpriteColor; //KEY = SPRITE - VALUE = COLOR
@@ -52,6 +55,8 @@ public class Inheritor
         Childrens = new List<Inheritor>();
         pairSpriteColor = new List<DuoGraphicElement>();
         Attirance = (int)Random.Range(1f, 4f);
+        MonnaieValue = (int)Random.Range(10f, 100F);
+        InfluenceValue = (int)Random.Range(1f, 5f);
     }
 
     public void UpdateBlazon(){

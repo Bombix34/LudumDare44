@@ -17,6 +17,8 @@ public class WeddingUI : Singleton<WeddingUI>
     public Inheritor inheritor;
     public Inheritor choice;
 
+    public CharacterPool poolCharacter;
+
     void Start()
     {
         weddingPanel.SetActive(false);
@@ -33,7 +35,7 @@ public class WeddingUI : Singleton<WeddingUI>
 
         portraitConcerned.SetuptFaceUI(concerned);
 
-        pretendantUI.LaunchPretendantUI(pretendants, concerned.Attirance);
+        pretendantUI.LaunchPretendantUI(pretendants, concerned);
     }
 
     public void LaunchValidation(GameObject pretendantChoose)
@@ -76,12 +78,45 @@ public class WeddingUI : Singleton<WeddingUI>
 
             DescentContainer.Instance.UpdateView();
 
-            print(inheritor.Spouse.Manager);
-
             inheritor.Spouse.Manager.Face.InitWithValue();
+
+            UpdateValue(inheritor, choice);
 
             ResetWedding();
             ui.gameObject.SetActive(false);
         }
+    }
+
+    public void UpdateValue(Inheritor concerned, Inheritor pretendant)
+    {
+        bool isStrongSex = (concerned.isWomen == GameManager.Instance.IsWomenStrongSex);
+        int monneyVal = pretendant.MonnaieValue + concerned.MonnaieValue;
+        int influenceVal = pretendant.InfluenceValue + concerned.InfluenceValue;
+        int affinityVal = Mathf.FloorToInt((pretendant.Attirance + concerned.Attirance) / 2);
+        if (isStrongSex)
+        {
+            influenceVal *= -1;
+        }
+        else
+        {
+            monneyVal *= -1;
+        }
+        GameManager.Instance.GoldCoins += monneyVal;
+        GameManager.Instance.InfluencePoints += influenceVal;
+        if (isStrongSex)
+            Createchildren(concerned, affinityVal);
+    }
+
+    public void Createchildren(Inheritor concerned,int val)
+    {
+        for(int i=0;i<val;i++)
+        {
+           concerned.Childrens.Add(poolCharacter.GetCharacterWithoutFace(Random.value > 0.5f));
+           concerned.Childrens[i].FamilyName = concerned.FamilyName;
+            concerned.Childrens[i].NotBornYet = true;
+            concerned.Childrens[i].IsAlive = true;
+            concerned.Childrens[i].Age = (int)Random.Range(1f,7f);
+        }
+        DescentContainer.Instance.UpdateView();
     }
 }

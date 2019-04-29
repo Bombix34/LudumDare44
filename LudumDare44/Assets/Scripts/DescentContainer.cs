@@ -29,49 +29,14 @@ public class DescentContainer : Singleton<DescentContainer>
         };
         this.Origin.UpdateBlazon();
 
-        this.Origin.Spouse = new Inheritor()
-        {
-            Name = "Wife",
-            FamilyName = "URGL",
-            Age = 38,
-            Trait = Inheritor.InheritorTrait.COWARD,
-            isWomen = true,
-            IsAlive = true,
-            Parent = null,
-            Spouse = this.Origin
-        };
-        this.Origin.Spouse.UpdateBlazon();
-
         GameManager.Instance.FamilyMaster = this.Origin;
 
         this.UpdateView();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
-        {
-            var children = new Inheritor()
-            {
-                Name = "Child",
-                FamilyName = "URGL",
-                Age = 38,
-                Trait = Inheritor.InheritorTrait.DUMB,
-                isWomen = false,
-                IsAlive = true,
-                Parent = this.Origin,
-                NotBornYet = false,
-            };
-                
-            this.Origin.Spouse.UpdateBlazon();
-            this.Origin.Childrens.Add(children);          
-            this.UpdateView();
-            foreach (var item in this.InheritorsView.Values)
-            {
-            //    item.GetComponent<CoupleManager>().UpdateCoupleInterface();
-            }
-        }
+
     }
 
     public void UpdateView()

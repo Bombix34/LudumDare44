@@ -22,8 +22,8 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        //debug
         ChangeState(new WeddingState(this.gameObject));
+        //debug
         IsWomenStrongSex = false;
     }
 
@@ -39,6 +39,11 @@ public class GameManager : Singleton<GameManager>
         {
             InheritorUI.Instance.CreateView(this.FamilyMaster);
         }
+    }
+
+    public void NextTurn()
+    {
+        ChangeState(new WeddingState(this.gameObject));
     }
 
     public void ChangeState(State newState)
