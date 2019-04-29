@@ -32,14 +32,10 @@ public class EventContainer
                     GameManager.Instance.FamilyMaster.FindAll(ref newInheritors, false, true, true, condition.IsWomen());
                     break;
                 case(EventConditionContainer.EventCondition.HAVE_MORE_GOLD_THAN):
-                    if(true){
-                        specialConditionSuccess = true;
-                    }
+                    specialConditionSuccess = GameManager.Instance.GoldCoins > condition.ConditionValue;
                     break;
                 case(EventConditionContainer.EventCondition.HAVE_MORE_INFLUENCE_THAN):
-                    if(true){
-                        specialConditionSuccess = true;
-                    }
+                    specialConditionSuccess = GameManager.Instance.InfluencePoints > condition.ConditionValue;
                     break;
                 case(EventConditionContainer.EventCondition.CHILD_AT_POSITION):
                     var isWomen = condition.IsWomen();
@@ -76,7 +72,49 @@ public class EventContainer
             }
         }
 
-        return inheritors.Count > 0;
+        if(inheritors == null){
+            return true;
+        } 
+        if(inheritors.Count > 0){
+            this.Inheritor = inheritors.OrderBy(x => Guid.NewGuid()).First();
+            return true;
+        }   else
+        {
+            this.Inheritor = null;
+            return false;
+        }
+    }
+
+    public EffectParams GetEffectParams(){
+        return new EffectParams(){
+            Inheritor = this.Inheritor
+        };
+    }
+
+    public string GetMessage(){
+        return FormatText(this.Message);
+    }
+
+    public string FormatText(string text){
+        return text.Replace("$charactername", this.Inheritor?.Name);
+    }
+
+    public void ChooseProposalOne(){
+        this.ProposalOne.DoEffects(new EffectParams(){
+            Inheritor = this.Inheritor
+        });
+    }
+
+    public void ChooseProposalTwo(){
+        this.ProposalTwo.DoEffects(new EffectParams(){
+            Inheritor = this.Inheritor
+        });
+    }
+
+    public void ChooseProposalSpecial(){
+        this.ProposalSpecial.DoEffects(new EffectParams(){
+            Inheritor = this.Inheritor
+        });
     }
 }
 [Serializable]

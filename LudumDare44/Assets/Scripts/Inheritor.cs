@@ -15,6 +15,10 @@ public class Inheritor
 
     public List<SpriteRenderer> RendererFaces { get; set; }
 
+    public void Kill(){
+        this.IsAlive = false;
+    }
+
     public Inheritor()
     {
         Childrens = new List<Inheritor>();

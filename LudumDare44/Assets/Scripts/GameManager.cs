@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -21,11 +22,21 @@ public class GameManager : Singleton<GameManager>
     {
         //debug
         IsWomenStrongSex = false;
+        this.ChooseEvent();
     }
 
     void Update()
     {
-        
+        print(GoldCoins);
+    }
+
+    public void ChooseEvent(){
+        var events = this.GetListAvailableEvents();
+        if(events.Count == 0){
+            return;
+        }
+        var choosenOne = events.OrderBy(x => Guid.NewGuid()).First();
+        EventUI.Instance.CreateView(choosenOne);
     }
 
     private List<EventContainer> GetListAvailableEvents(){
