@@ -15,7 +15,6 @@ public class GameManager : Singleton<GameManager>
     public int GoldCoins { get; set; }
     public int InfluencePoints { get; set; }
     public Inheritor FamilyMaster { get; set; }
-    public bool ManIsStrongSex { get; set; }
     public State CurrentState { get; set; }
     public bool IsWomenStrongSex { get; set; }
     public EventsScriptableObject EventsScriptableObject;
@@ -23,7 +22,6 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         //debug
-        ManIsStrongSex = true;
         ChangeState(new WeddingState(this.gameObject));
         IsWomenStrongSex = false;
     }
