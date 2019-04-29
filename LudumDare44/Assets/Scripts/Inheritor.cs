@@ -13,12 +13,16 @@ public class Inheritor
     public Inheritor Parent { get; set; }
     public List<Inheritor> Childrens { get; set; }
 
-    public List<SpriteRenderer> RendererFaces { get; set; }
+   //public List<SpriteRenderer> RendererFaces { get; set; }
+
+    public List<DuoGraphicElement> pairSpriteColor; //KEY = SPRITE - VALUE = COLOR
+    public CharacterManager Manager { get; set; }
 
     public Inheritor()
     {
+        IsAlive = true;
         Childrens = new List<Inheritor>();
-        RendererFaces = new List<SpriteRenderer>();
+        pairSpriteColor = new List<DuoGraphicElement>();
     }
 
     public List<Inheritor> FindAllLegitimateChild(ref List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false){
@@ -46,5 +50,17 @@ public class Inheritor
 
 
         return inheritors;
+    }
+}
+
+public class DuoGraphicElement
+{
+    public Sprite Sprite { get; set; }
+    public Color ElementColor { get; set; }
+
+    public DuoGraphicElement(Sprite newSprite, Color curcolor)
+    {
+        Sprite = newSprite;
+        ElementColor = curcolor;
     }
 }

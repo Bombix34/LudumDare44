@@ -30,7 +30,7 @@ public class DescentContainer : Singleton<DescentContainer>
         {
             Name = "Wife",
             isWomen = true,
-            IsAlive = false,
+            IsAlive = true,
             Parent = null,
             Spouse = this.Origin
         };
@@ -43,16 +43,20 @@ public class DescentContainer : Singleton<DescentContainer>
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("r"))
         {
-            this.Origin.Childrens.Add(            new Inheritor()
-        {
-            Name = "Child",
-            isWomen = true,
-            IsAlive = false,
-            Parent = this.Origin,
-        });
+            this.Origin.Childrens.Add(new Inheritor()
+            {
+                Name = "Child",
+                isWomen = true,
+                IsAlive = true,
+                Parent = this.Origin,
+            });
             this.UpdateView();
+            foreach (var item in this.InheritorsView.Values)
+            {
+                item.GetComponent<CoupleManager>().UpdateCoupleInterface();
+            }
         }
     }
 
@@ -153,13 +157,13 @@ public class DescentContainer : Singleton<DescentContainer>
 
                 var inheritorCharacterManager = inheritorView.GetComponent<CharacterManager>();
                 inheritorCharacterManager.CharacterInfos = inheritor;
-                inheritorCharacterManager.Face.InitSpriteRendererAccess(inheritorCharacterManager);
+                inheritorCharacterManager.Init(inheritor);
                 
                 if(inheritor.Parent == null){
-                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace(inheritor.isWomen);
+                    inheritor.Manager.Face.InitRandomFace(inheritor.isWomen);
                 }   else
                 {
-                    inheritor.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitHeritanceFace();
+                    inheritor.Manager.Face.InitHeritanceFace();
                 }
             }
 
@@ -170,8 +174,8 @@ public class DescentContainer : Singleton<DescentContainer>
 
                 if(inheritorSpouseCharacterManager.CharacterInfos == null){
                     inheritorSpouseCharacterManager.CharacterInfos = inheritor.Spouse;
-                    inheritorSpouseCharacterManager.Face.InitSpriteRendererAccess(inheritorSpouseCharacterManager);
-                    inheritor.Spouse.RendererFaces[0].transform.parent.GetComponent<FaceManager>().InitRandomFace(inheritorSpouseCharacterManager.CharacterInfos.isWomen);
+                    inheritorSpouseCharacterManager.Init(inheritor.Spouse);
+                    inheritorSpouseCharacterManager.Face.InitRandomFace(inheritorSpouseCharacterManager.CharacterInfos.isWomen);
                 }            
             }
 
