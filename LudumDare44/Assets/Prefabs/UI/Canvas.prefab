@@ -1243,7 +1243,7 @@ MonoBehaviour:
   ProposalTwoText: {fileID: 6459985829446535493}
   ProposalSpecialButton: {fileID: 3800727232569901616}
   ProposalSpecialText: {fileID: 753294268437227560}
-  OkButton: {fileID: 0}
+  OkButton: {fileID: 4820012279731205134}
 --- !u!1 &3436294732037054235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,8 +2306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Refuser ! Vous n'allez pas \xE9changer un membre de votre famille contre
-    des marchandises."
+  m_Text: Ok
 --- !u!1 &8381556019408889421
 GameObject:
   m_ObjectHideFlags: 0
