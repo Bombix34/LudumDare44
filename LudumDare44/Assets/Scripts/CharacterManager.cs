@@ -17,7 +17,6 @@ public class CharacterManager : MonoBehaviour
         face = GetComponentInChildren<FaceManager>();
         Blazon2d = GetComponentsInChildren<Blazon2d>().Where(q => q.transform.parent.parent == this.transform).First();
         face.Manager = this;
-        print(Blazon2d.transform.parent.parent.gameObject);
     }
 
     public void Init(Inheritor concerned)
