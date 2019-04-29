@@ -15,6 +15,8 @@ public class WeddingPretendantUI : MonoBehaviour
     public Text influence;
     public Text fertility;
 
+    public PortraitUI portrait;
+
     public void CreateView(Inheritor pretendant, int inheritorFertility)
     {
         this.Container.SetActive(true);
@@ -26,6 +28,8 @@ public class WeddingPretendantUI : MonoBehaviour
         this.price.text = $"Monney : {10}";
         this.influence.text = $"Influence : {10}";
         this.fertility.text = $"Affinity : {inheritorFertility}";
+
+        portrait.SetuptFaceUI(pretendant);
 
         //Mathf.floor
     }

@@ -9,6 +9,8 @@ public class WeddingUI : Singleton<WeddingUI>
 
     public PretendantManager pretendantUI;
 
+    public PortraitUI portraitConcerned;
+
     void Start()
     {
         weddingPanel.SetActive(false);
@@ -19,6 +21,11 @@ public class WeddingUI : Singleton<WeddingUI>
     {
         weddingPanel.SetActive(isAlive);
         ui.CreateView(concerned);
+
+
+        portraitConcerned.SetuptFaceUI(concerned);
+
+
         pretendantUI.LaunchPretendantUI(pretendants, concerned.Attirance);
     }
 

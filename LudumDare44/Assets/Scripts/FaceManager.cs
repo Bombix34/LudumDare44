@@ -232,7 +232,7 @@ public class FaceManager : MonoBehaviour
         { 
             face.color = dadFace[3].ElementColor;
         }
-        
+        manager.CharacterInfos.pairSpriteColor.Add(new DuoGraphicElement(face.sprite, face.color));
         //YEUX_______________________________
         rand = (int)Random.Range(0f, 99f);
         if (isWoman)
