@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV043
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 2
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: 'One evening, as you enter your room, a sharp pain runs through your
+      heart. Before you can do anything, you find yourself on the ground, unable to
+      breathe regularly. '
+    ProposalOne:
+      Choice: You cry out for help for your life, crying, and screaming at death.
+      Response: A few hours later, you wake up shaking on your bed. You will later
+        learn that you vomited and defecated multiple times on the doctor in your
+        delirium, and that the doctor asked for an increase in his fees as a result.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+      - Effect: 1
+        EffectValue: -1000
+    ProposalTwo:
+      Choice: You hope someone will pass through there soon, because it's unlikely
+        you'll be alive in an hour.
+      Response: Luckily, a member of your family passed by your room, and he found
+        you bent over backwards as you tried to remain silent. He absolutely did not
+        understand why you wanted to hide while you were dying, and could not save
+        you in time.
+      effects:
+      - Effect: 4
+        EffectValue: 0
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

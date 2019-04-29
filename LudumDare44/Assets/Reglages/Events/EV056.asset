@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV056
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    Message: 'You discover that $charactername is an integral part of the thieves''
+      guild in its spare time. This information seemed obvious to you when you saw
+      him leave at late hours at night, hooded, then return with his pockets full
+      of gold before dawn. '
+    ProposalOne:
+      Choice: You use $charactername to create a relationship between your family
+        and the Thief Guild. This will ensure that you do not suffer a burglary and
+        you may even expect lucrative business.
+      Response: Rather reluctant to see his family universe mix with his secret universe,
+        $charactername categorically refuses. You are obviously not up to the task.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalTwo:
+      Choice: You blackmail $charactername to pay you a percentage of what he earns
+        every time he goes on a night expedition.
+      Response: He seems almost insulted, and does not hesitate for a second to do
+        the same for you. If you ask him for gold again, he will give you up to custody
+        by showing them clear evidence that you are actually the thief. You're very
+        embarrassed and so forget about this story.
+      effects:
+      - Effect: 1
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

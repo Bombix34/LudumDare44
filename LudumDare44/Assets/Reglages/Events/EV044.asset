@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV044
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: You receive a letter from a prominent family in a nearby town, who proposes
+      to organize a banquet.
+    ProposalOne:
+      Choice: 'You agree to participate, and order your servants to prepare your house''s
+        specialty: Mushroom Pie.'
+      Response: You didn't think you were having such a good time, while everyone
+        is enjoying your pie. You return home covered with a glory you didn't even
+        know existed.
+      effects:
+      - Effect: 0
+        EffectValue: 10
+    ProposalTwo:
+      Choice: You refuse! There is no way you can be seen at a party as rudimentary
+        as theirs, and you send them a letter to make them understand that it is useless
+        to invite you back.
+      Response: In the general misunderstanding, you are told that there are no worries,
+        and that it was a simple proposal. In the days to come, you will be laughed
+        at somewhat, parodying your exaggerated reaction.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

@@ -17,11 +17,19 @@ public class PretendantManager : MonoBehaviour
         
     }
 
-    public void LaunchPretendantUI(List<Inheritor> pretendants,int inheritorAttirance)
+    public void LaunchPretendantUI(List<Inheritor> pretendants,Inheritor concerned)
     {
         for(int i = 0; i < pretendants.Count;i++)
         {
-            pretendantsUI[i].CreateView(pretendants[i],inheritorAttirance);
+            pretendantsUI[i].CreateView(pretendants[i],concerned);
+        }
+    }
+
+    public void ResetPretendantColors()
+    {
+        foreach(var item in pretendantsUI)
+        {
+            item.gameObject.GetComponent<Image>().color = Color.white;
         }
     }
 }

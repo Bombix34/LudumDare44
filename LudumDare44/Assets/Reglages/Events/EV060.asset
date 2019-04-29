@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
-  m_Name: 060
+  m_Name: EV060
   m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
   ev:
     Conditions:
@@ -20,7 +20,7 @@ MonoBehaviour:
       ConditionTrait: 3
       inheritorCondition: 0
     - Condition: 1
-      ConditionValue: 2
+      ConditionValue: 6
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
@@ -33,10 +33,12 @@ MonoBehaviour:
         through the home.
       effects:
       - Effect: 3
-        EffectValue: 0
+        EffectValue: 3
     ProposalTwo:
-      Choice: 
-      Response: 
+      Choice: You ask him to take it back to where he found it, you wouldn't want
+        to have allergies because of a pet.
+      Response: $charactername insists and then, in front of your impassivity, sadly
+        returns to give his new friend his freedom.
       effects: []
     ProposalSpecial:
       Choice: 

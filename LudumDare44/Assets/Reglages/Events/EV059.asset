@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV059
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 2
+      ConditionValue: 3
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 3
+    - Condition: 5
+      ConditionValue: 3
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: 'You notice that at the moment, your eldest and youngest children are
+      very often in conflict. You don''t understand where this hatred comes from,
+      but they seem to blame themselves more for their wrongs than if they were perfect
+      rivals. '
+    ProposalOne:
+      Choice: You decide to conduct your investigation, perhaps by understanding the
+        cause of their conflict, you could help them get along?
+      Response: Despite your research, you are unable to understand the reasons for
+        their conflicts. One fine morning you discover the body of your elder, your
+        heir lying in your property. Your youngest child then breaks down in tears
+        explaining that he did not want to do so, but that $charactername, your youngest
+        child, clearly suggested that he should do so. You then deny $charactername
+        for his crime, but cannot bring yourself to execute him. You don't understand
+        where all this hatred came from.
+      effects:
+      - Effect: 4
+        EffectValue: 0
+      - Effect: 5
+        EffectValue: 1
+    ProposalTwo:
+      Choice: You ask him to take it back to where he found it, you wouldn't want
+        to have allergies because of a pet.
+      Response: $charactername insists and then, in front of your impassivity, sadly
+        returns to give his new friend his freedom.
+      effects: []
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

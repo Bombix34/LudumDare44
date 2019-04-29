@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV045
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 3
+      ConditionValue: 3000
+      ConditionBoolValue: 0
+      ConditionTrait: 5
+      inheritorCondition: 0
+    - Condition: 6
+      ConditionValue: 4000
+      ConditionBoolValue: 0
+      ConditionTrait: 15
+      inheritorCondition: 0
+    Message: During an alcoholic evening in a bar to be raved about with a stranger,
+      he invites you to his daughter's wedding the next day.
+    ProposalOne:
+      Choice: 'With the help of alcohol, you promise him all the wonders for his daughter.
+        You are comfortable with money right now, and you are as happy as he is. '
+      Response: As you began to regret your decision the day before at the altar of
+        the stranger's daughter, the latter, more than touched by your gesture, announces
+        to everyone that his family to come, and his wealth will now be your vassals,
+        and you recognize him as such.
+      effects:
+      - Effect: 1
+        EffectValue: 1000
+      - Effect: 0
+        EffectValue: 15
+    ProposalTwo:
+      Choice: You may be drunk, but you know the difference between a friend and a
+        man out of nowhere. There's no way you're damaging your reputation by officially
+        posting yourself with a stranger!
+      Response: Upset of such a turn of events, the stranger insults you copiously,
+        and you return the favor. The scene is not particularly beautiful to see,
+        and hearing it told by outsiders is all the more shameful.
+      effects:
+      - Effect: 4
+        EffectValue: 0
+      - Effect: 4
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

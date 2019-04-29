@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV042
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 12
+      inheritorCondition: 0
+    Message: 'You learn from a villager that $charactername has been insulted by a
+      loser thirsty man many times. '
+    ProposalOne:
+      Choice: 'You organize yourself to have the culprit caught by your men, and make
+        him fully available to $charactername. '
+      Response: At the discretion of $charactername, you let him talk to himself alone.
+        You'll never know how he did it, but $charactername now became adored by a
+        large part of the villagers.
+      effects:
+      - Effect: 0
+        EffectValue: 20
+    ProposalTwo:
+      Choice: You ignore the remark, he's just a peasant.
+      Response: $charactername later learned of the affront made against him, and
+        while you feared an unnecessary vendetta, he offered him a full purse to the
+        drunk so that he could get out of begging. You have lost money, but it seems
+        that $charactername is now considered the greatest representative of justice
+        in the area.
+      effects:
+      - Effect: 1
+        EffectValue: -300
+      - Effect: 0
+        EffectValue: 15
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
