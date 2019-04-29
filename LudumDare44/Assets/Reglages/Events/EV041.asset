@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV041
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 10
+      inheritorCondition: 0
+    Message: One fine morning, $charactername comes to you to share with you his desire
+      to join the national war, to cover your house with glory.
+    ProposalOne:
+      Choice: You let him know that you are very proud, and that you totally approve
+        of him! You give him enough money so that he can make the trip and buy himself
+        armor.
+      Response: After more than two years, you still haven't seen $charactername again.
+        You are convinced that he is now dead and buried and that no one has ever
+        heard of your family. However, a few days later, you receive a letter telling
+        you that $charactername was adoubated at the royal court. It still proudly
+        bears your name, and covers you with more glory than you could have imagined.
+      effects:
+      - Effect: 1
+        EffectValue: -1000
+      - Effect: 0
+        EffectValue: 20
+    ProposalTwo:
+      Choice: You refuse to let him abandon his family and pretend that you need him
+        for domestic tasks.
+      Response: $charactername then offers you an agreed solution, he would be trained
+        in weapons, but would stay to protect your family, thus covering your family's
+        glory to a much lesser extent.
+      effects:
+      - Effect: 0
+        EffectValue: 5
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

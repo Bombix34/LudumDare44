@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV035
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: As you go out one night in the village, a group of young people at the
+      door of a dark house call out to you. They insist heavily that you join them
+      inside to spend the evening with them. On closer inspection, many of them are
+      partially naked.
+    ProposalOne:
+      Choice: 'Accept, no one will ever know, and you really need to "relax". '
+      Response: 'You wake up the next day, in the middle of tangled bodies. You discreetly
+        leave the house and go home without saying anything to your half, with a shared
+        feeling. It is only a few weeks later that you are punished by fate: Your
+        genitals have a funny color and you will have to be very discreet about it.'
+      effects:
+      - Effect: 0
+        EffectValue: 0
+    ProposalTwo:
+      Choice: 'Refuse, you are not on that side, and you will not succumb to temptation
+        today. '
+      Response: 'As if to provoke you, young people suddenly surround you and beg
+        you to join them. You dismiss them all, then go back to your business. A little
+        later, once you get home, you notice that your scholarship is missing... '
+      effects:
+      - Effect: 1
+        EffectValue: -1000
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

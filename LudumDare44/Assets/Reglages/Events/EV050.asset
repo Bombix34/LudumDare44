@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV050
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 0
+    Message: A very influential family, and much richer than yours, sends you a letter
+      proposing that you take a member of your family as a servant, in exchange for
+      a large amount of gold.
+    ProposalOne:
+      Choice: You consider hiring assassins for a few seconds, then you remember that
+        your finances are at their lowest. So you change your mind, and don't answer
+        anything.
+      Response: Noting your silence and cruelly wanting to have fun with your financial
+        situation again, the family contacts you again to ask if you wanted to ask
+        for alms. Shame covers you when you still can't do anything.
+      effects:
+      - Effect: 0
+        EffectValue: -15
+    ProposalTwo:
+      Choice: In return, you answer them that you are making them exactly the same
+        offer, with all the irony of the world. But you hope they won't accept, because
+        you couldn't pay.
+      Response: Your answer did not have any more at all to the family who first killed
+        themselves for a few days, then recruited a pair of bandits to burn down your
+        house. Some of it may have been saved, but you've rarely been so hurt.
+      effects:
+      - Effect: 1
+        EffectValue: -10000
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

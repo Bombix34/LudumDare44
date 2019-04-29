@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV053
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 3
+      inheritorCondition: 3
+    Message: 'As you pass the fortifications of the nearest town, you discover a scene
+      of public execution. Your gaze is for a short while on the condemned person
+      who cries out for injustice, then as you look more closely, you notice that
+      this is an old acquaintance of yours, but not the most friendly. '
+    ProposalOne:
+      Choice: 'You intercept the executioner before he does his job, and use your
+        influence to get him released. '
+      Response: The executioner seems determined not to listen to you, and hastens
+        to finish the work he started. It allows you to step up to the podium to make
+        a wonderful plea for global justice and the inhuman treatment that some people
+        must endure, a speech that will make him talk about it in the future.
+      effects:
+      - Effect: 1
+        EffectValue: 10
+    ProposalTwo:
+      Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
+      Response: He then sees you as he looks subtly at the crowd. He seems to want
+        to ask you for help, then change his mind. He probably remembered all the
+        bad times he had with you. It's certainly a horrible way to die...
+      effects:
+      - Effect: 0
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

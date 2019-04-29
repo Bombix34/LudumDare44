@@ -32,8 +32,8 @@ MonoBehaviour:
         stops, and when you ask him why, he explains that he actually came to murder
         you. Everyone will think you had a simple accident on the road. '
       effects:
-      - Effect: 1
-        EffectValue: -500
+      - Effect: 4
+        EffectValue: 0
     ProposalTwo:
       Choice: You refuse, leaving drunk means a risk of injury again and you need
         to be on your feet as soon as possible.

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV036
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 1
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: On a sunny day, you go to your country property to garden. As you seek
+      to dig the ground, you notice a reinforcement in the nearest cliff that is also
+      on your property. You hesitate to enter the cave.
+    ProposalOne:
+      Choice: Take your courage with both hands, and plunge straight into the darkness.
+      Response: A little disappointed, you don't find much wealth there. But there
+        is still a huge cavity, miraculously illuminated by a tiny ray of sunlight
+        filtering through the granite, and reflecting on the flowing walls. The scene
+        is sublime, and of course you plan to make it profitable, by spreading the
+        rumor of a curiosity on your territory.
+      effects:
+      - Effect: 0
+        EffectValue: 5
+      - Effect: 1
+        EffectValue: 500
+    ProposalTwo:
+      Choice: You go home, take a scroll large enough, and write in capital letter
+        "DO NOT ENTER", to stick it on the entrance of the cave.
+      Response: The sign eventually attracted the children from the nearby village
+        who ventured there. One of them one day slipped on the wet walls, and the
+        parents blame you. You tell them they can only blame themselves, but your
+        reputation still takes a hit.
+      effects:
+      - Effect: 0
+        EffectValue: -10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

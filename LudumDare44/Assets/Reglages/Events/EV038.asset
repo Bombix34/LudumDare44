@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV038
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 1
+      inheritorCondition: 0
+    - Condition: 2
+      ConditionValue: 2
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 3
+    - Condition: 5
+      ConditionValue: 2
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
+    Message: After years in the shadow of his eldest son eating his brake, $charactername
+      succumbs to his sick jealousy. You find it above your heir's mutilated corpse,
+      with a knife in hand.
+    ProposalOne:
+      Choice: You scream in pain at the sight of the flesh of your inert flesh before
+        you, and you have the traitor arrested by your personal guard.
+      Response: Suddenly, something changes in the look of $charactername, you've
+        never seen it so disturbed before. When the guards arrived to control him,
+        he moved like a snake in the room and managed to assassinate the two guards
+        without any difficulty. He then disappears into the shadow of the night.
+      effects:
+      - Effect: 5
+        EffectValue: 1
+      - Effect: 2
+        EffectValue: 0
+    ProposalTwo:
+      Choice: Tell him that you understand, but have no choice but to deny him and
+        exclude him from the family.
+      Response: He suddenly seems much paler. He had not considered this possibility
+        at all. However, he is completely trapped, and for a few days, he leaves on
+        his own, not without crying.
+      effects:
+      - Effect: 4
+        EffectValue: 0
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []

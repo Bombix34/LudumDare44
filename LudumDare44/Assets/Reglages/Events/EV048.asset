@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV048
+  m_EditorClassIdentifier: Assembly-CSharp::EventScriptableObject
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 15
+      inheritorCondition: 0
+    Message: At a mass in which you participate as a family, a priest comes to see
+      you, and insists that $charactername join the church, given his interest in
+      religion.
+    ProposalOne:
+      Choice: You are looking forward to building strong relationships with the church,
+        and explain to $charactername that he will take the habit.
+      Response: A few weeks later, you discover from $charactername's mouth that the
+        priest has more than once had inappropriate behaviour. Horrified, you change
+        your mind and immediately call $charactername back to your home.
+      effects:
+      - Effect: 0
+        EffectValue: 0
+    ProposalTwo:
+      Choice: You explain to the priest that you will think about it, then you will
+        duck his gaze every time you meet him.
+      Response: A few weeks later you hear more than disturbing rumours about the
+        priest, and you occasionally tell how you felt the danger was coming and that's
+        why you refused his offer. Your intuition seems to impress many people.
+      effects:
+      - Effect: 0
+        EffectValue: 10
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
