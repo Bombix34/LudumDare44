@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV009
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions:
+    - Condition: 0
+      ConditionValue: 0
+      ConditionBoolValue: 0
+      ConditionTrait: 4
+      inheritorCondition: 3
+    Message: $charactername is talking to you at length to let you know about a difficult
+      decision. He chose to abandon the couple's life that the dynasty imposed on
+      him and to leave with a commoner for love.
+    ProposalOne:
+      Choice: Prevent him from leaving the room, and accuse him loud and clear of
+        a fact that he did not commit so that your henchmen can hear the scene from
+        the outside.
+      Response: A few days later, the news came to inform the family that $charactername
+        had been brutally murdered in an alleyway, but that the cause of such an incident
+        was incomprehensible.
+      effects:
+      - Effect: 2
+        EffectValue: 0
+    ProposalTwo:
+      Choice: Tell them that you understand, but have no choice but to deny them and
+        exclude them from the family.
+      Response: As the family learns of the choice you have made, many of them openly
+        criticize you by not hesitating to claim that with them, it would have been
+        otherwise.
+      effects:
+      - Effect: 0
+        EffectValue: -5
+    ProposalSpecial:
+      Choice: 
+      Response: 
+      effects: []
