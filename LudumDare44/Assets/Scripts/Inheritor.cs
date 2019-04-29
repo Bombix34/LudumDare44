@@ -8,21 +8,21 @@ public class Inheritor
     public enum InheritorTrait
     {
         NONE,
-        BELLIQUEUX,
-        STRATÈGE,
-        ATTARDÉ,
-        ROMANTIQUE,
-        HOMOSEXUEL,
-        LÂCHE,
-        VILAIN,
-        VALEUREUX,
-        PINGRE,
-        CONQUÉRANT,
+        WARLIKE,
+        MASTERMIND,
+        DUMB,
+        ROMANTIC,
+        HOMOSEXUAL,
+        COWARD,
+        UGLY,
+        BOLD,
+        STINGY,
+        CONQUEROR,
         NOBLE,
-        JUSTE,
-        MYTHOMANE,
-        CLEPTOMANE,
-        PIEUX
+        JUST,
+        LIAR,
+        KLEPTOMANIAC,
+        PIOUS
     }
     public string Name { get; set; }
     public string FamilyName { get; set; }

@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraMover : MonoBehaviour
 {
     public float dragSpeed = 10;
     private Vector3 oldPos;
     private Vector3 panOrigin;
+    private bool isMoving;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
+            isMoving = true;
             oldPos = transform.position;
             panOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);            
         }
 
-        if (Input.GetMouseButton(0))
+        if (isMoving && Input.GetMouseButton(0))
         {
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition) - panOrigin;
             transform.position = oldPos + -pos * dragSpeed;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMoving = false;       
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // forward
         {
