@@ -22,12 +22,11 @@ public class GameManager : Singleton<GameManager>
     {
         //debug
         IsWomenStrongSex = false;
-        this.ChooseEvent();
     }
 
     void Update()
     {
-        print(GoldCoins);
+        
     }
 
     public void ChooseEvent(){
