@@ -83,6 +83,10 @@ public class WeddingUI : Singleton<WeddingUI>
             choice.Manager.Init(choice);
             inheritor.Manager.UpdateBlazon();
 
+
+            ui.gameObject.SetActive(false);
+            inheritor.Spouse.Manager.Face.DieFeedback();
+
             ResetWedding();
             ui.gameObject.SetActive(false);
         }
@@ -119,9 +123,5 @@ public class WeddingUI : Singleton<WeddingUI>
             concerned.Childrens[i].Age = (int)Random.Range(1f,7f);
         }
         DescentContainer.Instance.UpdateView();
-    }
-            ui.gameObject.SetActive(false);
-            inheritor.Spouse.Manager.Face.DieFeedback();
-        }
     }
 }
