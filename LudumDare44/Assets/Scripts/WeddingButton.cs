@@ -17,7 +17,7 @@ public class WeddingButton : MonoBehaviour
 
     public void OnClickWedding()
     {
-        Debug.Log("clickeu");
+        UiManager.Instance.ShowWeddingPanel(true);
     }
 
 }

@@ -37,7 +37,7 @@ public class CameraMover : MonoBehaviour
         }
         else if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // backwards
         {
-            if(Camera.main.orthographicSize > 1){
+            if(Camera.main.orthographicSize > 2.2){
                 Camera.main.orthographicSize--;
             }
         }
