@@ -83,7 +83,6 @@ public class WeddingUI : Singleton<WeddingUI>
             choice.Manager.Init(choice);
             inheritor.Manager.UpdateBlazon();
 
-
             ui.gameObject.SetActive(false);
             inheritor.Spouse.Manager.Face.DieFeedback();
 
