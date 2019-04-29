@@ -6,6 +6,8 @@ using UnityEngine;
 public class Inheritor
 {
     public string Name { get; set; }
+    public string FamilyName { get; set; }
+    public int Age { get; set; }
     public bool isWomen { get; set; }
     public bool IsAlive { get; set; }
     public bool NotBornYet { get; set; }
