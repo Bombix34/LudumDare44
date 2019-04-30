@@ -19,11 +19,14 @@ public class WeddingUI : Singleton<WeddingUI>
 
     public CharacterPool poolCharacter;
 
+    WeddingManager weddingManager;
+
     void Start()
     {
         weddingPanel.SetActive(false);
         validButton.SetActive(false);
         ui = weddingPanel.GetComponent<WeddingInheritorUI>();
+        weddingManager = GameManager.Instance.GetComponent<WeddingManager>();
     }
 
     public void ShowWeddingPanel(bool isAlive, Inheritor concerned, List<Inheritor>pretendants)
@@ -87,6 +90,8 @@ public class WeddingUI : Singleton<WeddingUI>
             ui.gameObject.SetActive(false);
             inheritor.Spouse.Manager.Face.DieFeedback();
 
+            weddingManager.RemoveFromPool(choice);
+
             ResetWedding();
             ui.gameObject.SetActive(false);
 
@@ -103,15 +108,16 @@ public class WeddingUI : Singleton<WeddingUI>
         if (isStrongSex)
         {
             influenceVal *= -1;
+            Createchildren(concerned, affinityVal);
         }
         else
         {
             monneyVal *= -1;
+            concerned.IsGone = true;
+            pretendant.IsGone = true;
         }
         GameManager.Instance.GoldCoins += monneyVal;
         GameManager.Instance.InfluencePoints += influenceVal;
-        if (isStrongSex)
-            Createchildren(concerned, affinityVal);
     }
 
     public void Createchildren(Inheritor concerned,int val)

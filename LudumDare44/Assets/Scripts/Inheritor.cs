@@ -39,6 +39,8 @@ public class Inheritor
     public int MonnaieValue { get; set; }
     public int InfluenceValue { get; set; }
 
+    public bool IsGone { get; set; }
+
    //public List<SpriteRenderer> RendererFaces { get; set; }
 
     public List<DuoGraphicElement> pairSpriteColor; //KEY = SPRITE - VALUE = COLOR
@@ -59,11 +61,21 @@ public class Inheritor
     public Inheritor()
     {
         IsAlive = true;
+        IsGone = false;
         Childrens = new List<Inheritor>();
         pairSpriteColor = new List<DuoGraphicElement>();
         Attirance = (int)Random.Range(1f, 4f);
         MonnaieValue = (int)Random.Range(100f, 1000F);
         InfluenceValue = (int)Random.Range(1f, 5f);
+        InitCharacterTrait();
+    }
+
+    public void InitCharacterTrait()
+    {
+        if (Random.Range(0f, 99f) < 10)
+            Trait = InheritorTrait.NONE;
+        else
+            Trait = (InheritorTrait)Random.Range(0, System.Enum.GetValues(typeof(InheritorTrait)).Length);
     }
 
     public void UpdateBlazon(){

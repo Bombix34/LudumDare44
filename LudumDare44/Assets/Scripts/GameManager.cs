@@ -70,7 +70,9 @@ public class GameManager : Singleton<GameManager>
 
         this.FamilyMaster = GetComponent<WeddingManager>().characterPool.GetCharacterWithoutFace(IsWomenStrongSex);
         this.FamilyMaster.FamilyName = familyName;
+        this.FamilyMaster.Trait = Inheritor.InheritorTrait.NONE;
         DescentContainer.Instance.Init(this.FamilyMaster);
+        InheritorUI.Instance.CreateView(this.FamilyMaster);
         ChangeState(new WeddingState(this.gameObject));
     }
 

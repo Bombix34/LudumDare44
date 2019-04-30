@@ -19,6 +19,7 @@ public class DescentContainer : Singleton<DescentContainer>
         this.Origin = origin;
         
         this.Origin.UpdateBlazon();
+        MainBlazonManager.Instance.InitMainBlazon(this.Origin);
 
         GameManager.Instance.FamilyMaster = this.Origin;
 

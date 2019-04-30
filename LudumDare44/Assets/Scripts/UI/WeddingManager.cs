@@ -66,6 +66,7 @@ public class WeddingManager : MonoBehaviour
         {
             menWedding.Remove(concerned);
         }
+        UpdatePool();
     }
 
     public void InitRandomFace(Inheritor concerned)

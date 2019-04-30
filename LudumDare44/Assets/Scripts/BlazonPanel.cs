@@ -11,9 +11,17 @@ public class BlazonPanel : MonoBehaviour
     public Image LowerLeft;
     public Image LowerRight;
     public Image Motif;
-    // Start is called before the first frame update
-    public void UpdateBlazon()
+
+    private void Start()
     {
+        BlazonManager = new BlazonManager();
+    }
+
+    public void UpdateBlazon(Inheritor concerned)
+    {
+        if (BlazonManager == null)
+            BlazonManager = new BlazonManager();
+        BlazonManager.Random(concerned.FamilyName);
         UpperLeft.color = BlazonManager.UpperLeft;
         UpperRight.color = BlazonManager.UpperRight;
         LowerLeft.color = BlazonManager.LowerLeft;

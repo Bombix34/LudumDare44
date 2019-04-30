@@ -11,8 +11,11 @@ public class WeddingInheritorUI : MonoBehaviour
     public Text Age;
     public Text Trait;
 
+    public BlazonPanel blazon;
+
     public void CreateView(Inheritor inheritor)
     {
+        blazon.UpdateBlazon(inheritor);
         this.Container.SetActive(true);
         this.Name.text = inheritor.Name;
         this.FamilyName.text = inheritor.FamilyName;

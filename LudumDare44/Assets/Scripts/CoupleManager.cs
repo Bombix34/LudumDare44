@@ -60,7 +60,8 @@ public class CoupleManager : MonoBehaviour
                 secondCharacter.Face.transform.parent.gameObject.SetActive(false);
                 break;
             case CoupleState.single:
-            
+
+                infoButon.transform.parent.gameObject.SetActive(true);
                 firstCharacter.Face.transform.gameObject.SetActive(true);
                 secondCharacter.Face.transform.parent.gameObject.SetActive(true);
                 spouseInfoButon.transform.parent.gameObject.SetActive(false);

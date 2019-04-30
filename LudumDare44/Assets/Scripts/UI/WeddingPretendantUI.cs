@@ -18,11 +18,13 @@ public class WeddingPretendantUI : MonoBehaviour
     public PortraitUI portrait;
 
     public GameObject affinityLogo;
+    public BlazonPanel blazon;
 
     public Inheritor Current { get; set; }
 
     public void CreateView(Inheritor pretendant, Inheritor concerned)
     {
+        blazon.UpdateBlazon(pretendant);
         bool isStrongSex = (concerned.isWomen == GameManager.Instance.IsWomenStrongSex);
         int monneyVal = pretendant.MonnaieValue+concerned.MonnaieValue;
         int influenceVal = pretendant.InfluenceValue+concerned.InfluenceValue;
