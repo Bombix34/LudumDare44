@@ -14,29 +14,15 @@ public class DescentContainer : Singleton<DescentContainer>
     private Dictionary<int, List<Inheritor>> layers;
     public Vector4 SpaceUsed;
 
-
-    void Awake()
-    {
+    public void Init(Inheritor origin){
         this.InheritorsView = new Dictionary<Inheritor, GameObject>();
-        this.Origin = new Inheritor(){
-            Name = "Joe",
-            FamilyName = "URGL",
-            Age = 48,
-            Trait = Inheritor.InheritorTrait.NONE,
-            isWomen = false,
-            IsAlive = true,
-            Spouse = null,
-        };
+        this.Origin = origin;
+        
         this.Origin.UpdateBlazon();
 
         GameManager.Instance.FamilyMaster = this.Origin;
 
         this.UpdateView();
-    }
-
-    void Update()
-    {
-
     }
 
     public void RemoveInheritor(Inheritor inheritor){
