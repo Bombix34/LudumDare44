@@ -944,9 +944,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mariageSound: {fileID: 11400000, guid: 0bf1c13f761874972b034e4298e88291, type: 2}
   clickSound: {fileID: 11400000, guid: c5219ff1579c24e93b73c84af7a8d1bb, type: 2}
-  monneySound: {fileID: 0}
-  eventGenericLaunch: {fileID: 0}
-  eventGenericResult: {fileID: 0}
+  monneySound: {fileID: 11400000, guid: bf5150ef1b8804ecd917e64cea0c610c, type: 2}
+  eventGenericLaunch: {fileID: 11400000, guid: 34b662e3fa61148c7a7c3a33b02a7ae1, type: 2}
+  eventGenericResult: {fileID: 11400000, guid: 994aed335ea40451f94986af7edb3f31, type: 2}
   audiosources:
   - {fileID: 4094337943877628747}
   - {fileID: 4094337942564302030}
