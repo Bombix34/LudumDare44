@@ -13,18 +13,54 @@ public class GameManager : Singleton<GameManager>
         EVENT,
     }
     public int Turn { get; set; }
-    public int GoldCoins { get; set; }
-    public int InfluencePoints { get; set; }
+    private int goldCoins;
+    public int GoldCoins 
+    { 
+        get { 
+            return goldCoins; 
+            } 
+        set {
+            if (value < 0)
+            {
+                goldCoins = 0;
+            }
+            else
+            {
+                goldCoins = value;
+            }
+            RessourceUI.Instance.UpdateValue();
+        } 
+     }
+    private int influencePoints;
+    public int InfluencePoints {
+        get { return influencePoints; } 
+        set {
+            if (value < 0)
+                influencePoints = 0;
+            else if (InfluencePoints > 100)
+            {
+                influencePoints = 100;
+            }
+            else
+                influencePoints = value;
+            RessourceUI.Instance.UpdateValue();
+        } 
+    }
+
     public Inheritor FamilyMaster { get; set; }
     public State CurrentState { get; set; }
     public bool IsWomenStrongSex { get; set; }
     public EventsScriptableObject EventsScriptableObject;
+
 
     void Start()
     {
         ChangeState(new WeddingState(this.gameObject));
         //debug
         IsWomenStrongSex = false;
+
+        GoldCoins = 5000;
+        InfluencePoints = 10;
     }
 
     void Update()
@@ -43,7 +79,37 @@ public class GameManager : Singleton<GameManager>
 
     public void NextTurn()
     {
+        var allToBorn = FamilyMaster.FindAllToBorn();
+        foreach (var item in allToBorn)
+        {
+            item.NotBornYet = false;
+        }
+
+        var inheritors = new List<Inheritor>();
+        FamilyMaster.FindAll(ref inheritors);
+
+        foreach (var item in inheritors)
+        {
+            item.Age += 8;
+            item.Spouse.Age += 8;
+
+            if (item.Age > 50)
+            {
+                item.Kill();
+            }
+            if (item.Spouse.Age > 50)
+            {
+                item.Spouse.Kill();
+            }
+
+        }
         ChangeState(new WeddingState(this.gameObject));
+    }
+
+
+    public void FinishWedding()
+    {
+        ChangeState(new EventState(this.gameObject));
     }
 
     public void ChangeState(State newState)

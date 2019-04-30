@@ -88,6 +88,8 @@ public class WeddingUI : Singleton<WeddingUI>
 
             ResetWedding();
             ui.gameObject.SetActive(false);
+
+            GameManager.Instance.FinishWedding();
         }
     }
 
