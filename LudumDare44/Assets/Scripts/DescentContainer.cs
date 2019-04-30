@@ -21,7 +21,7 @@ public class DescentContainer : Singleton<DescentContainer>
         this.Origin = new Inheritor(){
             Name = "Joe",
             FamilyName = "URGL",
-            Age = 43,
+            Age = 48,
             Trait = Inheritor.InheritorTrait.NONE,
             isWomen = false,
             IsAlive = true,
@@ -37,6 +37,11 @@ public class DescentContainer : Singleton<DescentContainer>
     void Update()
     {
 
+    }
+
+    public void RemoveInheritor(Inheritor inheritor){
+        Destroy(this.InheritorsView[inheritor]);
+        this.InheritorsView.Remove(inheritor);
     }
 
     public void UpdateView()
@@ -78,8 +83,14 @@ public class DescentContainer : Singleton<DescentContainer>
         List<Inheritor> childrens = new List<Inheritor>();
         foreach (var inheritor in inheritors)
         {
+            if(inheritor == null){
+                continue;
+            }
             if(inheritor.Childrens.Count > 0){
                 childrens.AddRange(inheritor.Childrens);
+            }   else
+            {
+                childrens.Add(null);
             }
             
         }
@@ -100,14 +111,29 @@ public class DescentContainer : Singleton<DescentContainer>
         {
             var inheritor = inheritors[i];
 
+            if(inheritor == null){
+                continue;
+            }
+
+            if(inheritor.NotBornYet && !inheritor.Parent.IsAlive){
+                if(this.InheritorsView.ContainsKey(inheritor)){
+                    Destroy(this.InheritorsView[inheritor]);
+                    this.InheritorsView.Remove(inheritor);
+                    continue;
+                }
+            }
+
             Vector3? position = null;
 
-            if(inheritor.Childrens.Count > 0 && this.InheritorsView.ContainsKey(inheritor.Childrens[0])){
+            if(inheritor.Childrens.Count > 0){
                 var positions = new List<float>();
                 foreach (var child in inheritor.Childrens)
                 {
-                    positions.Add(this.InheritorsView[child].transform.position.x);
+                    if(inheritor.IsAlive || !child.NotBornYet){
+                        positions.Add(this.InheritorsView[child].transform.position.x);
+                    }
                 }
+                //arg
                 position = new Vector3(positions.Average(), -layer * HeightBetween);
             }
 
