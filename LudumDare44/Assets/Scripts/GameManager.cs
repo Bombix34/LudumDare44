@@ -91,18 +91,23 @@ public class GameManager : Singleton<GameManager>
         foreach (var item in inheritors)
         {
             item.Age += 8;
-            item.Spouse.Age += 8;
 
             if (item.Age > 50)
             {
                 item.Kill();
             }
-            if (item.Spouse.Age > 50)
-            {
-                item.Spouse.Kill();
+            if(item.Spouse != null){
+                item.Spouse.Age += 8;
+                if (item.Spouse.Age > 50)
+                {
+                    item.Spouse.Kill();
+                }
             }
 
         }
+
+        DescentContainer.Instance.UpdateView();
+        
         ChangeState(new WeddingState(this.gameObject));
     }
 
@@ -130,6 +135,15 @@ public class GameManager : Singleton<GameManager>
 
     private List<EventScriptableObject> GetListAvailableEvents(){
         return EventsScriptableObject.events.Where(q => q.ev.AreConditionValid()).ToList();
+    }
+
+    public void UpdateAllCouple(){
+        var inheritors = new List<Inheritor>();
+        this.FamilyMaster.FindAll(ref inheritors, false, false, false, null, false);
+        foreach (var item in inheritors)
+        {
+            item.Manager.GetComponent<CoupleManager>().UpdateCoupleInterface();
+        }
     }
 
 }

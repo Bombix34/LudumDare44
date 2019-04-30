@@ -102,6 +102,7 @@ public class Inheritor
         var result = new List<Inheritor>();
         var inheritors = new List<Inheritor>();
         this.FindAll(ref inheritors);
+        Debug.Log(inheritors.Count);
         foreach (var item in inheritors)
         {
             var notBorn = item.Childrens.Where(q => q.NotBornYet).ToList();

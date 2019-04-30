@@ -122,6 +122,7 @@ public class WeddingUI : Singleton<WeddingUI>
             concerned.Childrens[i].NotBornYet = true;
             concerned.Childrens[i].IsAlive = true;
             concerned.Childrens[i].Age = (int)Random.Range(1f,7f);
+            concerned.Childrens[i].Parent = concerned;
         }
         DescentContainer.Instance.UpdateView();
     }
