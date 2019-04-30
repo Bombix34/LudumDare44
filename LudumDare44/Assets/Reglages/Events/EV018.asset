@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: EV018
   m_EditorClassIdentifier: 
   ev:
-    Conditions: []
+    Conditions:
+    - Condition: 4
+      ConditionValue: 50
+      ConditionBoolValue: 0
+      ConditionTrait: 0
+      inheritorCondition: 0
     Message: 'As you walk quietly along the immense corridor of your home, you hear
       the bell ringing at your door. '
     ProposalOne:
