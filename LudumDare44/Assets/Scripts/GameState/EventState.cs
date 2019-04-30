@@ -13,6 +13,7 @@ public class EventState : GameState
 
     public override void Enter()
     {
+        GameManager.Instance.UpdateAllCouple();
         GameManager.Instance.ChooseEvent();
     }
 

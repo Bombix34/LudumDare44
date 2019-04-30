@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     public Inheritor CharacterInfos { get; set; }
-    
+    public CoupleManager CoupleManager { get; set; }
     public BlazonManager BlazonManager { get; set; }
     public Blazon2d Blazon2d { get; set; }
 
@@ -14,6 +14,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Awake()
     {
+        CoupleManager = GetComponent<CoupleManager>() ?? transform.parent.GetComponent<CoupleManager>();
         face = GetComponentInChildren<FaceManager>();
         Blazon2d = GetComponentsInChildren<Blazon2d>().Where(q => q.transform.parent.parent == this.transform).First();
         face.Manager = this;

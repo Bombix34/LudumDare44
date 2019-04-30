@@ -63,5 +63,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlazonDatabase: {fileID: 11400000, guid: b2ade5d1943944549a798f920ab29f9e, type: 2}
-  EventsScriptableObject: {fileID: 11400000, guid: 974e99947a6aee648805ac59aceb51de,
+  EventsScriptableObject: {fileID: 11400000, guid: 23ca2f7708ad7ce43b8ec5b52eeb1260,
     type: 2}

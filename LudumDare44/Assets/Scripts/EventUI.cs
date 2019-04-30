@@ -69,5 +69,6 @@ public class EventUI : Singleton<EventUI>
 
     public void Close(){
         this.Container.SetActive(false);
+        GameManager.Instance.NextTurn();
     }
 }

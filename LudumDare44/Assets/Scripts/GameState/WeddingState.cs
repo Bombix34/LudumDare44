@@ -13,6 +13,7 @@ public class WeddingState : GameState
 
     public override void Enter()
     {
+        GameManager.Instance.UpdateAllCouple();
         manager.Turn++;
     }
 

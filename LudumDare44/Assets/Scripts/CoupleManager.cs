@@ -29,6 +29,14 @@ public class CoupleManager : MonoBehaviour
 
     void Start()
     {
+        infoButon.onClick.AddListener(OnClickInfoFirstCharacter);
+        spouseInfoButon.onClick.AddListener(OnClickInfoSecondCharacter);
+
+        UpdateCoupleInterface();
+    }
+
+   public void UpdateCoupleInterface()
+    {
         if(firstCharacter.CharacterInfos.NotBornYet){
             currentState = CoupleState.notBornYet;
         }   else
@@ -41,14 +49,6 @@ public class CoupleManager : MonoBehaviour
             }
         }
 
-        infoButon.onClick.AddListener(OnClickInfoFirstCharacter);
-        spouseInfoButon.onClick.AddListener(OnClickInfoSecondCharacter);
-
-        UpdateCoupleInterface();
-    }
-
-   public void UpdateCoupleInterface()
-    {
         weddingButton.SetActive(false);
         weddingButton.GetComponentInChildren<Button>().interactable = false;
         switch (currentState)
@@ -64,6 +64,7 @@ public class CoupleManager : MonoBehaviour
                 firstCharacter.Face.transform.gameObject.SetActive(true);
                 secondCharacter.Face.transform.parent.gameObject.SetActive(true);
                 spouseInfoButon.transform.parent.gameObject.SetActive(false);
+                print(firstCharacter.CharacterInfos.IsAlive);
                 if (firstCharacter.CharacterInfos.IsAlive)
                 {
                     secondCharacter.Face.transform.gameObject.SetActive(true);
