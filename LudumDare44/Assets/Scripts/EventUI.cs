@@ -14,7 +14,10 @@ public class EventUI : Singleton<EventUI>
     public Text ProposalSpecialText;
     public Button OkButton;
     public EventContainer EventContainer { get; set; }
+
     public void CreateView(EventContainer eventContainer){
+        //ouvre l'event
+        SoundManager.instance.PlaySound(3);
         this.Container.SetActive(true);
         this.OkButton.gameObject.SetActive(false);
         this.EventContainer = eventContainer;
@@ -38,6 +41,8 @@ public class EventUI : Singleton<EventUI>
     }
 
     private void proposalSelected(){
+        //selectionne une proposition
+        SoundManager.instance.PlaySound(4);
         this.ProposalOneButton.gameObject.SetActive(false);
         this.ProposalTwoButton.gameObject.SetActive(false);
         this.ProposalSpecialButton.gameObject.SetActive(false);

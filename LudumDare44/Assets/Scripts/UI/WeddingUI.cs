@@ -40,6 +40,7 @@ public class WeddingUI : Singleton<WeddingUI>
 
     public void LaunchValidation(GameObject pretendantChoose)
     {
+        SoundManager.instance.PlaySound(1);
         pretendantUI.ResetPretendantColors();
         pretendantChoose.GetComponent<Image>().color = Color.green;
         choice = pretendantChoose.GetComponent<WeddingPretendantUI>().Current;
@@ -124,5 +125,10 @@ public class WeddingUI : Singleton<WeddingUI>
             concerned.Childrens[i].Age = (int)Random.Range(1f,7f);
         }
         DescentContainer.Instance.UpdateView();
+    }
+
+    public void PlayClickSound()
+    {
+        SoundManager.instance.PlaySound(1);
     }
 }

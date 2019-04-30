@@ -17,6 +17,7 @@ public class WeddingButton : MonoBehaviour
 
     public void OnClickWedding(CharacterManager character)
     {
+        SoundManager.instance.PlaySound(0);
         GameManager.Instance.GetComponent<WeddingManager>().LaunchWedding(character.CharacterInfos);
     }
 

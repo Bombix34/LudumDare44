@@ -109,11 +109,13 @@ public class CoupleManager : MonoBehaviour
 
     public void OnClickInfoFirstCharacter()
     {
+        SoundManager.instance.PlaySound(1);
         InheritorUI.Instance.CreateView(this.firstCharacter.CharacterInfos);
     }
 
     public void OnClickInfoSecondCharacter()
     {
+        SoundManager.instance.PlaySound(1);
         InheritorUI.Instance.CreateView(this.secondCharacter.CharacterInfos);
     }
 

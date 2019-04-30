@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
+  m_Name: UIClick
+  m_EditorClassIdentifier: 
+  loop: 0
+  clips:
+  - {fileID: 8300000, guid: 1ab52c8e479d3427bb170fc45b1434b1, type: 3}
+  - {fileID: 8300000, guid: 130f9c9fa21954a099d84efc77224e5d, type: 3}
+  - {fileID: 8300000, guid: 8af2fe6f932104c7fafd1bf9fc17cf73, type: 3}
+  - {fileID: 8300000, guid: dfc690d819ae746058809a512d7ed679, type: 3}
+  - {fileID: 8300000, guid: 3abfe588f94d9493891a479e592c1697, type: 3}
+  volume:
+    minValue: 0.2708333
+    maxValue: 0.35416675
+  pitch:
+    minValue: 0.7083334
+    maxValue: 1.25

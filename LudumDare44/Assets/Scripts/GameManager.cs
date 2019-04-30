@@ -22,12 +22,14 @@ public class GameManager : Singleton<GameManager>
         set {
             if (value < 0)
             {
+
                 goldCoins = 0;
             }
             else
             {
                 goldCoins = value;
             }
+            SoundManager.instance.PlaySound(1);
             RessourceUI.Instance.UpdateValue();
         } 
      }
