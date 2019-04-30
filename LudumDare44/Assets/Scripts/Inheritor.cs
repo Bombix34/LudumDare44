@@ -62,7 +62,7 @@ public class Inheritor
         Childrens = new List<Inheritor>();
         pairSpriteColor = new List<DuoGraphicElement>();
         Attirance = (int)Random.Range(1f, 4f);
-        MonnaieValue = (int)Random.Range(10f, 100F);
+        MonnaieValue = (int)Random.Range(100f, 1000F);
         InfluenceValue = (int)Random.Range(1f, 5f);
     }
 

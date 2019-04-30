@@ -14,9 +14,12 @@ public class WeddingInheritorUI : MonoBehaviour
     public void CreateView(Inheritor inheritor)
     {
         this.Container.SetActive(true);
-        this.Name.text = $"Name : {inheritor.Name}";
-        this.FamilyName.text = $"FamilyName : {inheritor.FamilyName}";
+        this.Name.text = inheritor.Name;
+        this.FamilyName.text = inheritor.FamilyName;
         this.Age.text = $"Age : {inheritor.Age}";
-        this.Trait.text = $"Trait : {inheritor.Trait}";
+        if(inheritor.Trait!=Inheritor.InheritorTrait.NONE)
+            this.Trait.text = inheritor.Trait.ToString();
+        else
+            this.Trait.text = " ";
     }
 }

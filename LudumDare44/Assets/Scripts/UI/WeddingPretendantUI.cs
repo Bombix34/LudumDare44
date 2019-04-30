@@ -17,6 +17,8 @@ public class WeddingPretendantUI : MonoBehaviour
 
     public PortraitUI portrait;
 
+    public GameObject affinityLogo;
+
     public Inheritor Current { get; set; }
 
     public void CreateView(Inheritor pretendant, Inheritor concerned)
@@ -27,10 +29,13 @@ public class WeddingPretendantUI : MonoBehaviour
         int affinityVal = Mathf.FloorToInt((pretendant.Attirance + concerned.Attirance)/2);
 
         this.Container.SetActive(true);
-        this.Name.text = $"Name : {pretendant.Name}";
-        this.FamilyName.text = $"FamilyName : {pretendant.FamilyName}";
+        this.Name.text = pretendant.Name;
+        this.FamilyName.text = pretendant.FamilyName;
         this.Age.text = $"Age : {pretendant.Age}";
-        this.Trait.text = $"Trait : {pretendant.Trait}";
+        if (pretendant.Trait != Inheritor.InheritorTrait.NONE)
+            this.Trait.text = pretendant.Trait.ToString();
+        else
+            this.Trait.text = " ";
 
         if(isStrongSex)
         {
@@ -40,9 +45,18 @@ public class WeddingPretendantUI : MonoBehaviour
         {
             monneyVal *= -1;
         }
-        this.price.text = $"Monney : {monneyVal}";
-        this.influence.text = $"Influence : {influenceVal}";
-        this.fertility.text = $"Affinity : {affinityVal}";
+        this.price.text = monneyVal.ToString();
+        this.influence.text = influenceVal.ToString();
+        if (isStrongSex)
+        {
+            this.fertility.text = affinityVal.ToString();
+            affinityLogo.SetActive(true);
+        }
+        else
+        {
+            this.fertility.text = " ";
+            affinityLogo.SetActive(false);
+        }
 
         portrait.SetuptFaceUI(pretendant);
         Current = pretendant;
