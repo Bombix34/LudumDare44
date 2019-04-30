@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
+  m_Name: MoneySound
+  m_EditorClassIdentifier: 
+  loop: 0
+  clips:
+  - {fileID: 8300000, guid: be0bac2f67e934c278ed371b6ac99fa2, type: 3}
+  - {fileID: 8300000, guid: dc35535f9587e479b8146cd7425764b3, type: 3}
+  - {fileID: 8300000, guid: edf4da6cb376d4bfda9c5d247d0960cd, type: 3}
+  volume:
+    minValue: 0.2708333
+    maxValue: 0.35416675
+  pitch:
+    minValue: 0.7083334
+    maxValue: 1.25
