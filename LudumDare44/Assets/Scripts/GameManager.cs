@@ -54,11 +54,14 @@ public class GameManager : Singleton<GameManager>
     public bool IsWomenStrongSex { get; set; }
     public EventsScriptableObject EventsScriptableObject;
 
+    [SerializeField]
+    Sprite crown;
+    [SerializeField]
+    Sprite heritierCrown;
 
     void Start()
     {
-        
-        Init("URGL", true);
+        Init("De Moncul", true);
     }
 
     public void Init(string familyName, bool isWomenStrongSex){
@@ -73,13 +76,14 @@ public class GameManager : Singleton<GameManager>
         this.FamilyMaster.Trait = Inheritor.InheritorTrait.NONE;
         DescentContainer.Instance.Init(this.FamilyMaster);
         InheritorUI.Instance.CreateView(this.FamilyMaster);
+        this.FamilyMaster.Manager.GetComponent<CoupleManager>().SetCrown(crown);
         ChangeState(new WeddingState(this.gameObject));
     }
 
     void Update()
     {
         CurrentState.Execute();
-        
+        /*
         if(Input.GetKeyDown("t"))
         {
             this.ChooseEvent();
@@ -88,6 +92,7 @@ public class GameManager : Singleton<GameManager>
         {
             InheritorUI.Instance.CreateView(this.FamilyMaster);
         }
+        */
     }
 
     public void NextTurn()
@@ -98,6 +103,8 @@ public class GameManager : Singleton<GameManager>
             item.NotBornYet = false;
         }
 
+        GetComponent<WeddingManager>().UpdatePoolAge();
+
         var inheritors = new List<Inheritor>();
         FamilyMaster.FindAll(ref inheritors);
 
@@ -107,13 +114,27 @@ public class GameManager : Singleton<GameManager>
 
             if (item.Age > 50)
             {
-                item.Kill();
+                if (item.Age > 70)
+                    item.Kill();
+                else
+                {
+                    int rand = (int)UnityEngine.Random.Range(0f, 99f);
+                    if (rand <= 49)
+                        item.Kill();
+                }
             }
             if(item.Spouse != null){
                 item.Spouse.Age += 8;
                 if (item.Spouse.Age > 50)
                 {
-                    item.Spouse.Kill();
+                    if (item.Spouse.Age > 70)
+                        item.Spouse.Kill();
+                    else
+                    {
+                        int rand = (int)UnityEngine.Random.Range(0f, 99f);
+                        if (rand <= 49)
+                            item.Spouse.Kill();
+                    }
                 }
             }
 
@@ -124,6 +145,45 @@ public class GameManager : Singleton<GameManager>
         ChangeState(new WeddingState(this.gameObject));
     }
 
+    public void CheckNewfamilyMaster()
+    {
+        UpdateHeritierCrown();
+        if (this.FamilyMaster.IsAlive==false)
+        {
+            var inheritors = new List<Inheritor>();
+            this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, false);
+            if (inheritors.Count != 0)
+            {
+                this.FamilyMaster.Manager.GetComponent<CoupleManager>().SetCrown(null);
+                this.FamilyMaster = inheritors[0];
+                inheritors[0].Manager.GetComponent<CoupleManager>().SetCrown(crown);
+                UpdateHeritierCrown();
+            }
+            else
+                GameOver();
+        }
+    }
+
+    public void UpdateHeritierCrown()
+    {
+        var inheritors = new List<Inheritor>();
+        this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, false);
+        if (inheritors.Count > 0)
+        {
+            if (inheritors[0] == this.FamilyMaster)
+            {
+                if (inheritors.Count > 1)
+                    inheritors[1].Manager.GetComponent<CoupleManager>().SetCrown(heritierCrown);
+                return;
+            }
+            inheritors[0].Manager.GetComponent<CoupleManager>().SetCrown(heritierCrown);
+        }
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("GameOver");
+    }
 
     public void FinishWedding()
     {
@@ -157,6 +217,20 @@ public class GameManager : Singleton<GameManager>
         {
             item.Manager.GetComponent<CoupleManager>().UpdateCoupleInterface();
         }
+    }
+
+    public int GetLivingInFamilyCharacters()
+    {
+        int val = 0;
+        var inheritors = new List<Inheritor>();
+        this.FamilyMaster.FindAll(ref inheritors);
+        val = inheritors.Count;
+        foreach(var item in inheritors)
+        {
+            if (item.Spouse != null && item.Spouse.IsAlive)
+                val++;
+        }
+        return val;
     }
 
 }

@@ -66,6 +66,47 @@ public class WeddingManager : MonoBehaviour
         {
             menWedding.Remove(concerned);
         }
+    }
+
+    public void UpdatePoolAge()
+    {
+        List<Inheritor> toRemove = new List<Inheritor>();
+        foreach (var item in menWedding)
+        {
+            item.Age += 8;
+
+            if (item.Age > 50)
+            {
+                if (item.Age > 70)
+                    toRemove.Add(item);
+                else
+                {
+                    int rand = (int)UnityEngine.Random.Range(0f, 99f);
+                    if (rand <= 49)
+                        toRemove.Add(item);
+                }
+            }
+        }
+        foreach (var item in womenWedding)
+        {
+            item.Age += 8;
+
+            if (item.Age > 50)
+            {
+                if (item.Age > 70)
+                    toRemove.Add(item);
+                else
+                {
+                    int rand = (int)UnityEngine.Random.Range(0f, 99f);
+                    if (rand <= 49)
+                        toRemove.Add(item);
+                }
+            }
+        }
+        foreach(var item in toRemove)
+        {
+            RemoveFromPool(item);
+        }
         UpdatePool();
     }
 
@@ -78,7 +119,6 @@ public class WeddingManager : MonoBehaviour
         Color faceColor = ColorManager.Instance.SkinColor.GetRandColor();
         Color noseColor = ColorManager.Instance.NoseColor.GetRandColor() * faceColor;
         Color mouthColor = ColorManager.Instance.MouthColor.GetRandColor();
-
 
         concerned.pairSpriteColor.Add(new DuoGraphicElement(sprites[0], mouthColor)); //bouche
         concerned.pairSpriteColor.Add(new DuoGraphicElement(sprites[1], hairColor)); //cheveux 

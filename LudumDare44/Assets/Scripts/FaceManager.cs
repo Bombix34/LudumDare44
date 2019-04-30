@@ -42,6 +42,7 @@ public class FaceManager : MonoBehaviour
     // sourcils -> 5
     // barbes -> 6
     // buste -> 7
+
     FaceAnimation faceAnimation;
 
     void Awake()
@@ -369,11 +370,14 @@ public class FaceManager : MonoBehaviour
         // barbes -> 6
         // buste -> 7
         mouth.color = Color.white;
+        mouth.sprite = null;
         hair.color = Color.white;
-        nose.color = Color.black;
+        nose.color = Color.grey;
+        //nose.sprite = null;
         face.color = Color.white;
         eyes.sprite = null;
         sourcils.color = Color.white;
+        sourcils.sprite = null;
         barbe.color = Color.white;
         buste.color = Color.white;
         background.color = Color.gray;

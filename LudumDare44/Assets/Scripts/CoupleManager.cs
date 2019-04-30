@@ -20,6 +20,9 @@ public class CoupleManager : MonoBehaviour
     [SerializeField]
     Button spouseInfoButon;
 
+    [SerializeField]
+    SpriteRenderer crownSprite;
+
     public CoupleState currentState;
 
     private void Awake()
@@ -101,6 +104,11 @@ public class CoupleManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SetCrown(Sprite sprite)
+    {
+        crownSprite.sprite = sprite;
     }
 
     public void SetupSecondCharacter(Inheritor character)

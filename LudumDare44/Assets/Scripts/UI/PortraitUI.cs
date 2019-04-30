@@ -30,22 +30,14 @@ public class PortraitUI : MonoBehaviour
 
     public void SetuptFaceUI(Inheritor concerned)
     {
-        /*
-        print(concerned.pairSpriteColor[0].Sprite);
-        print(concerned.pairSpriteColor[1].Sprite);
-        print(concerned.pairSpriteColor[2].Sprite);
-        print(concerned.pairSpriteColor[3].Sprite);
-        print(concerned.pairSpriteColor[4].Sprite);
-        print(concerned.pairSpriteColor[5].Sprite);
-        print(concerned.pairSpriteColor[6].Sprite);
-        print(concerned.pairSpriteColor[7].Sprite);
-        */      
-
 
         mouth.sprite = concerned.pairSpriteColor[0].Sprite;
         mouth.color = concerned.pairSpriteColor[0].ElementColor;
 
-        hair.sprite = concerned.pairSpriteColor[1].Sprite;
+        if (concerned.pairSpriteColor[1].Sprite != null)
+            hair.sprite = concerned.pairSpriteColor[1].Sprite;
+        else
+            hair.gameObject.SetActive(false);
         hair.color = concerned.pairSpriteColor[1].ElementColor;
 
         nose.sprite = concerned.pairSpriteColor[2].Sprite;

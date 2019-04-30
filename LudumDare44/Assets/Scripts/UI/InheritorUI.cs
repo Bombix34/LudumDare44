@@ -21,8 +21,8 @@ public class InheritorUI : Singleton<InheritorUI>
         if (portrait != null)
             portrait.SetuptFaceUI(inheritor);
         this.Container.SetActive(true);
-        this.Name.text = $"Name : {inheritor.Name}";
-        this.FamilyName.text = $"FamilyName : {inheritor.FamilyName}";
+        this.Name.text = inheritor.Name;
+        this.FamilyName.text = inheritor.FamilyName;
         if(inheritor.IsAlive)
             this.Age.text = $"Age : {inheritor.Age}";
         else if(inheritor.IsGone)

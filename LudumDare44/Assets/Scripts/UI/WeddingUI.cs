@@ -16,6 +16,7 @@ public class WeddingUI : Singleton<WeddingUI>
 
     public Inheritor inheritor;
     public Inheritor choice;
+    WeddingPretendantUI choiceUI;
 
     public CharacterPool poolCharacter;
 
@@ -46,7 +47,8 @@ public class WeddingUI : Singleton<WeddingUI>
         SoundManager.instance.PlaySound(1);
         pretendantUI.ResetPretendantColors();
         pretendantChoose.GetComponent<Image>().color = Color.green;
-        choice = pretendantChoose.GetComponent<WeddingPretendantUI>().Current;
+        choiceUI = pretendantChoose.GetComponent<WeddingPretendantUI>();
+        choice = choiceUI.Current;
         validButton.SetActive(true);
     }
 
@@ -82,7 +84,7 @@ public class WeddingUI : Singleton<WeddingUI>
 
             inheritor.Spouse.Manager.Face.InitWithValue();
 
-            UpdateValue(inheritor, choice);
+            UpdateValue(inheritor, choice, choiceUI.result);
 
             choice.Manager.Init(choice);
             inheritor.Manager.UpdateBlazon();
@@ -99,25 +101,20 @@ public class WeddingUI : Singleton<WeddingUI>
         }
     }
 
-    public void UpdateValue(Inheritor concerned, Inheritor pretendant)
+    public void UpdateValue(Inheritor concerned, Inheritor pretendant, WeddingPretendantUI.Result ressources)
     {
         bool isStrongSex = (concerned.isWomen == GameManager.Instance.IsWomenStrongSex);
-        int monneyVal = pretendant.MonnaieValue + concerned.MonnaieValue;
-        int influenceVal = pretendant.InfluenceValue + concerned.InfluenceValue;
-        int affinityVal = Mathf.FloorToInt((pretendant.Attirance + concerned.Attirance) / 2);
         if (isStrongSex)
         {
-            influenceVal *= -1;
-            Createchildren(concerned, affinityVal);
+            Createchildren(concerned, ressources.affinityVal);
         }
         else
         {
-            monneyVal *= -1;
             concerned.IsGone = true;
             pretendant.IsGone = true;
         }
-        GameManager.Instance.GoldCoins += monneyVal;
-        GameManager.Instance.InfluencePoints += influenceVal;
+        GameManager.Instance.GoldCoins += ressources.monneyVal;
+        GameManager.Instance.InfluencePoints += ressources.influenceVal;
     }
 
     public void Createchildren(Inheritor concerned,int val)

@@ -40,6 +40,14 @@ public class FaceDatabase : ScriptableObject
 
     public List<Sprite> GetCharacter(bool isWoman)
     {
+        // mouth -> 0
+        // hair -> 1
+        // nose -> 2
+        // face -> 3
+        // eyes -> 4
+        // sourcils -> 5
+        // barbes -> 6
+        // buste -> 7
         int rand = (int) Random.Range(0f, 99f);
         List<Sprite> result = new List<Sprite>();
 
