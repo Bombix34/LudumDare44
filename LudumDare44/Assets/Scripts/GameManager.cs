@@ -57,12 +57,21 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        ChangeState(new WeddingState(this.gameObject));
+        
+        Init("URGL", true);
+    }
+
+    public void Init(string familyName, bool isWomenStrongSex){
         //debug
-        IsWomenStrongSex = false;
+        IsWomenStrongSex = isWomenStrongSex;
 
         GoldCoins = 5000;
         InfluencePoints = 10;
+
+        this.FamilyMaster = GetComponent<WeddingManager>().characterPool.GetCharacterWithoutFace(IsWomenStrongSex);
+        this.FamilyMaster.FamilyName = familyName;
+        DescentContainer.Instance.Init(this.FamilyMaster);
+        ChangeState(new WeddingState(this.gameObject));
     }
 
     void Update()

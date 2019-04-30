@@ -13,7 +13,6 @@ public class InheritorUI : Singleton<InheritorUI>
 
     public void CreateView(Inheritor inheritor)
     {
-        print(inheritor);
         this.Container.SetActive(true);
         this.Name.text = $"Name : {inheritor.Name}";
         this.FamilyName.text = $"FamilyName : {inheritor.FamilyName}";

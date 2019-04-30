@@ -64,7 +64,7 @@ public class CoupleManager : MonoBehaviour
                 firstCharacter.Face.transform.gameObject.SetActive(true);
                 secondCharacter.Face.transform.parent.gameObject.SetActive(true);
                 spouseInfoButon.transform.parent.gameObject.SetActive(false);
-                print(firstCharacter.CharacterInfos.IsAlive);
+
                 if (firstCharacter.CharacterInfos.IsAlive)
                 {
                     secondCharacter.Face.transform.gameObject.SetActive(true);

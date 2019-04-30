@@ -104,39 +104,6 @@ public class Inheritor
         return inheritors;
     }
 
-    public List<Inheritor> FindAll(List<Inheritor> inheritors, bool fromChildren = false, bool fromBrother = false
-                                    , bool fromParent = false, bool? isWomen = null, bool? isMarried = null
-                                    , InheritorTrait? trait = null){
-        if(this.IsAlive && !this.NotBornYet 
-            && (isWomen == null || this.isWomen == isWomen)
-            && (isMarried == null || ((this.Spouse != null) == isMarried))
-            && (trait == null || this.Trait == trait)){
-            inheritors.Add(this);
-        }
-        if(!fromChildren && this.Childrens.Count > 0){
-            this.Childrens.First().FindAll(inheritors, false, false, true, isWomen, isMarried, trait);
-        }
-
-        if(!fromBrother){
-            if(this.Parent != null){
-                if(this.Parent.Childrens.Count > 1){
-                    foreach (var brother in this.Parent.Childrens)
-                    {
-                        if(brother == this){
-                            continue;
-                        }
-                        brother.FindAll(inheritors, false, true, false, isWomen, isMarried, trait);
-                    }
-                }
-                if(!fromParent){
-                    this.Parent.FindAll(inheritors, true, false, false, isWomen, isMarried, trait);
-                }
-            }
-
-        }
-        return inheritors;
-    }
-
     public List<Inheritor> FindAllToBorn()
     {
         var result = new List<Inheritor>();
