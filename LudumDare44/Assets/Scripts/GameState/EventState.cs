@@ -13,7 +13,7 @@ public class EventState : GameState
 
     public override void Enter()
     {
-
+        GameManager.Instance.ChooseEvent();
     }
 
     public override void Execute()
@@ -22,5 +22,6 @@ public class EventState : GameState
 
     public override void Exit()
     {
+
     }
 }

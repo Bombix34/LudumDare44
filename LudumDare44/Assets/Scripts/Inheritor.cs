@@ -96,6 +96,24 @@ public class Inheritor
         }
         return inheritors;
     }
+
+    public List<Inheritor> FindAllToBorn()
+    {
+        var result = new List<Inheritor>();
+        var inheritors = new List<Inheritor>();
+        this.FindAll(ref inheritors);
+        foreach (var item in inheritors)
+        {
+            var notBorn = item.Childrens.Where(q => q.NotBornYet).ToList();
+            if(notBorn.Count > 0)
+            {
+                result.Add(notBorn.First());
+            }
+        }
+        return result;
+    }
+
+
 }
 
 public class DuoGraphicElement
