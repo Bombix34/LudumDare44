@@ -45,6 +45,7 @@ public class ChooseName : MonoBehaviour
             matriarcBouton.GetComponent<Image>().color = baseColor;
             patriarcBouton.GetComponent<Image>().color = Color.green;
         }
+        SoundManager.instance.PlaySound(1);
         initSex = true;
     }
 
@@ -54,5 +55,6 @@ public class ChooseName : MonoBehaviour
         GameManager.Instance.Init(input.text, isWomenStrongSex);
         GameManager.Instance.gameObject.GetComponent<WeddingManager>().enabled = true;
         gameObject.SetActive(false);
+        SoundManager.instance.PlaySound(1);
     }
 }

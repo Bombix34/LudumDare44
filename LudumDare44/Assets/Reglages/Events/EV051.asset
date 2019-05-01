@@ -24,7 +24,7 @@ MonoBehaviour:
       with your family members, accusing you of enjoying his wealth and threatening
       to declare an open war on you.
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 9
       Choice: You decide to discreetly poison his drink as soon as the rest of the
         guests no longer pay attention to you.
       Response: You didn't expect such a quick effect, but even before the meal is

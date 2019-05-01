@@ -19,7 +19,7 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
-    CustomSongId: 0
+    CustomSongId: 2
     Message: You receive a letter from a prominent family in a nearby town, who proposes
       to organize a banquet.
     ProposalOne:

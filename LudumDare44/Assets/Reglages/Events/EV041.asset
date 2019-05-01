@@ -19,7 +19,7 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 10
       inheritorCondition: 0
-    CustomSongId: 0
+    CustomSongId: 5
     Message: One fine morning, $charactername comes to you to share with you his desire
       to join the national war, to cover your house with glory.
     ProposalOne:

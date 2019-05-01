@@ -35,7 +35,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 5
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 6
       Choice: You take your annual bath much earlier than expected, and rinse your
         body thoroughly with hot water.
       Response: Several days later, you are still infected, and it is very painful

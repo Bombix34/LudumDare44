@@ -19,7 +19,7 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 10
       inheritorCondition: 0
-    CustomSongId: 0
+    CustomSongId: 5
     Message: Less than a week later, the scandal broke while everyone was at the table,
       and in self-defense, $charactername did not hesitate to remind you that you
       were there and that you did not look more shocked than that at the time.

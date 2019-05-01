@@ -19,7 +19,7 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 3
-    CustomSongId: 0
+    CustomSongId: 5
     Message: One of the allied kingdoms goes to war with a distant dynasty and asks
       for your help. The whole world is focused on you, the outcome of the war depending
       on what you are going to do...

@@ -25,7 +25,7 @@ MonoBehaviour:
       who cries out for injustice, then as you look more closely, you notice that
       this is an old acquaintance of yours, but not the most friendly. '
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 7
       Choice: 'You intercept the executioner before he does his job, and use your
         influence to get him released. '
       Response: The executioner seems determined not to listen to you, and hastens
@@ -36,7 +36,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 10
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 7
       Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
       Response: He then sees you as he looks subtly at the crowd. He seems to want
         to ask you for help, then change his mind. He probably remembered all the

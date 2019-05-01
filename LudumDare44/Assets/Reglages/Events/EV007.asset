@@ -25,7 +25,7 @@ MonoBehaviour:
       at you to beg for money. You push it away with a blow of the cuff, but when
       you try to hold on to something, it scratches you quite deeply.
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 4
       Choice: 'You go home, disgusted, and do what is necessary by contacting your
         family to punish the beggar. '
       Response: You manage to have the beggar executed in public. But a few weeks

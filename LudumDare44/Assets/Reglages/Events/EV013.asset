@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
-    CustomSongId: 0
+    CustomSongId: 6
     Message: 'One evening, as you enter your room, a sharp pain runs through your
       heart. Before you can do anything, you find yourself on the ground, unable to
       breathe regularly. '

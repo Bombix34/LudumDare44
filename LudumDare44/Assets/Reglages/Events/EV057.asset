@@ -26,7 +26,7 @@ MonoBehaviour:
       So you take the opportunity to drink a cervoise, and it is then that a traveller
       in a strange outfit invites you to share his evening with you.
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 1
       Choice: You accept, you tell yourself that it could help you return to your
         property in case of a problem.
       Response: 'After hours of drinking, eating and laughing at the world around

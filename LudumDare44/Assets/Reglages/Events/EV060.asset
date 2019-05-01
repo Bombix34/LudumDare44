@@ -28,7 +28,7 @@ MonoBehaviour:
     Message: On returning from a country walk, $charactername is proud to introduce
       its new pet, an adorable little rodent.
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 4
       Choice: You pet the cute little animal and go back to your business.
       Response: After spending a few days with his new friend, horrible bubons abound
         on $charactername's body. You then understand your mistake as the plague spreads

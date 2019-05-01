@@ -39,7 +39,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 0
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 9
       Choice: Refuse, you need it to keep your family going and the common interest
         must come first.
       Response: You haven't taken his love seriously enough, he cries, shouts, tells

@@ -24,7 +24,7 @@ MonoBehaviour:
       decision. He chose to abandon the couple's life that the dynasty imposed on
       him and to leave with a commoner for love.
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 1
       Choice: Prevent him from leaving the room, and accuse him loud and clear of
         a fact that he did not commit so that your henchmen can hear the scene from
         the outside.

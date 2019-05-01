@@ -32,7 +32,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 1000
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 7
       Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
       Response: As he takes one last look at the crowd, he sees you and begs you to
         do something in the name of the "good old days" you may have spent together.

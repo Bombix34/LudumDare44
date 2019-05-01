@@ -19,7 +19,7 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 14
       inheritorCondition: 0
-    CustomSongId: 0
+    CustomSongId: 2
     Message: During a banquet organized by a local celebrity, you see $charactername
       sneak out and then come back with slight bulges in his pockets.
     ProposalOne:

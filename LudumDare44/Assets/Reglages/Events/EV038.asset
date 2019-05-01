@@ -47,7 +47,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 7
       Choice: Tell him that you understand, but have no choice but to deny him and
         exclude him from the family.
       Response: He suddenly seems much paler. He had not considered this possibility

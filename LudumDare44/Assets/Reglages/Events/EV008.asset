@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
-    CustomSongId: 0
+    CustomSongId: 1
     Message: After years in the shadow of his eldest son eating his brake, $charactername
       succumbs to his sick jealousy. You find it above your heir's mutilated corpse,
       with a knife in hand.

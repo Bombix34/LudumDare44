@@ -30,7 +30,7 @@ MonoBehaviour:
       but they seem to blame themselves more for their wrongs than if they were perfect
       rivals. '
     ProposalOne:
-      CustomSongId: 0
+      CustomSongId: 1
       Choice: You decide to conduct your investigation, perhaps by understanding the
         cause of their conflict, you could help them get along?
       Response: Despite your research, you are unable to understand the reasons for
@@ -46,7 +46,7 @@ MonoBehaviour:
       - Effect: 5
         EffectValue: 1
     ProposalTwo:
-      CustomSongId: 0
+      CustomSongId: 7
       Choice: You ask him to take it back to where he found it, you wouldn't want
         to have allergies because of a pet.
       Response: $charactername insists and then, in front of your impassivity, sadly
