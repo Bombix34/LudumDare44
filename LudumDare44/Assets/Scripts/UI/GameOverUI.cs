@@ -11,6 +11,12 @@ public class GameOverUI : Singleton<GameOverUI>
     public void GameOver(string message){
         this.GameOverText.text = message;
         GameOverGameObject.SetActive(true);
+        var weddingsButton = FindObjectsOfType<WeddingButton>();
+        print(weddingsButton.Length);
+        foreach (var wed in weddingsButton)
+        {
+            wed.GetComponentInChildren<Button>().interactable = false;
+        }
     }
 
     public void Restart(){

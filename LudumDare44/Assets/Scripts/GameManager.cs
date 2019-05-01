@@ -63,6 +63,8 @@ public class GameManager : Singleton<GameManager>
     Sprite crown;
     [SerializeField]
     Sprite heritierCrown;
+    public EventScriptableObject EventFirstTurn;
+    public EventScriptableObject EventSecondTurn;
 
     void Start()
     {
@@ -138,11 +140,11 @@ public class GameManager : Singleton<GameManager>
 
         DescentContainer.Instance.UpdateView();
         this.GoldTurnCheck();
-        if(!this.CanStillHaveChildrens()){
-            this.GameOver("No more childrens");
-        }
         
         ChangeState(new WeddingState(this.gameObject));
+        if(!this.CanStillHaveChildrens()){
+            this.GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
+        }
     }
 
     private void GoldTurnCheck(){
@@ -180,7 +182,7 @@ public class GameManager : Singleton<GameManager>
                 UpdateHeritierCrown();
             }
             else
-                GameOver("All your family is dead");
+                GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
         }
     }
 
@@ -218,6 +220,13 @@ public class GameManager : Singleton<GameManager>
         CurrentState.Enter();
     }
     public void ChooseEvent(){
+        if(this.Turn == 1){
+            EventUI.Instance.CreateView(EventFirstTurn.ev);
+            return;
+        }   else if(this.Turn == 2){
+            EventUI.Instance.CreateView(EventSecondTurn.ev);
+            return;
+        }
         var events = this.GetListAvailableEvents();
         if(events.Count == 0){
             return;
@@ -254,7 +263,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     private void Ruined(){
-        this.GameOver("Your family is ruined");
+        this.GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
     }
 
 }

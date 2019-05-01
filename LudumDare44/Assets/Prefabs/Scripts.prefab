@@ -64,10 +64,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlazonDatabase: {fileID: 11400000, guid: b2ade5d1943944549a798f920ab29f9e, type: 2}
+  goldCostByTurnByFamilyNumber: 0
+  goldGainByTurnByInfluencePointPourcent: 0
   EventsScriptableObject: {fileID: 11400000, guid: 23ca2f7708ad7ce43b8ec5b52eeb1260,
     type: 2}
   crown: {fileID: 21300000, guid: 3a5440d51dffc4e63a2e9e1b4b35a889, type: 3}
   heritierCrown: {fileID: 21300000, guid: a5a3ab3e5ec2946d4990e915dac1dbfa, type: 3}
+  EventFirstTurn: {fileID: 11400000, guid: 33a731949d77c1547ae4ffb4038f8516, type: 2}
+  EventSecondTurn: {fileID: 11400000, guid: a8477b0b8907c3c4591d8dbc23a350f3, type: 2}
 --- !u!114 &1876657118
 MonoBehaviour:
   m_ObjectHideFlags: 0
