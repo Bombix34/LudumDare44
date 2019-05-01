@@ -80,6 +80,7 @@ public class CoupleManager : MonoBehaviour
                 }else//IF DEAD
                 {
                     firstCharacter.Face.DieFeedback();
+                    SetCrown(null);
                     secondCharacter.Face.transform.parent.gameObject.SetActive(false);
                 }
                 break;
@@ -94,6 +95,7 @@ public class CoupleManager : MonoBehaviour
                 }else
                 {
                     firstCharacter.Face.DieFeedback();
+                    SetCrown(null);
                 }
                 if (secondCharacter.CharacterInfos.IsAlive)
                 {
