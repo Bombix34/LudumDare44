@@ -137,6 +137,9 @@ public class GameManager : Singleton<GameManager>
 
         DescentContainer.Instance.UpdateView();
         this.GoldTurnCheck();
+        if(!this.CanStillHaveChildrens()){
+            this.GameOver("No more childrens");
+        }
         
         ChangeState(new WeddingState(this.gameObject));
     }
@@ -145,6 +148,20 @@ public class GameManager : Singleton<GameManager>
         var familySize = this.GetLivingInFamilyCharacters();
         this.GoldCoins -= familySize * goldCostByTurnByFamilyNumber;
         this.goldCoins += influencePoints * goldGainByTurnByInfluencePointPourcent;
+    }
+
+    private bool CanStillHaveChildrens(){
+        var inheritors = new List<Inheritor>();
+        this.FamilyMaster.FindAll(ref inheritors, false, false, false, this.IsWomenStrongSex);
+        if(inheritors.Any(q => q.Spouse == null)){
+            return true;
+        }
+
+        if(inheritors.Any(q => q.Spouse != null && q.Childrens.Any(c => c.NotBornYet))){
+            return true;
+        }
+
+        return false;
     }
 
     public void CheckNewfamilyMaster()
@@ -162,7 +179,7 @@ public class GameManager : Singleton<GameManager>
                 UpdateHeritierCrown();
             }
             else
-                GameOver();
+                GameOver("All your family is dead");
         }
     }
 
@@ -182,7 +199,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void GameOver()
+    public void GameOver(string message)
     {
         Debug.Log("GameOver");
     }
@@ -236,7 +253,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     private void Ruined(){
-
+        this.GameOver("Your family is ruined");
     }
 
 }
