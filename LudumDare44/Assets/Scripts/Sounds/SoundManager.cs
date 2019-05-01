@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	public PitchVolumeAudio mariageSound; //0
-    public PitchVolumeAudio clickSound; //1
-    public PitchVolumeAudio monneySound; //2
-    public PitchVolumeAudio eventGenericLaunch; //3
-    public PitchVolumeAudio eventGenericResult; //4
+	public AudioSource[] audiosources;
 
-	public AudioSource[] audiosources; 
+    public SoundDatabase baseSounds;
+    public SoundDatabase eventOpenDatabase;
+    public SoundDatabase eventResponseDatabase;
 
 	void Start(){
 		for(int i =0 ; i < audiosources.Length;i++)
@@ -21,35 +19,20 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlaySound(int sound)
     {
-		switch(sound)
-        {
-			case 0:
-				GetAudioSourceAvailable(mariageSound);
-				break;
-			case 1:
-				GetAudioSourceAvailable(clickSound);
-				break;
-            case 2:
-                GetAudioSourceAvailable(monneySound);
-                break;
-            case 3:
-                GetAudioSourceAvailable(eventGenericLaunch);
-                break;
-            case 4:
-                GetAudioSourceAvailable(eventGenericResult);
-                break;
-            case 5:
-              //  GetAudioSourceAvailable(rocketLaunch);
-                break;
-            case 6:
-              //  GetAudioSourceAvailable(rocketExplosion);
-                break;
-            case 7:
-               // GetAudioSourceAvailable(speedBoostSound);
-                break;
-        }
+        GetAudioSourceAvailable(baseSounds.audioDatabase[sound]);
     }
 
+    public void PlayEventSound(int index, bool IsOpenSound)
+    {
+        if(IsOpenSound)
+        {
+            GetAudioSourceAvailable(eventOpenDatabase.audioDatabase[index]);
+        }
+        else
+        {
+            GetAudioSourceAvailable(eventResponseDatabase.audioDatabase[index]);
+        }
+    }
 
 	public void GetAudioSourceAvailable(AudioClip clip){
 		for(int i =0 ; i < audiosources.Length;i++){

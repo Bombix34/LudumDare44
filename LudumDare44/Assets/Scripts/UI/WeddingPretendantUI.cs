@@ -135,6 +135,8 @@ public class WeddingPretendantUI : MonoBehaviour
     {
         if (toCheck.affinityVal < 1)
             toCheck.affinityVal = 1;
+        else if (toCheck.affinityVal > 4)
+            toCheck.affinityVal = 4;
 
         return toCheck;
     }

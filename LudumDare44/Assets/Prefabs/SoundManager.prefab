@@ -942,11 +942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c63ae17dddf6af4e8d853eb573ef033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mariageSound: {fileID: 11400000, guid: 0bf1c13f761874972b034e4298e88291, type: 2}
-  clickSound: {fileID: 11400000, guid: c5219ff1579c24e93b73c84af7a8d1bb, type: 2}
-  monneySound: {fileID: 11400000, guid: bf5150ef1b8804ecd917e64cea0c610c, type: 2}
-  eventGenericLaunch: {fileID: 11400000, guid: 34b662e3fa61148c7a7c3a33b02a7ae1, type: 2}
-  eventGenericResult: {fileID: 11400000, guid: 994aed335ea40451f94986af7edb3f31, type: 2}
   audiosources:
   - {fileID: 4094337943877628747}
   - {fileID: 4094337942564302030}
@@ -958,6 +953,10 @@ MonoBehaviour:
   - {fileID: 4094337943512717329}
   - {fileID: 4094337943803870082}
   - {fileID: 4094337944569644046}
+  baseSounds: {fileID: 11400000, guid: 5fb3f2ac00ca24cd69730fdbde2c35ad, type: 2}
+  eventOpenDatabase: {fileID: 11400000, guid: d7e5a0ea04ca84bb1b42ce5804f2b861, type: 2}
+  eventResponseDatabase: {fileID: 11400000, guid: 563fdaf29bac844f097a0c38d0205295,
+    type: 2}
 --- !u!1 &4094337944101053894
 GameObject:
   m_ObjectHideFlags: 0

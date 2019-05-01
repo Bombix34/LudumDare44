@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
-  m_Name: EventGenericLaunch
+  m_Name: EventEpidemie
   m_EditorClassIdentifier: 
   loop: 0
   clips:
-  - {fileID: 8300000, guid: 6c5c8da9a29ee40ce934701d04d4d4ae, type: 3}
+  - {fileID: 8300000, guid: 8f50e0566296b4c3599986e355bd2507, type: 3}
   volume:
-    minValue: 0.35416666
-    maxValue: 0.4375001
+    minValue: 0.3333333
+    maxValue: 0.41666675
   pitch:
-    minValue: 0.75000006
+    minValue: 0.7916667
     maxValue: 1.25
