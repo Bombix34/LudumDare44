@@ -49,7 +49,10 @@ public class PortraitUI : MonoBehaviour
         eyes.sprite = concerned.pairSpriteColor[4].Sprite;
         eyes.color = concerned.pairSpriteColor[4].ElementColor;
 
-        sourcils.sprite = concerned.pairSpriteColor[5].Sprite;
+        if (concerned.pairSpriteColor[5].Sprite != null)
+            sourcils.sprite = concerned.pairSpriteColor[5].Sprite;
+        else
+            sourcils.gameObject.SetActive(false);
         sourcils.color = concerned.pairSpriteColor[5].ElementColor;
 
         if (concerned.pairSpriteColor[6].Sprite != null)
