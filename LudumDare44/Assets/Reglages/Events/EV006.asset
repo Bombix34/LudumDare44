@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: On a sunny day, you go to your country property to garden. As you seek
       to dig the ground, you notice a reinforcement in the nearest cliff that is also
       on your property. You hesitate to enter the cave.
     ProposalOne:
+      CustomSongId: 0
       Choice: Take your courage with both hands, and plunge straight into the darkness.
       Response: 'After several hours of exploration, you understand that this is actually
         a very large silver mine. You thank God that the cliff is entirely on your
@@ -26,11 +28,13 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: No one is there to judge you, you don't need to take such a risk.
       Response: You go home, take a scroll large enough, and write in capital letter
         "DO NOT ENTER", to stick it on the entrance of the cave.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

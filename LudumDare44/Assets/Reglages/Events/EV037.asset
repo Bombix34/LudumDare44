@@ -19,11 +19,13 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 3
+    CustomSongId: 0
     Message: While walking around the village market, you observe a beggar prowling
       around, looking sick. You don't have time to duck him and let him throw himself
       at you to beg for money. You push it away with a blow of the cuff, but when
       you try to hold on to something, it scratches you quite deeply.
     ProposalOne:
+      CustomSongId: 0
       Choice: 'You go home, disgusted, and do what is necessary by contacting your
         family to punish the beggar. '
       Response: All those who were in contact with you after this event became seriously
@@ -33,6 +35,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 5
     ProposalTwo:
+      CustomSongId: 0
       Choice: You take your annual bath much earlier than expected, and rinse your
         body thoroughly with hot water.
       Response: Several days later, you are still infected, and it is very painful
@@ -42,6 +45,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

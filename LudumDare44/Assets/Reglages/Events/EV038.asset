@@ -29,10 +29,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: After years in the shadow of his eldest son eating his brake, $charactername
       succumbs to his sick jealousy. You find it above your heir's mutilated corpse,
       with a knife in hand.
     ProposalOne:
+      CustomSongId: 0
       Choice: You scream in pain at the sight of the flesh of your inert flesh before
         you, and you have the traitor arrested by your personal guard.
       Response: Suddenly, something changes in the look of $charactername, you've
@@ -45,6 +47,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: Tell him that you understand, but have no choice but to deny him and
         exclude him from the family.
       Response: He suddenly seems much paler. He had not considered this possibility
@@ -54,6 +57,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

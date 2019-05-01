@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: 'One evening, as you enter your room, a sharp pain runs through your
       heart. Before you can do anything, you find yourself on the ground, unable to
       breathe regularly. '
     ProposalOne:
+      CustomSongId: 0
       Choice: You cry out for help for your life, crying, and screaming at death.
       Response: Several members of your family, alerted by your cries, manage to get
         you upright and go for a doctor as quickly as possible. You're saved, but
@@ -26,6 +28,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -5
     ProposalTwo:
+      CustomSongId: 0
       Choice: You hope someone will pass through there soon, because it's unlikely
         you'll be alive in an hour.
       Response: Unfortunately, no one passes by, and you see your life passing before
@@ -34,6 +37,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: 'As you walk quietly along the immense corridor of your home, you hear
       the bell ringing at your door. '
     ProposalOne:
+      CustomSongId: 0
       Choice: 'Curious you will open to discover who it is. '
       Response: Seeing no one, you ask yourself questions, then go out to understand.
         That's when a bunch of hooded thugs come at you, piercing you through and
@@ -30,10 +32,12 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 12
       inheritorCondition: 0
+    CustomSongId: 0
     Message: 'You learn from a villager that $charactername has been insulted by a
       loser thirsty man many times. '
     ProposalOne:
+      CustomSongId: 0
       Choice: 'You organize yourself to have the culprit caught by your men, and make
         him fully available to $charactername. '
       Response: While the drunk is completely tied up, on his knees, and begging for
@@ -31,11 +33,13 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 10
     ProposalTwo:
+      CustomSongId: 0
       Choice: You ignore the remark, he's just a peasant.
       Response: The peasant will continue to talk nonsense in this bar until we don't
         see him around again.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

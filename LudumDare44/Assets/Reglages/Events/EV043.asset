@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: 'One evening, as you enter your room, a sharp pain runs through your
       heart. Before you can do anything, you find yourself on the ground, unable to
       breathe regularly. '
     ProposalOne:
+      CustomSongId: 0
       Choice: You cry out for help for your life, crying, and screaming at death.
       Response: A few hours later, you wake up shaking on your bed. You will later
         learn that you vomited and defecated multiple times on the doctor in your
@@ -33,6 +35,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You hope someone will pass through there soon, because it's unlikely
         you'll be alive in an hour.
       Response: Luckily, a member of your family passed by your room, and he found
@@ -45,6 +48,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 15
       inheritorCondition: 0
+    CustomSongId: 0
     Message: During your weekly popular grievance session, a ten-year-old child approaches
       you and declares in front of everyone that he is the fruit of your adventure
       with a former servant of the castle.
     ProposalOne:
+      CustomSongId: 0
       Choice: You pretend not to know this person and make sure that you are more
         loyal than anyone else.
       Response: Just after, his mother calls you and swears that you gave birth to
@@ -33,6 +35,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 20
     ProposalTwo:
+      CustomSongId: 0
       Choice: You publicly acknowledge your youthful mistakes and make a generous
         donation to allow your illegitimate child to live with dignity.
       Response: A few months later, you discover a birthmark on your "child"'s back
@@ -44,6 +47,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 5
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

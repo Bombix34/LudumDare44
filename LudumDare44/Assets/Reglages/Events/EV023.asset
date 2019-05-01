@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: 'You are a candidate to lead the merchant guild, but the matriarch of
       a large rival family seems to be much more favorite than you. You cannot let
       it take such an economic lead over you, at the risk of falling far behind. '
     ProposalOne:
+      CustomSongId: 0
       Choice: You know one of the current members of the guild very well and you are
         complicit enough with him to be able to plan a plan to discredit the said
         matriarch.
@@ -29,6 +31,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You use your influence to bring a large number of foreign merchants
         into the city to create potential new trade routes.
       Response: Not only have you taken control of the guild, but thanks to these
@@ -39,6 +42,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 1500
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

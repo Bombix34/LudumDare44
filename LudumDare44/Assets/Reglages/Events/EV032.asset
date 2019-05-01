@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: A very rich lord of a distant land meets your family, and immediately
       decides to unite your two dynasties by the sacred bonds of marriage. He offers
       you to marry $charactername. You barely know him, but while you are sitting
       at a table next to him, he makes you very subtly understand that if you accept,
       the reward will be up to the task.
     ProposalOne:
+      CustomSongId: 0
       Choice: Refuse! You are not going to exchange a family member for goods.
       Response: Outraged, the Lord declares that you will hear from him again. You
         then challenge him to a duel, and to your surprise, he accepts! He is actually
@@ -29,6 +31,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: Immediately exchange a cup of cervoise with them to celebrate the upcoming
         wedding! The ambition to become an aristocrat makes you wander a little while
         while you take a sip.
@@ -43,6 +46,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 15
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

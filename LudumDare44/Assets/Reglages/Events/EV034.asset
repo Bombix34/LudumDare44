@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: An old friend tells you that he wants to come and spend a holiday in
       your kingdom and asks for hospitality.
     ProposalOne:
+      CustomSongId: 0
       Choice: You ignore his request.
       Response: A few days later, you learn that this friend, in front of your silence,
         has chosen to spend his holidays a few leagues away, in the home of a rival
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalTwo:
+      CustomSongId: 0
       Choice: You accept with pleasure, for the sake of the good old days.
       Response: After a few weeks, you start to wonder if he will ever leave, or if
         he has decided to be part of your family. One fine morning, you notice that
@@ -42,6 +45,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1000
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 14
       inheritorCondition: 0
+    CustomSongId: 0
     Message: During a banquet organized by a local celebrity, you see $charactername
       sneak out and then come back with slight bulges in his pockets.
     ProposalOne:
+      CustomSongId: 0
       Choice: You have no shame in humiliating him in front of the guests by asking
         him to empty his pockets.
       Response: 'Obviously, $charactername panics, and runs through the whole room.
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 15
     ProposalTwo:
+      CustomSongId: 0
       Choice: You pretend you didn't see anything.
       Response: Even if you wanted to be discreet, someone else will do it for you
         later in the evening, and will scream at the thief. You propose to return
@@ -41,6 +44,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -1000
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,11 +19,13 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 3
+    CustomSongId: 0
     Message: 'You notice that at the moment, your eldest and youngest children are
       very often in conflict. You don''t understand where this hatred comes from,
       but they seem to blame themselves more for their wrongs than if they were perfect
       rivals. '
     ProposalOne:
+      CustomSongId: 0
       Choice: You decide to conduct your investigation, perhaps by understanding the
         cause of their conflict, you could help them get along?
       Response: 'By looking around, you discover that everyone''s pattern was initiated
@@ -34,6 +36,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: You propose that they settle this dispute the "old-fashioned way". You
         place them in a pen made of wood, explaining to them that whoever beat the
         other will be right. You hope that the fear of harm will win them over, so
@@ -46,6 +49,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -15
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

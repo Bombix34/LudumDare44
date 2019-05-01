@@ -24,9 +24,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 15
       inheritorCondition: 0
+    CustomSongId: 0
     Message: During an alcoholic evening in a bar to be raved about with a stranger,
       he invites you to his daughter's wedding the next day.
     ProposalOne:
+      CustomSongId: 0
       Choice: 'With the help of alcohol, you promise him all the wonders for his daughter.
         You are comfortable with money right now, and you are as happy as he is. '
       Response: As you began to regret your decision the day before at the altar of
@@ -39,6 +41,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 15
     ProposalTwo:
+      CustomSongId: 0
       Choice: You may be drunk, but you know the difference between a friend and a
         man out of nowhere. There's no way you're damaging your reputation by officially
         posting yourself with a stranger!
@@ -51,6 +54,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

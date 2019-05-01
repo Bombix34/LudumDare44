@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: On a sunny day, you go to your country property to garden. As you seek
       to dig the ground, you notice a reinforcement in the nearest cliff that is also
       on your property. You hesitate to enter the cave.
     ProposalOne:
+      CustomSongId: 0
       Choice: Take your courage with both hands, and plunge straight into the darkness.
       Response: A little disappointed, you don't find much wealth there. But there
         is still a huge cavity, miraculously illuminated by a tiny ray of sunlight
@@ -35,6 +37,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 500
     ProposalTwo:
+      CustomSongId: 0
       Choice: You go home, take a scroll large enough, and write in capital letter
         "DO NOT ENTER", to stick it on the entrance of the cave.
       Response: The sign eventually attracted the children from the nearby village
@@ -45,6 +48,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

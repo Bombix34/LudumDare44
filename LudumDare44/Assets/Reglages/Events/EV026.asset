@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: You have been hearing rumours for some time now that two members of your
       family are close. Maybe even too close.
     ProposalOne:
+      CustomSongId: 0
       Choice: You summon them to get to the bottom of it.
       Response: Against all odds, they choose to claim their act, and seem to have
         taken their courage in both hands to tell you that they love each other to
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 3
         EffectValue: 2
     ProposalTwo:
+      CustomSongId: 0
       Choice: You don't take care of them, after all, they don't hurt anyone.
       Response: A few weeks later, a scandal broke when a villager declared that he
         had seen the two forbidden lovers fornicating through one of the house's windows.
@@ -39,6 +42,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

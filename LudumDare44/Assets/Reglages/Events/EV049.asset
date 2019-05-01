@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 3
       inheritorCondition: 0
+    CustomSongId: 0
     Message: "As Christmas approaches, the priest comes knocking on your door to ask
       for a contribution to the construction of the cr\xE8che. "
     ProposalOne:
+      CustomSongId: 0
       Choice: You are getting tired of giving money to a cult you don't even believe
         in and that doesn't bring you anything. You donate the few coins in your pocket
         and go back to your business without delay.
@@ -33,6 +35,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: You love Christmas and directly propose to build the crib with your
         own hands.
       Response: General, the priest explains that it is their pleasure to do the crib,
@@ -46,6 +49,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -500
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

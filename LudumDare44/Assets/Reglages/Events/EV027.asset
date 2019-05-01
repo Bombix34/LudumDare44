@@ -19,11 +19,13 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: 'You discover that $charactername is an integral part of the thieves''
       guild in its spare time. This information seemed obvious to you when you saw
       him leave at late hours at night, hooded, then return with his pockets full
       of gold before dawn. '
     ProposalOne:
+      CustomSongId: 0
       Choice: You use $charactername to create a relationship between your family
         and the Thief Guild. This will ensure that you do not suffer a burglary and
         you may even expect lucrative business.
@@ -35,6 +37,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You blackmail $charactername to pay you a percentage of what he earns
         every time he goes on a night expedition.
       Response: Dumbfounded that you could prove guilty of such low standards, $charactername
@@ -43,6 +46,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1500
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

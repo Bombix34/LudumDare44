@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: 'As you pass the fortifications of the nearest town, you discover a scene
       of public execution. Your gaze is for a short while on the condemned person
       who cries out for injustice, then as you look more closely, you notice that
       this is an old acquaintance of yours, but not the most friendly. '
     ProposalOne:
+      CustomSongId: 0
       Choice: 'You intercept the executioner before he does his job, and use your
         influence to get him released. '
       Response: 'The executioner is not easily convinced, but when the prisoner is
@@ -30,6 +32,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
       Response: As he takes one last look at the crowd, he sees you and begs you to
         do something in the name of the "good old days" you may have spent together.
@@ -39,6 +42,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

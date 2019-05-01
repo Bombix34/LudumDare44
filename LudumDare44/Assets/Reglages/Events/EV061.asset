@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 14
       inheritorCondition: 0
+    CustomSongId: 0
     Message: During a banquet organized by a local celebrity, you see $charactername
       sneak out and then come back with slight bulges in his pockets.
     ProposalOne:
+      CustomSongId: 0
       Choice: You have no shame in humiliating him in front of the guests by asking
         him to empty his pockets.
       Response: Penaud, $charactername then extracts a multitude of expensive jewellery.
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 10
     ProposalTwo:
+      CustomSongId: 0
       Choice: You pretend you didn't see anything.
       Response: When you return to your home, $charactername then reveals its hold,
         exposing a mutltude of expensive jewellery, which shellily replenishes your
@@ -39,6 +42,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: 1000
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

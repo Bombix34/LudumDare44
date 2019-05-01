@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 3
       inheritorCondition: 0
+    CustomSongId: 0
     Message: You have been hearing rumours for some time now that two members of your
       family are very close. Maybe even too close.
     ProposalOne:
+      CustomSongId: 0
       Choice: You summon them to get to the bottom of it.
       Response: While you were thinking about the worst, they reveal to you that they
         both took a passion for politics. They were both working hard to try to sell
@@ -32,6 +34,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 10
     ProposalTwo:
+      CustomSongId: 0
       Choice: You don't take care of them, after all, they don't hurt anyone.
       Response: A few weeks later, you learn that your two relative ones are both
         leaving to become advisors to a close lord. They seem determined to gain political
@@ -40,6 +43,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 5
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

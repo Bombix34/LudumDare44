@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 5
       inheritorCondition: 0
+    CustomSongId: 0
     Message: As you enter a room in the family estate, you surprise $charactername
       with gay sex. Horrified, the two lovers dare not say a word.
     ProposalOne:
+      CustomSongId: 0
       Choice: With a very pronounced expression of disgust, you pretend to faint in
         the face of the shock, while the two interested begin to consider running
         away. You then prevent them from doing so by standing in front of the exit,
@@ -32,6 +34,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -15
     ProposalTwo:
+      CustomSongId: 0
       Choice: You immediately close the door, and walk away. Nothing happened at all.
       Response: Less than a week later, the scandal broke while everyone was at the
         table, and in self-defense, $charactername did not hesitate to remind you
@@ -41,6 +44,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -20
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

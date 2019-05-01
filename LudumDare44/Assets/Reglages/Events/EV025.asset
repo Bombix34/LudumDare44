@@ -19,11 +19,13 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 3
+    CustomSongId: 0
     Message: 'Your lord has summoned you to his immense castle. Once there, he makes
       you a proposal that deserves to be studied: he would like you to become his
       steward, and that you now reside at the castle. Of course, a very generous compensation
       would follow.'
     ProposalOne:
+      CustomSongId: 0
       Choice: You accept the proposal, and abandon your role as head of the house
         for the good of the dynasty.
       Response: It's official, so you become the steward of one of the country's greatest
@@ -36,6 +38,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: You refuse, even if you thank him very much for offering you this. You
         are far too proud to be in charge of the dynasty.
       Response: The Lord is very clearly disappointed, and urges you to leave his
@@ -43,6 +46,7 @@ MonoBehaviour:
         against you.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

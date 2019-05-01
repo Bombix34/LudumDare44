@@ -24,9 +24,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: On returning from a country walk, $charactername is proud to introduce
       its new pet, an adorable little rodent.
     ProposalOne:
+      CustomSongId: 0
       Choice: You pet the cute little animal and go back to your business.
       Response: You didn't pay attention and the rodent slipped into your office one
         day, and enjoyed some of your property titles. In an outburst of anger you
@@ -36,6 +38,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You ask him to take it back to where he found it, you wouldn't want
         to have allergies because of a pet.
       Response: $charactername shares his sadness with you, then he goes to the forest
@@ -48,6 +51,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

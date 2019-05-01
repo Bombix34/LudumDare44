@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: A very influential family, and much richer than yours, sends you a letter
       proposing that you take a member of your family as a servant, in exchange for
       a large amount of gold.
     ProposalOne:
+      CustomSongId: 0
       Choice: You consider hiring assassins for a few seconds, then you remember that
         your finances are at their lowest. So you change your mind, and don't answer
         anything.
@@ -27,6 +29,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalTwo:
+      CustomSongId: 0
       Choice: In return, you answer them that you are making them exactly the same
         offer, with all the irony of the world. But you hope they won't accept, because
         you couldn't pay.
@@ -36,6 +39,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -20
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -24,9 +24,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: On returning from a country walk, $charactername is proud to introduce
       its new pet, an adorable little rodent.
     ProposalOne:
+      CustomSongId: 0
       Choice: You pet the cute little animal and go back to your business.
       Response: After spending a few days with his new friend, horrible bubons abound
         on $charactername's body. You then understand your mistake as the plague spreads
@@ -35,12 +37,14 @@ MonoBehaviour:
       - Effect: 3
         EffectValue: 3
     ProposalTwo:
+      CustomSongId: 0
       Choice: You ask him to take it back to where he found it, you wouldn't want
         to have allergies because of a pet.
       Response: $charactername insists and then, in front of your impassivity, sadly
         returns to give his new friend his freedom.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

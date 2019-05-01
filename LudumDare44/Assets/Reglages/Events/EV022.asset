@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: During a Sunday meal, one of your closest friends begins to get angry
       with your family members, accusing you of enjoying his wealth and threatening
       to declare an open war on you.
     ProposalOne:
+      CustomSongId: 0
       Choice: You decide to discreetly poison his drink as soon as the rest of the
         guests no longer pay attention to you.
       Response: Your "friend" is found cold by servants a few hours later on the toilet.
@@ -32,6 +34,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -15
     ProposalTwo:
+      CustomSongId: 0
       Choice: You in turn get angry at this heinous defamation and ask him to leave
         your home.
       Response: The following night, a gang of mercenaries broke into the castle,
@@ -41,6 +44,7 @@ MonoBehaviour:
       - Effect: 3
         EffectValue: 5
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: You just learned that $charactername was kidnapped by bandits! These
       scoundrels are asking for a ransom of "x" gold coins ! Such an amount of money
       cannot be taken lightly.
     ProposalOne:
+      CustomSongId: 0
       Choice: Pay the ransom with regrets.
       Response: Without delay, you contacted the bandits and begged them to give you
         your child back. They kept their end of the bargain while laughing at you
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalTwo:
+      CustomSongId: 0
       Choice: Pretend you didn't hear anything.
       Response: Your advisor remains nailed in place, while you order him to keep
         this information to himself. Days later you publicly declare that $charactername
@@ -39,6 +42,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects:

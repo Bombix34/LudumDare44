@@ -19,12 +19,14 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 3
       inheritorCondition: 0
+    CustomSongId: 0
     Message: It's been several weeks since you broke your leg. Tonight, for the first
       time, you plan to start your rehabilitation by walking to the tavern. The expedition
       is more ambitious than expected, and you arrive at the tavern early in the evening.
       So you take the opportunity to drink a cervoise, and it is then that a traveller
       in a strange outfit invites you to share his evening with you.
     ProposalOne:
+      CustomSongId: 0
       Choice: You accept, you tell yourself that it could help you return to your
         property in case of a problem.
       Response: 'After hours of drinking, eating and laughing at the world around
@@ -35,6 +37,7 @@ MonoBehaviour:
       - Effect: 4
         EffectValue: 0
     ProposalTwo:
+      CustomSongId: 0
       Choice: You refuse, leaving drunk means a risk of injury again and you need
         to be on your feet as soon as possible.
       Response: You did well to leave in the middle of the day, the return was difficult,
@@ -43,6 +46,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -500
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

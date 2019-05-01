@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 10
       inheritorCondition: 0
+    CustomSongId: 0
     Message: Less than a week later, the scandal broke while everyone was at the table,
       and in self-defense, $charactername did not hesitate to remind you that you
       were there and that you did not look more shocked than that at the time.
     ProposalOne:
+      CustomSongId: 0
       Choice: You let him know that you are very proud, and that you totally approve
         of him! You give him enough money so that he can make the trip and buy himself
         armor.
@@ -35,6 +37,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -1000
     ProposalTwo:
+      CustomSongId: 0
       Choice: You refuse to let him abandon his family and pretend that you need him
         for domestic tasks.
       Response: He protests, furious and swears that he has nothing left to do in
@@ -43,6 +46,7 @@ MonoBehaviour:
       - Effect: 2
         EffectValue: 0
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

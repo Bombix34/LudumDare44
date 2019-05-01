@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 10
       inheritorCondition: 0
+    CustomSongId: 0
     Message: One fine morning, $charactername comes to you to share with you his desire
       to join the national war, to cover your house with glory.
     ProposalOne:
+      CustomSongId: 0
       Choice: You let him know that you are very proud, and that you totally approve
         of him! You give him enough money so that he can make the trip and buy himself
         armor.
@@ -36,6 +38,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 20
     ProposalTwo:
+      CustomSongId: 0
       Choice: You refuse to let him abandon his family and pretend that you need him
         for domestic tasks.
       Response: $charactername then offers you an agreed solution, he would be trained
@@ -45,6 +48,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 5
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

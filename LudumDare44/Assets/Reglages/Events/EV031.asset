@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: "You just learned that $charactername was kidnapped by bandits! These
       scoundrels are asking for a ransom of \"x\" \xE9cus! Such a sum cannot be taken
       lightly."
     ProposalOne:
+      CustomSongId: 0
       Choice: Pay the ransom with resentment.
       Response: At the time of paying the ransom, one of the blackmailers lets a sleeve
         of his garment stick out, revealing a crest belonging to a rival house. Once
@@ -34,12 +36,14 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 20
     ProposalTwo:
+      CustomSongId: 0
       Choice: Pretend you didn't hear anything.
       Response: A few days later, your son returns alone to the family home. Realizing
         that you would never pay the ransom, the blackmailers preferred to avoid the
         embarrassment of committing a homicide.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

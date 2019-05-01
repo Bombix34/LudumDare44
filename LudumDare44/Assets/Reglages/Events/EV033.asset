@@ -19,10 +19,12 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 3
+    CustomSongId: 0
     Message: One of the allied kingdoms goes to war with a distant dynasty and asks
       for your help. The whole world is focused on you, the outcome of the war depending
       on what you are going to do...
     ProposalOne:
+      CustomSongId: 0
       Choice: You send $charactername to the front to save the honor of your dynasty.
       Response: $charactername left proud and courageous, he came back with an arm
         and leg amputated. Very quickly, the kingdom forgot his services, and gave
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -10
     ProposalTwo:
+      CustomSongId: 0
       Choice: 'You decide to hire a troop of over-trained mercenaries at a high price
         to turn the situation around. '
       Response: The investment paid off, the mercenaries screamed on your behalf on
@@ -42,6 +45,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 10
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -19,11 +19,13 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 5
       inheritorCondition: 0
+    CustomSongId: 0
     Message: You are hosting a very wealthy foreign national and his entire family
       who are travelling. A few hours before they leave, $charactername explains that
       he will go with them to their country so that he can live a love that does not
       care about sexual orientation.
     ProposalOne:
+      CustomSongId: 0
       Choice: You accept, you only want his good, and he would have been unhappy anyway
         by staying here.
       Response: More than surprised, he thanks you warmly, and promises you that he
@@ -32,12 +34,14 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 15
     ProposalTwo:
+      CustomSongId: 0
       Choice: Refuse, you need it to keep your family going and the common interest
         must come first.
       Response: Jaded, he gets angry first, then he hears your arguments, and finally
         accepts his sad destiny.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev:
     Conditions: []
+    CustomSongId: 0
     Message: You receive a letter from a prominent family in a nearby town, who proposes
       to organize a banquet.
     ProposalOne:
+      CustomSongId: 0
       Choice: 'You agree to participate, and order your servants to prepare the speciality
         of your house: Mushroom Pie.'
       Response: Once there, you realize that this banquet was actually just a way
@@ -26,6 +28,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: -15
     ProposalTwo:
+      CustomSongId: 0
       Choice: You refuse! There is no way you can be seen at a party as rudimentary
         as theirs, and you send them a letter to make them understand that it is useless
         to invite you back.
@@ -33,6 +36,7 @@ MonoBehaviour:
         been ridiculed by you.
       effects: []
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

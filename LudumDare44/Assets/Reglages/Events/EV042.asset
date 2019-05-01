@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 12
       inheritorCondition: 0
+    CustomSongId: 0
     Message: 'You learn from a villager that $charactername has been insulted by a
       loser thirsty man many times. '
     ProposalOne:
+      CustomSongId: 0
       Choice: 'You organize yourself to have the culprit caught by your men, and make
         him fully available to $charactername. '
       Response: At the discretion of $charactername, you let him talk to himself alone.
@@ -31,6 +33,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 20
     ProposalTwo:
+      CustomSongId: 0
       Choice: You ignore the remark, he's just a peasant.
       Response: $charactername later learned of the affront made against him, and
         while you feared an unnecessary vendetta, he offered him a full purse to the
@@ -43,6 +46,7 @@ MonoBehaviour:
       - Effect: 0
         EffectValue: 15
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []

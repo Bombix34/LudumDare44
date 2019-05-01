@@ -19,9 +19,11 @@ MonoBehaviour:
       ConditionBoolValue: 0
       ConditionTrait: 0
       inheritorCondition: 0
+    CustomSongId: 0
     Message: An old friend tells you that he wants to come and spend a holiday in
       your kingdom and asks for hospitality.
     ProposalOne:
+      CustomSongId: 0
       Choice: You ignore his request.
       Response: When you leave the throne room, you come face-to-face with this one.
         Vexed, he asks you why you never answered his letter. You rush to stammer
@@ -29,6 +31,7 @@ MonoBehaviour:
         it.
       effects: []
     ProposalTwo:
+      CustomSongId: 0
       Choice: You accept with pleasure, for the sake of the good old days.
       Response: After a week of frank camaraderie punctuated by orgies and booze,
         you realize that after his departure your so-called friend did not hesitate
@@ -37,6 +40,7 @@ MonoBehaviour:
       - Effect: 1
         EffectValue: -1500
     ProposalSpecial:
+      CustomSongId: 0
       Choice: 
       Response: 
       effects: []
