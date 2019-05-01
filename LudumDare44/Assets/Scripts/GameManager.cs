@@ -63,6 +63,8 @@ public class GameManager : Singleton<GameManager>
     Sprite crown;
     [SerializeField]
     Sprite heritierCrown;
+    public EventScriptableObject EventFirstTurn;
+    public EventScriptableObject EventSecondTurn;
 
     void Start()
     {
@@ -217,6 +219,13 @@ public class GameManager : Singleton<GameManager>
         CurrentState.Enter();
     }
     public void ChooseEvent(){
+        if(this.Turn == 1){
+            EventUI.Instance.CreateView(EventFirstTurn.ev);
+            return;
+        }   else if(this.Turn == 2){
+            EventUI.Instance.CreateView(EventSecondTurn.ev);
+            return;
+        }
         var events = this.GetListAvailableEvents();
         if(events.Count == 0){
             return;

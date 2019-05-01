@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1221331687bc1c44080fd149d5b1506c, type: 3}
+  m_Name: EV064_TOUR1
+  m_EditorClassIdentifier: 
+  ev:
+    Conditions: []
+    CustomSongId: 0
+    Message: With the marriage you just made, bonds are created and you can now think
+      of the future. You dream of the wealth and power your dynasty will acquire through
+      the ages, and how your descendants will tell your story as an example.
+    ProposalOne:
+      CustomSongId: 0
+      Choice: You look forward to having a first heir.
+      Response: 'Several years later, you see your first child come to life. You then
+        make up your mind that you will achieve the dream you had when you were young. '
+      effects: []
+    ProposalTwo:
+      CustomSongId: 0
+      Choice: 
+      Response: 
+      effects: []
+    ProposalSpecial:
+      CustomSongId: 0
+      Choice: 
+      Response: 
+      effects: []
