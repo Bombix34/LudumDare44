@@ -83,7 +83,6 @@ public class GameManager : Singleton<GameManager>
         InheritorUI.Instance.CreateView(this.FamilyMaster);
         this.FamilyMaster.Manager.GetComponent<CoupleManager>().SetCrown(crown);
         ChangeState(new WeddingState(this.gameObject));
-        this.GameOver("JE SUIS UN TESt");
     }
 
     void Update()
