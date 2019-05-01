@@ -139,11 +139,11 @@ public class GameManager : Singleton<GameManager>
 
         DescentContainer.Instance.UpdateView();
         this.GoldTurnCheck();
-        if(!this.CanStillHaveChildrens()){
-            this.GameOver("No more childrens");
-        }
         
         ChangeState(new WeddingState(this.gameObject));
+        if(!this.CanStillHaveChildrens()){
+            this.GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
+        }
     }
 
     private void GoldTurnCheck(){
@@ -181,7 +181,7 @@ public class GameManager : Singleton<GameManager>
                 UpdateHeritierCrown();
             }
             else
-                GameOver("All your family is dead");
+                GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
         }
     }
 
@@ -262,7 +262,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     private void Ruined(){
-        this.GameOver("Your family is ruined");
+        this.GameOver("Your dynasty has no heir. You did Well but sooner or later your name will perish");
     }
 
 }
