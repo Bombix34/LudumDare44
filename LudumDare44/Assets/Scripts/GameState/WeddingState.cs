@@ -16,6 +16,7 @@ public class WeddingState : GameState
         GameManager.Instance.UpdateAllCouple();
         GameManager.Instance.CheckNewfamilyMaster();
         RessourceUI.Instance.UpdateCharacters();
+        InheritorUI.Instance.UpdateView();
         manager.Turn++;
     }
 

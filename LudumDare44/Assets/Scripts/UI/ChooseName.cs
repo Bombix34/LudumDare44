@@ -21,6 +21,7 @@ public class ChooseName : MonoBehaviour
     private void Start()
     {
         startBouton.SetActive(false);
+        MainUI.SetActive(false);
         baseColor = patriarcBouton.GetComponent<Image>().color;
     }
 

@@ -14,8 +14,11 @@ public class InheritorUI : Singleton<InheritorUI>
     public BlazonPanel blazon;
     public PortraitUI portrait;
 
+    Inheritor current;
+
     public void CreateView(Inheritor inheritor)
     {
+        current = inheritor;
         if (blazon != null)
             blazon.UpdateBlazon(inheritor);
         if (portrait != null)
@@ -33,6 +36,18 @@ public class InheritorUI : Singleton<InheritorUI>
             this.Trait.text = inheritor.Trait.ToString();
         else
             this.Trait.text = " ";
+    }
+
+    public void UpdateView()
+    {
+        if (current == null)
+            return;
+        if (current.IsAlive)
+            this.Age.text = $"Age : {current.Age}";
+        else if (current.IsGone)
+            this.Age.text = "Age : GONE FOREVER";
+        else
+            this.Age.text = "Age : DEAD";
     }
 
     public void Close(){

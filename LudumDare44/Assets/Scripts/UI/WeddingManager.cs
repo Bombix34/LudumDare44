@@ -22,6 +22,19 @@ public class WeddingManager : MonoBehaviour
         womenWedding = new List<Inheritor>();
         ui = WeddingUI.Instance;
         UpdatePool();
+        InitFirstPool();
+    }
+
+    public void InitFirstPool()
+    {
+        foreach(var item in menWedding)
+        {
+            item.Attirance = 4;
+        }
+        foreach (var item in womenWedding)
+        {
+            item.Attirance = 4;
+        }
     }
 
     public void UpdatePool()

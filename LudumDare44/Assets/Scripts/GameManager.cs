@@ -44,7 +44,7 @@ public class GameManager : Singleton<GameManager>
         set {
             if (value < 0)
                 influencePoints = 0;
-            else if (InfluencePoints > 100)
+            else if (value > 100)
             {
                 influencePoints = 100;
             }
@@ -79,6 +79,7 @@ public class GameManager : Singleton<GameManager>
         this.FamilyMaster = GetComponent<WeddingManager>().characterPool.GetCharacterWithoutFace(IsWomenStrongSex);
         this.FamilyMaster.FamilyName = familyName;
         this.FamilyMaster.Trait = Inheritor.InheritorTrait.NONE;
+        this.FamilyMaster.Attirance = 3;
         DescentContainer.Instance.Init(this.FamilyMaster);
         InheritorUI.Instance.CreateView(this.FamilyMaster);
         this.FamilyMaster.Manager.GetComponent<CoupleManager>().SetCrown(crown);
