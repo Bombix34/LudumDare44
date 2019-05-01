@@ -16,15 +16,11 @@ public class WeddingManager : MonoBehaviour
     [SerializeField]
     List<Inheritor> womenWedding;
 
-    private void Awake()
+    private void Start()
     {
         menWedding = new List<Inheritor>();
         womenWedding = new List<Inheritor>();
         ui = WeddingUI.Instance;
-    }
-
-    private void Start()
-    {
         UpdatePool();
     }
 

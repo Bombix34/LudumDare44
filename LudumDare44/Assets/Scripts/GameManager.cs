@@ -61,7 +61,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        Init("De Moncul", true);
+        //Init("De Moncul", true);
     }
 
     public void Init(string familyName, bool isWomenStrongSex){
@@ -82,17 +82,7 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
-        CurrentState.Execute();
-        /*
-        if(Input.GetKeyDown("t"))
-        {
-            this.ChooseEvent();
-        }
-        if(Input.GetKeyDown("y"))
-        {
-            InheritorUI.Instance.CreateView(this.FamilyMaster);
-        }
-        */
+        CurrentState?.Execute();
     }
 
     public void NextTurn()
