@@ -151,7 +151,7 @@ public class GameManager : Singleton<GameManager>
         if (this.FamilyMaster.IsAlive==false)
         {
             var inheritors = new List<Inheritor>();
-            this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, false);
+            this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, null);
             if (inheritors.Count != 0)
             {
                 this.FamilyMaster.Manager.GetComponent<CoupleManager>().SetCrown(null);
@@ -167,7 +167,7 @@ public class GameManager : Singleton<GameManager>
     public void UpdateHeritierCrown()
     {
         var inheritors = new List<Inheritor>();
-        this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, false);
+        this.FamilyMaster.FindAll(ref inheritors, false, false, false, IsWomenStrongSex, null);
         if (inheritors.Count > 0)
         {
             if (inheritors[0] == this.FamilyMaster)

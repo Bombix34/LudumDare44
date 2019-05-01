@@ -7,6 +7,8 @@ using UnityEngine;
 [Serializable]
 public class EventProposal
 {
+    public int? CustomSongId;
+
     [TextArea(3,10)]
     public string Choice;
     [TextArea(3,10)]

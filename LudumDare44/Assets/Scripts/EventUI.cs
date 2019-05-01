@@ -17,7 +17,12 @@ public class EventUI : Singleton<EventUI>
 
     public void CreateView(EventContainer eventContainer){
         //ouvre l'event
-        SoundManager.instance.PlaySound(3);
+        if(eventContainer.CustomSongId.HasValue){
+            SoundManager.instance.PlaySound(eventContainer.CustomSongId.Value);
+        }   else
+        {
+            SoundManager.instance.PlaySound(3);
+        }
         this.Container.SetActive(true);
         this.OkButton.gameObject.SetActive(false);
         this.EventContainer = eventContainer;
@@ -42,7 +47,6 @@ public class EventUI : Singleton<EventUI>
 
     private void proposalSelected(){
         //selectionne une proposition
-        SoundManager.instance.PlaySound(4);
         this.ProposalOneButton.gameObject.SetActive(false);
         this.ProposalTwoButton.gameObject.SetActive(false);
         this.ProposalSpecialButton.gameObject.SetActive(false);
@@ -51,18 +55,36 @@ public class EventUI : Singleton<EventUI>
 
     public void ClickOnProposalOne(){   
         this.proposalSelected();
+        if(this.EventContainer.ProposalOne.CustomSongId.HasValue){
+            SoundManager.instance.PlaySound(this.EventContainer.ProposalOne.CustomSongId.Value);
+        }   else
+        {
+            SoundManager.instance.PlaySound(4);
+        }
         this.MainText.text = this.EventContainer.FormatText(this.EventContainer.ProposalOne.Response);
         this.EventContainer.ProposalOne.DoEffects(this.EventContainer.GetEffectParams());
     }
 
     public void ClickOnProposalTwo(){
         this.proposalSelected();
+        if(this.EventContainer.ProposalTwo.CustomSongId.HasValue){
+            SoundManager.instance.PlaySound(this.EventContainer.ProposalTwo.CustomSongId.Value);
+        }   else
+        {
+            SoundManager.instance.PlaySound(4);
+        }
         this.MainText.text = this.EventContainer.FormatText(this.EventContainer.ProposalTwo.Response);
         this.EventContainer.ProposalTwo.DoEffects(this.EventContainer.GetEffectParams());
     }
 
     public void ClickOnProposalSpecial(){
         this.proposalSelected();
+        if(this.EventContainer.ProposalSpecial.CustomSongId.HasValue){
+            SoundManager.instance.PlaySound(this.EventContainer.ProposalSpecial.CustomSongId.Value);
+        }   else
+        {
+            SoundManager.instance.PlaySound(4);
+        }
         this.MainText.text = this.EventContainer.FormatText(this.EventContainer.ProposalSpecial.Response);
         this.EventContainer.ProposalSpecial.DoEffects(this.EventContainer.GetEffectParams());
     }

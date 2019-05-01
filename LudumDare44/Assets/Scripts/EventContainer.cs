@@ -7,6 +7,7 @@ using UnityEngine;
 public class EventContainer
 {
     public List<EventConditionContainer> Conditions;
+    public int? CustomSongId;
     [TextArea(3,10)]
     public string Message;
     public EventProposal ProposalOne;

@@ -71,6 +71,7 @@ public class DescentContainer : Singleton<DescentContainer>
         foreach (var inheritor in inheritors)
         {
             if(inheritor == null){
+                childrens.Add(null);
                 continue;
             }
             if(inheritor.Childrens.Count > 0){
