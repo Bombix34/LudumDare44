@@ -13,6 +13,8 @@ public class GameManager : Singleton<GameManager>
         EVENT,
     }
     public int Turn { get; set; }
+    public int goldCostByTurnByFamilyNumber;
+    public int goldGainByTurnByInfluencePointPourcent;
     private int goldCoins;
     public int GoldCoins 
     { 
@@ -31,6 +33,9 @@ public class GameManager : Singleton<GameManager>
             }
             SoundManager.instance.PlaySound(1);
             RessourceUI.Instance.UpdateValue();
+            if(goldCoins == 0){
+                this.Ruined();
+            }
         } 
      }
     private int influencePoints;
@@ -131,8 +136,15 @@ public class GameManager : Singleton<GameManager>
         }
 
         DescentContainer.Instance.UpdateView();
+        this.GoldTurnCheck();
         
         ChangeState(new WeddingState(this.gameObject));
+    }
+
+    private void GoldTurnCheck(){
+        var familySize = this.GetLivingInFamilyCharacters();
+        this.GoldCoins -= familySize * goldCostByTurnByFamilyNumber;
+        this.goldCoins += influencePoints * goldGainByTurnByInfluencePointPourcent;
     }
 
     public void CheckNewfamilyMaster()
@@ -221,6 +233,10 @@ public class GameManager : Singleton<GameManager>
                 val++;
         }
         return val;
+    }
+
+    private void Ruined(){
+
     }
 
 }
