@@ -4375,38 +4375,6 @@ PrefabInstance:
       objectReference: {fileID: 138873516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24754f26e8d4e4182b21db12f2d5cce4, type: 3}
---- !u!114 &3177418730202811840 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3177418730202811840, guid: e57b2edc0646ae24d9208ac416216165,
-    type: 3}
-  m_PrefabInstance: {fileID: 3564863873983528464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &3177418731436402145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3177418731436402145, guid: e57b2edc0646ae24d9208ac416216165,
-    type: 3}
-  m_PrefabInstance: {fileID: 3564863873983528464}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3177418731436402146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3177418731436402145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bfde4357295fd54dad5736f72cf99e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 3177418730202811840}
-  MainUI: {fileID: 2124208473}
 --- !u!1001 &3564863873983528464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4524,71 +4492,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
+    - target: {fileID: 3177418731436402146, guid: e57b2edc0646ae24d9208ac416216165,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: MainUI
       value: 
-      objectReference: {fileID: 3177418731436402146}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChooseStrongSex
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418731172291518, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3177418731436402146}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChooseStrongSex
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177418730201398033, guid: e57b2edc0646ae24d9208ac416216165,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2124208473}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e57b2edc0646ae24d9208ac416216165, type: 3}
 --- !u!1001 &6184030239821432060
