@@ -21,16 +21,16 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: As you enter a room in the family estate, you surprise $charactername
-      with gay sex. Horrified, the two lovers did not dare to say a word.
+      with someone of the same sex. Horrified, the two lovers dare not say a word.
     ProposalOne:
       CustomSongId: 8
-      Choice: With a very pronounced expression of disgust, you pretend to faint in
-        the face of the shock, while the two interested begin to consider running
-        away. You then prevent them from doing so by standing in front of the exit,
-        and shouting insults at them.
-      Response: In a gesture of panic, one of them grabs a broken shard of mud in
-        the hate, and slits your throat in a single gesture. You bleed to death very
-        quickly, taking your secret to the grave.
+      Choice: With a very pronounced expression of disgust, you pretend to faint from
+        the shock, while the two interested consider running away. You then prevent
+        them from doing so by standing in front of the exit, and shouting insults
+        at them.
+      Response: In a gesture of panic, one of them grabs a broken shard of glass hastily,
+        and slits your throat in a single gesture. You bleed to death very quickly,
+        taking your secret to the grave.
       effects:
       - Effect: 0
         EffectValue: -10

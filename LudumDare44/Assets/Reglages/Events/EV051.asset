@@ -36,11 +36,11 @@ MonoBehaviour:
         EffectValue: 10
     ProposalTwo:
       CustomSongId: 0
-      Choice: You in turn get angry at this heinous defamation and ask him to leave
-        your home.
-      Response: In the days that follow, your health worsens, and if at first you
-        blame it on food, you realize at some point that you have been poisoned. You
-        will later die in excruciating suffering, under the dazed eyes of your family.
+      Choice: You too get angry at this heinous defamation and ask him to leave your
+        home.
+      Response: In the days that follow, your health gets worse and worse, and if
+        at first you blame it on food, you realize at some point that you have been
+        poisoned. You will later die in suffering, under the dazed eyes of your family.
       effects:
       - Effect: 0
         EffectValue: -10

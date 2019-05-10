@@ -21,10 +21,10 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: 'As you walk quietly along the immense corridor of your home, you hear
-      the bell ringing at your door. '
+      your doorbell ringing. '
     ProposalOne:
       CustomSongId: 1
-      Choice: 'Curious you will open to discover who it is. '
+      Choice: 'Curious you open to discover who is it. '
       Response: Seeing no one, you ask yourself questions, then go out to understand.
         That's when a bunch of hooded thugs come at you, piercing you through and
         through. You bleed to death, and die very quickly.

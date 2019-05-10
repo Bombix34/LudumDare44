@@ -17,32 +17,30 @@ MonoBehaviour:
     - Condition: 0
       ConditionValue: 0
       ConditionBoolValue: 0
-      ConditionTrait: 3
-      inheritorCondition: 0
-    - Condition: 1
-      ConditionValue: 6
-      ConditionBoolValue: 0
-      ConditionTrait: 0
+      ConditionTrait: 14
       inheritorCondition: 0
     CustomSongId: 0
-    Message: On returning from a country walk, $charactername is proud to introduce
-      its new pet, an adorable little rodent.
+    Message: During a banquet organized by a local celebrity, you see $charactername
+      sneak out and then come back with slight bulges in his pockets.
     ProposalOne:
       CustomSongId: 4
-      Choice: You pet the cute little animal and go back to your business.
-      Response: After spending a few days with his new friend, horrible bubons abound
-        on $charactername's body. You then understand your mistake as the plague spreads
-        through the home.
+      Choice: You have no shame in humiliating him in front of the guests by asking
+        him to empty his pockets.
+      Response: Embarrassed, $charactername then extracts a multitude of expensive
+        jewellery. Far from damaging your reputation, the honesty of your reaction
+        evokes respect in the assembly.
       effects:
-      - Effect: 3
-        EffectValue: 3
+      - Effect: 0
+        EffectValue: 10
     ProposalTwo:
       CustomSongId: 0
-      Choice: You ask him to take it back to where he found it, you wouldn't want
-        to have allergies because of a pet.
-      Response: $charactername insists and then, in front of your impassivity, sadly
-        returns to give his new friend his freedom.
-      effects: []
+      Choice: You pretend you didn't see anything.
+      Response: When you return to your home, $charactername then reveals its hold,
+        exposing a mutltude of expensive jewellery, which strongly replenishes your
+        chests.
+      effects:
+      - Effect: 1
+        EffectValue: 1000
     ProposalSpecial:
       CustomSongId: 0
       Choice: 

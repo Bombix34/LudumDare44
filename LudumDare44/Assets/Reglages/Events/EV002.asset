@@ -30,20 +30,20 @@ MonoBehaviour:
       Choice: Refuse! You are not going to exchange a family member for goods.
       Response: Outraged, the Lord declares that you will hear from him again. You
         then challenge him to a duel, and as his expression seems to break down, he
-        announces in a voice that is not very confident that he is not trained enough
-        to take up the challenge.
+        announces in a voice that is not very confident anymore that he is not trained
+        enough to take up the challenge.
       effects:
       - Effect: 0
         EffectValue: 10
     ProposalTwo:
       CustomSongId: 0
       Choice: Immediately exchange a cup of ale with them to celebrate the upcoming
-        wedding! The ambition to become an aristocrat makes you wander a little while
-        while you take a sip.
+        wedding! The ambition to possess some property at the end of the world makes
+        you fantasize a little while while you take a sip of your cup.
       Response: 'A few days later, a messenger announces to you a delegation from
-        the Lord, and you leave your home, imagining wonderful riches. As you leave,
+        the Lord, and you leave your home, imagining wonderful wealth. As you leave,
         you let out a scream of surprise and disgust: The gift happens to be half
-        a dozen delicately placed camels in your stable.'
+        a dozen camels, disposed here, in your stable.'
       effects:
       - Effect: 2
         EffectValue: 0

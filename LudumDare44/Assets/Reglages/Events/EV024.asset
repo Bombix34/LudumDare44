@@ -16,16 +16,16 @@ MonoBehaviour:
     Conditions: []
     CustomSongId: 0
     Message: 'As you pass the fortifications of the nearest town, you discover a scene
-      of public execution. Your gaze is for a short while on the condemned person
-      who cries out for injustice, then as you look more closely, you notice that
-      this is an old acquaintance of yours, but not the most friendly. '
+      of public execution. Your gaze goes for a short while on the sentenced person
+      who cries out for injustice. Then as you look more closely, you notice that
+      this is an old acquaintance of yours, but not the most friendly kind. '
     ProposalOne:
       CustomSongId: 0
       Choice: 'You intercept the executioner before he does his job, and use your
         influence to get him released. '
       Response: 'The executioner is not easily convinced, but when the prisoner is
         released, he recognizes you and thanks you on his knees. It offers you a fabulous
-        family pendant because without you, it would have been recovered by the executioner. '
+        family pendant because without you, it would have been stolen by the executioner. '
       effects:
       - Effect: 0
         EffectValue: -10
@@ -33,7 +33,8 @@ MonoBehaviour:
         EffectValue: 1000
     ProposalTwo:
       CustomSongId: 7
-      Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
+      Choice: You stay here and watch. Half hidden so the sentenced man doesn't spot
+        you in the crowd.
       Response: As he takes one last look at the crowd, he sees you and begs you to
         do something in the name of the "good old days" you may have spent together.
         When his head is sharply cut off, the crowd's eyes are on you. You're not

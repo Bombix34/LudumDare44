@@ -25,14 +25,13 @@ MonoBehaviour:
       ConditionTrait: 15
       inheritorCondition: 0
     CustomSongId: 0
-    Message: You are hosting a very wealthy foreign national and his entire family
-      who are travelling. A few hours before they leave, $charactername explains that
-      he will go with them to their country so that he can live a love that does not
-      care about sexual orientation.
+    Message: You are hosting a very wealthy foreign family who are travelling. A few
+      hours before they leave, $charactername explains that he will go with them to
+      their country where they do not care about sexual orientation.
     ProposalOne:
       CustomSongId: 0
-      Choice: You accept, you only want his good, and he would have been unhappy anyway
-        by staying here.
+      Choice: You accept, you only want the best for him, and he would have been sad
+        by staying here anyway.
       Response: More than surprised, he thanks you warmly. He intends to work in the
         arts, and to live from day to day.
       effects:
@@ -40,10 +39,10 @@ MonoBehaviour:
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 9
-      Choice: Refuse, you need it to keep your family going and the common interest
+      Choice: Refuse, you need it to keep your family running and the common interest
         must come first.
       Response: You haven't taken his love seriously enough, he cries, shouts, tells
-        you to change your mind. In front of your immutable posture, he gives himself
+        you to change your mind. Facing your immutable position, he gives himself
         death by ingesting a deadly poison a few days later.
       effects:
       - Effect: 4

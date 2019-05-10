@@ -37,7 +37,7 @@ MonoBehaviour:
       Choice: You don't take care of them, after all, they don't hurt anyone.
       Response: A few weeks later, a scandal broke when a villager declared that he
         had seen the two forbidden lovers fornicating through one of the house's windows.
-        Your reputation is damaged, but you still give the benefit of the doubt.
+        Your reputation is damaged, but you must stand up for them, now.
       effects:
       - Effect: 0
         EffectValue: -10

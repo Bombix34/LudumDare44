@@ -24,11 +24,11 @@ MonoBehaviour:
       to organize a banquet.
     ProposalOne:
       CustomSongId: 0
-      Choice: 'You agree to participate, and order your servants to prepare your house''s
-        specialty: Mushroom Pie.'
-      Response: You didn't think you were having such a good time, while everyone
-        is enjoying your pie. You return home covered with a glory you didn't even
-        know existed.
+      Choice: 'You agree to participate, and order your servants to prepare the speciality
+        of your house: "La tourte aux champignons".'
+      Response: You didn't think you would be having such a good time, as everyone
+        enjoy your pie. You return home covered with a glory you didn't even know
+        existed.
       effects:
       - Effect: 0
         EffectValue: 10
@@ -36,7 +36,7 @@ MonoBehaviour:
       CustomSongId: 0
       Choice: You refuse! There is no way you can be seen at a party as rudimentary
         as theirs, and you send them a letter to make them understand that it is useless
-        to invite you back.
+        to invite you again.
       Response: In the general misunderstanding, you are told that there are no worries,
         and that it was a simple proposal. In the days to come, you will be laughed
         at somewhat, parodying your exaggerated reaction.

@@ -25,10 +25,9 @@ MonoBehaviour:
     ProposalOne:
       CustomSongId: 0
       Choice: You ignore his request.
-      Response: A few days later, you learn that this friend, in front of your silence,
+      Response: A few days later, you learn that this friend, facing your silence,
         has chosen to spend his holidays a few leagues away, in the home of a rival
-        family, which has not let his chance pass. You are sure that they will not
-        fail to grumble at you.
+        family, which has not let his chance pass. You already hear them mocking you...
       effects:
       - Effect: 0
         EffectValue: -10
@@ -38,9 +37,9 @@ MonoBehaviour:
       Response: After a few weeks, you start to wonder if he will ever leave, or if
         he has decided to be part of your family. One fine morning, you notice that
         he has simply left, but not without leaving a letter for you. He explains
-        that he is actually a traveller and therefore has no point of landing. His
-        travels have taken him to faraway countries, so he has been able to create
-        a trade route to your city, and promises you spices and other wonders.
+        that he is actually a traveller and that he has no point of landing. His travels
+        have taken him to faraway countries, so he has been able to create a trade
+        route to your city, and promises you spices and other wonders.
       effects:
       - Effect: 1
         EffectValue: 1000

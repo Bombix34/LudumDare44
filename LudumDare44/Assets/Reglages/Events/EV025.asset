@@ -22,7 +22,7 @@ MonoBehaviour:
     CustomSongId: 0
     Message: 'Your lord has summoned you to his immense castle. Once there, he makes
       you a proposal that deserves to be studied: he would like you to become his
-      steward, and that you now reside at the castle. Of course, a very generous compensation
+      steward, and that you now reside at his castle. Of course, a very generous compensation
       would follow.'
     ProposalOne:
       CustomSongId: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     ProposalTwo:
       CustomSongId: 0
       Choice: You refuse, even if you thank him very much for offering you this. You
-        are far too proud to be in charge of the dynasty.
+        are far too proud to be in charge of the dynasty to leave it.
       Response: The Lord is very clearly disappointed, and urges you to leave his
         castle. That said, he seemed to have a second choice, so he didn't hold it
         against you.

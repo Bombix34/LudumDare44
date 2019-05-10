@@ -21,14 +21,14 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: 'You learn from a villager that $charactername has been insulted by a
-      loser thirsty man many times. '
+      thirsty loser in town many times. '
     ProposalOne:
       CustomSongId: 0
-      Choice: 'You organize yourself to have the culprit caught by your men, and make
-        him fully available to $charactername. '
-      Response: While the drunk is completely tied up, on his knees, and begging for
-        his life at the feet of $charactername, he declares that it is useless to
-        do more, and spares the scoundrel.
+      Choice: 'You prepare everything to have the culprit caught by your men, and
+        make him fully at mercy of $charactername. '
+      Response: While the drunk man is completely tied up, on his knees, and begging
+        for his life at his feets, $charactername surprinsingly declares that it is
+        useless to do more, and spares the scoundrel.
       effects:
       - Effect: 0
         EffectValue: 10

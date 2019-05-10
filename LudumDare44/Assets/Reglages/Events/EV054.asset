@@ -22,16 +22,16 @@ MonoBehaviour:
     CustomSongId: 0
     Message: 'Your lord has summoned you to his immense castle. Once there, he makes
       you a proposal that deserves to be studied: he would like you to become his
-      steward, and that you now reside at the castle. Of course, a very generous compensation
+      steward, and that you now reside at his castle. Of course, a very generous compensation
       would follow.'
     ProposalOne:
       CustomSongId: 0
       Choice: You accept the proposal, and abandon your role as head of the house
         for the good of the dynasty.
-      Response: Once you are in place at your post, you understand the subterfuge.
+      Response: Once you are in place at your post, you understand the deception.
         The castle is in a sorry state, and restoring it requires more than considerable
         work. Finally, your reputation is damaged because all the lord's problems
-        are reported to you on your back.
+        are reported on your back.
       effects:
       - Effect: 1
         EffectValue: 10
@@ -40,7 +40,7 @@ MonoBehaviour:
     ProposalTwo:
       CustomSongId: 0
       Choice: You refuse, even if you thank him very much for offering you this. You
-        are far too proud to be in charge of the dynasty.
+        are far too proud to be in charge of the dynasty to leave it.
       Response: You have learned that whoever replaced you very quickly collapsed
         under work. At the castle, everyone repeats in a low voice that you probably
         would have done a much better job.

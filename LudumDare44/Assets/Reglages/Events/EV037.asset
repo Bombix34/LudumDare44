@@ -21,23 +21,23 @@ MonoBehaviour:
       inheritorCondition: 3
     CustomSongId: 0
     Message: While walking around the village market, you observe a beggar prowling
-      around, looking sick. You don't have time to duck him and let him throw himself
+      around, looking sick. You don't have time to dodge him as he throws himself
       at you to beg for money. You push it away with a blow of the cuff, but when
-      you try to hold on to something, it scratches you quite deeply.
+      you try to hold on to something, it scratches you quite deeply on the arm.
     ProposalOne:
       CustomSongId: 0
-      Choice: 'You go home, disgusted, and do what is necessary by contacting your
-        family to punish the beggar. '
+      Choice: 'You go home, disgusted, and contact all of your family to punish the
+        beggar. '
       Response: All those who were in contact with you after this event became seriously
-        ill and eventually healed. A long time later, it was found that none of these
-        people became ill, in any case. Probably witchcraft...
+        ill and eventually healed. A long time later, you note that every member who
+        were infected never got ill again, in any case. Probably witchcraft...
       effects:
       - Effect: 0
         EffectValue: 5
     ProposalTwo:
       CustomSongId: 6
       Choice: You take your annual bath much earlier than expected, and rinse your
-        body thoroughly with hot water.
+        body thoroughly with boiling water.
       Response: Several days later, you are still infected, and it is very painful
         for you. You call the family doctor Doctis Imo who diagnoses you with a plague
         and extorts a large amount of gold from you.

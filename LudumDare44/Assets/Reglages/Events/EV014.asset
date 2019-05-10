@@ -20,10 +20,10 @@ MonoBehaviour:
     ProposalOne:
       CustomSongId: 0
       Choice: 'You agree to participate, and order your servants to prepare the speciality
-        of your house: Mushroom Pie.'
+        of your house: "La tourte aux champignons".'
       Response: Once there, you realize that this banquet was actually just a way
-        to make a fool of yourself by being rude to you all along the party. You can't
-        stand these mockery for long, and go home absolutely furious.
+        to make a fool out of you by being rude to your family all along the party.
+        You can't stand these mockery for long, and go home absolutely furious.
       effects:
       - Effect: 0
         EffectValue: -15
@@ -31,9 +31,9 @@ MonoBehaviour:
       CustomSongId: 0
       Choice: You refuse! There is no way you can be seen at a party as rudimentary
         as theirs, and you send them a letter to make them understand that it is useless
-        to invite you back.
-      Response: In the days to come, rumours will spread that the notable family has
-        been ridiculed by you.
+        to invite you again.
+      Response: In the days to come, rumours will spread, and the notable family will
+        be mocked for the answer you gave to them.
       effects: []
     ProposalSpecial:
       CustomSongId: 0

@@ -30,17 +30,18 @@ MonoBehaviour:
       Response: 'You wake up the next day, in the middle of tangled bodies. You discreetly
         leave the house and go home without saying anything to your half, with a shared
         feeling. It is only a few weeks later that you are punished by fate: Your
-        genitals have a funny color and you will have to be very discreet about it.'
+        genitals now have a funny color and you will have to be very discreet about
+        it.'
       effects:
       - Effect: 0
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 0
-      Choice: 'Refuse, you are not on that side, and you will not succumb to temptation
-        today. '
+      Choice: 'Refuse, you are not that kind of people , and you will not succumb
+        to temptation today. '
       Response: 'As if to provoke you, young people suddenly surround you and beg
         you to join them. You dismiss them all, then go back to your business. A little
-        later, once you get home, you notice that your scholarship is missing... '
+        later, once you get home, you notice that your gold purse is missing... '
       effects:
       - Effect: 1
         EffectValue: -1000

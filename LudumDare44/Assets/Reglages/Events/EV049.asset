@@ -20,8 +20,8 @@ MonoBehaviour:
       ConditionTrait: 3
       inheritorCondition: 0
     CustomSongId: 0
-    Message: "As Christmas approaches, the priest comes knocking on your door to ask
-      for a contribution to the construction of the cr\xE8che. "
+    Message: 'As Christmas approaches, the priest comes knocking on your door to ask
+      for a contribution to the construction of the crib. '
     ProposalOne:
       CustomSongId: 0
       Choice: You are getting tired of giving money to a cult you don't even believe
@@ -30,7 +30,7 @@ MonoBehaviour:
       Response: Even if the amount is not large, the priest thanks you very sincerely
         for your help. Finally, you say to yourself that this institution is not as
         bad as you imagined. On the other hand, you can see that the construction
-        of nurseries is not their strong suit.
+        of crib is not the thing they do better.
       effects:
       - Effect: 0
         EffectValue: 0
@@ -38,11 +38,11 @@ MonoBehaviour:
       CustomSongId: 0
       Choice: You love Christmas and directly propose to build the crib with your
         own hands.
-      Response: General, the priest explains that it is their pleasure to do the crib,
-        and that they would prefer funds to help them. Despite everything, you choose
-        to make a crib that will be better than theirs, and the whole village will
-        traditionally begin to celebrate each year your rivalry with the church in
-        terms of crib construction.
+      Response: Embarrassed, the priest explains that it is their pleasure to do the
+        crib, and that they would prefer funds to help them. Despite everything, you
+        choose to make a crib that will be better than theirs, and the whole village
+        will traditionally begin to celebrate each year your rivalry with the church
+        in terms of crib construction.
       effects:
       - Effect: 0
         EffectValue: 10

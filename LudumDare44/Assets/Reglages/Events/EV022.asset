@@ -28,15 +28,15 @@ MonoBehaviour:
       Choice: You decide to discreetly poison his drink as soon as the rest of the
         guests no longer pay attention to you.
       Response: Your "friend" is found cold by servants a few hours later on the toilet.
-        Rumours of his death are spreading around and your altercation accuses you
-        as much as it does of a true confession.
+        Rumours of his death are spreading around and the fight you two had is more
+        or less a proof of what you did.
       effects:
       - Effect: 0
         EffectValue: -15
     ProposalTwo:
       CustomSongId: 0
-      Choice: You in turn get angry at this heinous defamation and ask him to leave
-        your home.
+      Choice: You too get angry at this heinous defamation and ask him to leave your
+        home.
       Response: The following night, a gang of mercenaries broke into the castle,
         and managed to murder a large part of your family before being killed by the
         guard.

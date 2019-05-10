@@ -21,14 +21,13 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: 'You learn from a villager that $charactername has been insulted by a
-      loser thirsty man many times. '
+      thirsty loser in town many times. '
     ProposalOne:
       CustomSongId: 0
-      Choice: 'You organize yourself to have the culprit caught by your men, and make
-        him fully available to $charactername. '
-      Response: At the discretion of $charactername, you let him talk to himself alone.
-        You'll never know how he did it, but $charactername now became adored by a
-        large part of the villagers.
+      Choice: 'You prepare everything to have the culprit caught by your men, and
+        make him fully at mercy of $charactername. '
+      Response: You let $charactername talk to him alone. You'll never know how he
+        did it, but $charactername now became loved by a large part of the villagers.
       effects:
       - Effect: 0
         EffectValue: 20
@@ -36,8 +35,8 @@ MonoBehaviour:
       CustomSongId: 0
       Choice: You ignore the remark, he's just a peasant.
       Response: $charactername later learned of the affront made against him, and
-        while you feared an unnecessary vendetta, he offered him a full purse to the
-        drunk so that he could get out of begging. You have lost money, but it seems
+        while you feared an unnecessary vendetta, he offered the drunk man a full
+        purse so that he could get out of begging. You have lost money, but it seems
         that $charactername is now considered the greatest representative of justice
         in the area.
       effects:

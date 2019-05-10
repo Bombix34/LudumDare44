@@ -16,13 +16,12 @@ MonoBehaviour:
     Conditions: []
     CustomSongId: 0
     Message: A very influential family, and much richer than yours, sends you a letter
-      proposing that you take a member of your family as a servant, in exchange for
-      a large amount of gold.
+      proposing they take a member of your family as a servant, in exchange for a
+      large amount of gold.
     ProposalOne:
       CustomSongId: 0
       Choice: You consider hiring assassins for a few seconds, then you remember that
-        your finances are at their lowest. So you change your mind, and don't answer
-        anything.
+        you can't afford them. You then change your mind, and don't answer anything.
       Response: A few days later, you hear villagers whispering as they tell this
         story with a lot of fun. You take it upon yourself not to get angry.
       effects:
@@ -31,8 +30,8 @@ MonoBehaviour:
     ProposalTwo:
       CustomSongId: 0
       Choice: In return, you answer them that you are making them exactly the same
-        offer, with all the irony of the world. But you hope they won't accept, because
-        you couldn't pay.
+        offer, with all the irony you can express. But you hope they won't accept,
+        because you couldn't pay.
       Response: The answer to your provocation is not long in coming, and this time
         the letter is much more threatening.
       effects:

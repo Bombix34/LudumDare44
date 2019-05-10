@@ -15,8 +15,8 @@ MonoBehaviour:
   ev:
     Conditions: []
     CustomSongId: 1
-    Message: After years in the shadow of his eldest son eating his brake, $charactername
-      succumbs to his sick jealousy. You find it above your heir's mutilated corpse,
+    Message: After years in the shadow of his elder brother, $charactername succumbs
+      to his sick jealousy. You find your child above your heir's mutilated corpse,
       with a knife in hand.
     ProposalOne:
       CustomSongId: 0
@@ -32,9 +32,9 @@ MonoBehaviour:
         EffectValue: -15
     ProposalTwo:
       CustomSongId: 0
-      Choice: Devastated by the loss of a child, you decide to forgive him so as not
-        to lose a second one. You're spreading rumors about the elder's strange disappearance
-        to cover up the murder.
+      Choice: Devastated by the loss of a child, you decide to forgive him so you
+        do not to lose a second one. You're spreading rumors about the elder's strange
+        disappearance to cover up the murder.
       Response: Despite massive propaganda to turn the murder into an extinction,
         the people are not fooled and everyone is beginning to think that you are
         irresponsible for letting a dangerous madman go free.

@@ -28,8 +28,8 @@ MonoBehaviour:
       effects: []
     ProposalTwo:
       CustomSongId: 0
-      Choice: 'Refuse, you are not on that side, and you will not succumb to temptation
-        today. '
+      Choice: 'Refuse, you are not that kind of people , and you will not succumb
+        to temptation today. '
       Response: 'You are then booed and pursued in the middle of the street by a dozen
         drunk and naked people. This wakes up the neighbourhood, which misinterprets
         this ridiculous scene. '

@@ -21,27 +21,26 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: A very influential family, and much richer than yours, sends you a letter
-      proposing that you take a member of your family as a servant, in exchange for
-      a large amount of gold.
+      proposing they take a member of your family as a servant, in exchange for a
+      large amount of gold.
     ProposalOne:
       CustomSongId: 0
       Choice: You consider hiring assassins for a few seconds, then you remember that
-        your finances are at their lowest. So you change your mind, and don't answer
-        anything.
+        you can't afford them. You then change your mind, and don't answer anything.
       Response: Noting your silence and cruelly wanting to have fun with your financial
-        situation again, the family contacts you again to ask if you wanted to ask
-        for alms. Shame covers you when you still can't do anything.
+        situation again, the family contacts you again to ask if you are actually
+        that desesperate. Shame covers you as you still can't do anything.
       effects:
       - Effect: 0
         EffectValue: -15
     ProposalTwo:
       CustomSongId: 0
       Choice: In return, you answer them that you are making them exactly the same
-        offer, with all the irony of the world. But you hope they won't accept, because
-        you couldn't pay.
-      Response: Your answer did not have any more at all to the family who first killed
-        themselves for a few days, then recruited a pair of bandits to burn down your
-        house. Some of it may have been saved, but you've rarely been so hurt.
+        offer, with all the irony you can express. But you hope they won't accept,
+        because you couldn't pay.
+      Response: Your answer actually enraged the family who first held silence for
+        a few days, then recruited a pair of bandits to burn down your house. Some
+        of it may have been saved, but you've rarely been so hurt.
       effects:
       - Effect: 1
         EffectValue: -10000

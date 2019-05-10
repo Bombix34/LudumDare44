@@ -21,16 +21,16 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: While walking around the village market, you observe a beggar prowling
-      around, looking sick. You don't have time to duck him and let him throw himself
+      around, looking sick. You don't have time to dodge him as he throws himself
       at you to beg for money. You push it away with a blow of the cuff, but when
-      you try to hold on to something, it scratches you quite deeply.
+      you try to hold on to something, it scratches you quite deeply on the arm.
     ProposalOne:
       CustomSongId: 4
-      Choice: 'You go home, disgusted, and do what is necessary by contacting your
-        family to punish the beggar. '
+      Choice: 'You go home, disgusted, and contact all of your family to punish the
+        beggar. '
       Response: You manage to have the beggar executed in public. But a few weeks
         later, you notice that part of the family has some of the symptoms of the
-        plague. You won't last very long in this condition.
+        plague. The family won't last very long in this condition.
       effects:
       - Effect: 4
         EffectValue: 0
@@ -38,9 +38,10 @@ MonoBehaviour:
         EffectValue: 3
     ProposalTwo:
       CustomSongId: 0
-      Choice: No one is there to judge you, you don't need to take such a risk.
-      Response: You go home, take a scroll large enough, and write in capital letter
-        "DO NOT ENTER", to stick it on the entrance of the cave.
+      Choice: You take your annual bath much earlier than expected, and rinse your
+        body thoroughly with boiling water.
+      Response: Your wound gets infected very slightly, but nothing very serious awaits
+        you, you have the impression of having escaped a ridiculous death.
       effects: []
     ProposalSpecial:
       CustomSongId: 0

@@ -21,15 +21,15 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: You have been hearing rumours for some time now that two members of your
-      family are very close. Maybe even too close.
+      family are close. Maybe even too close.
     ProposalOne:
       CustomSongId: 0
       Choice: You summon them to get to the bottom of it.
       Response: While you were thinking about the worst, they reveal to you that they
-        both took a passion for politics. They were both working hard to try to sell
-        off a senior position in the local seigneury in order to impose their vision.
-        You take this opportunity to tell them to do so on your behalf, so that they
-        can strengthen your reputation.
+        both took a passion for politics. They were both working hard to get some
+        high placed work at the closest castle in order to impose their vision to
+        the world. You take this opportunity to tell them to do so on your behalf,
+        so that they can strengthen your reputation.
       effects:
       - Effect: 0
         EffectValue: 10

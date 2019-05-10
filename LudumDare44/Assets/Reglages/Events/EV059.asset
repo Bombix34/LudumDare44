@@ -25,10 +25,9 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 0
     CustomSongId: 0
-    Message: 'You notice that at the moment, your eldest and youngest children are
-      very often in conflict. You don''t understand where this hatred comes from,
-      but they seem to blame themselves more for their wrongs than if they were perfect
-      rivals. '
+    Message: 'You notice that lately, your eldest and youngest children are very often
+      in conflict. You don''t understand where this hatred comes from, but they seem
+      to blame themselves more than real life ennemies. '
     ProposalOne:
       CustomSongId: 1
       Choice: You decide to conduct your investigation, perhaps by understanding the
@@ -37,7 +36,7 @@ MonoBehaviour:
         their conflicts. One fine morning you discover the body of your elder, your
         heir lying in your property. Your youngest child then breaks down in tears
         explaining that he did not want to do so, but that $charactername, your youngest
-        child, clearly suggested that he should do so. You then deny $charactername
+        child, clearly suggested that he should do so. You then disown $charactername
         for his crime, but cannot bring yourself to execute him. You don't understand
         where all this hatred came from.
       effects:
@@ -47,10 +46,12 @@ MonoBehaviour:
         EffectValue: 1
     ProposalTwo:
       CustomSongId: 7
-      Choice: You ask him to take it back to where he found it, you wouldn't want
-        to have allergies because of a pet.
-      Response: $charactername insists and then, in front of your impassivity, sadly
-        returns to give his new friend his freedom.
+      Choice: You propose that they settle this dispute the "old-fashioned way". You
+        place them in a arena made of wood, explaining to them that whoever beat the
+        other will be right. You hope that the fear of harm will win them over, so
+        that they will understand the uselessness of such a family conflict.
+      Response: It was probably the worst idea you've ever had in your life, you can't
+        stop your two children and they kill each other in an incomprehensible bloodbath.
       effects: []
     ProposalSpecial:
       CustomSongId: 0

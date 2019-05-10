@@ -20,13 +20,13 @@ MonoBehaviour:
       ConditionTrait: 15
       inheritorCondition: 0
     CustomSongId: 0
-    Message: During your weekly popular grievance session, a ten-year-old child approaches
-      you and declares in front of everyone that he is the fruit of your adventure
-      with a former servant of the castle.
+    Message: During your weekly crowd request session, a ten-year-old child approaches
+      you and declares in front of everyone that he is the fruit of an adventure you
+      supposedly had with a former servant of your family.
     ProposalOne:
       CustomSongId: 0
-      Choice: You pretend not to know this person and make sure that you are more
-        loyal than anyone else.
+      Choice: You pretend not to know this person and declare publicly that you are
+        more loyal than anyone else.
       Response: Just after, his mother calls you and swears that you gave birth to
         him 9 years ago, during a particularly harsh winter. This anecdote reminds
         all those who know you that at that time you were travelling on behalf of
@@ -39,7 +39,7 @@ MonoBehaviour:
       Choice: You publicly acknowledge your youthful mistakes and make a generous
         donation to allow your illegitimate child to live with dignity.
       Response: A few months later, you discover a birthmark on your "child"'s back
-        that proves you are not related to her. So you were taken for a ride, but
+        that proves you are not related to her. So you were taken for a fool, but
         it's too late to declare the opposite...
       effects:
       - Effect: 1

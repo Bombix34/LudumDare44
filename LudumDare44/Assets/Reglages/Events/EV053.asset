@@ -21,23 +21,24 @@ MonoBehaviour:
       inheritorCondition: 3
     CustomSongId: 0
     Message: 'As you pass the fortifications of the nearest town, you discover a scene
-      of public execution. Your gaze is for a short while on the condemned person
-      who cries out for injustice, then as you look more closely, you notice that
-      this is an old acquaintance of yours, but not the most friendly. '
+      of public execution. Your gaze goes for a short while on the sentenced person
+      who cries out for injustice. Then as you look more closely, you notice that
+      this is an old acquaintance of yours, but not the most friendly kind. '
     ProposalOne:
       CustomSongId: 7
       Choice: 'You intercept the executioner before he does his job, and use your
         influence to get him released. '
       Response: The executioner seems determined not to listen to you, and hastens
-        to finish the work he started. It allows you to step up to the podium to make
-        a wonderful plea for global justice and the inhuman treatment that some people
-        must endure, a speech that will make him talk about it in the future.
+        to finish the work he started. It allows you to step up to the scene as you
+        make a wonderful plea for global justice and the inhuman treatment that some
+        people must endure, a speech that will make people talk about you in the future.
       effects:
       - Effect: 1
         EffectValue: 10
     ProposalTwo:
       CustomSongId: 7
-      Choice: You stay here and watch. Half hidden so he doesn't spot you in the crowd.
+      Choice: You stay here and watch. Half hidden so the sentenced man doesn't spot
+        you in the crowd.
       Response: He then sees you as he looks subtly at the crowd. He seems to want
         to ask you for help, then change his mind. He probably remembered all the
         bad times he had with you. It's certainly a horrible way to die...

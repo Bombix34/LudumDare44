@@ -22,10 +22,10 @@ MonoBehaviour:
     CustomSongId: 9
     Message: 'One evening, as you enter your room, a sharp pain runs through your
       heart. Before you can do anything, you find yourself on the ground, unable to
-      breathe regularly. '
+      breathe with regularity. '
     ProposalOne:
       CustomSongId: 0
-      Choice: You cry out for help for your life, crying, and screaming at death.
+      Choice: You scream out for help for your life, crying, and screaming at death.
       Response: A few hours later, you wake up shaking on your bed. You will later
         learn that you vomited and defecated multiple times on the doctor in your
         delirium, and that the doctor asked for an increase in his fees as a result.

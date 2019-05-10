@@ -25,17 +25,16 @@ MonoBehaviour:
     ProposalOne:
       CustomSongId: 0
       Choice: You ignore his request.
-      Response: When you leave the throne room, you come face-to-face with this one.
-        Vexed, he asks you why you never answered his letter. You rush to stammer
-        an excuse for a lost carrier pigeon and the duties to be done to get rid of
-        it.
+      Response: Someday, you just meet him not far from your house, and you have no
+        choice but to talk to him. Vexed, he asks you why you never answered his letter.
+        You stammer an excuse about a lost carrier pigeon to get rid of him.
       effects: []
     ProposalTwo:
       CustomSongId: 0
       Choice: You accept with pleasure, for the sake of the good old days.
-      Response: After a week of frank camaraderie punctuated by orgies and booze,
-        you realize that after his departure your so-called friend did not hesitate
-        to empty the castle's coffers.
+      Response: After a week of feast mostly composed of orgies and booze, you realize
+        that after his departure your so-called friend did not hesitate to empty the
+        castle's chests.
       effects:
       - Effect: 1
         EffectValue: -1500

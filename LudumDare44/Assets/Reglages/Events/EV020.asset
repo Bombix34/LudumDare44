@@ -15,17 +15,17 @@ MonoBehaviour:
   ev:
     Conditions: []
     CustomSongId: 0
-    Message: "As Christmas approaches, the priest comes knocking on your door to ask
-      for a contribution to the construction of the cr\xE8che. "
+    Message: 'As Christmas approaches, the priest comes knocking on your door to ask
+      for a contribution to the construction of the crib. '
     ProposalOne:
       CustomSongId: 0
       Choice: You are getting tired of giving money to a cult you don't even believe
         in and that doesn't bring you anything. You donate the few coins in your pocket
         and go back to your business without delay.
       Response: Disappointed, the priest left with your meagre gift and echoed your
-        stininess throughout the village. You are now becoming the role model not
-        to be repeated and you are unwillingly encouraging all the nobbies around
-        you to give nice sums of money.
+        stininess throughout the village. You are now becoming the one who shouldn't
+        be copied and you are unwillingly encouraging all the nobbies around you to
+        give nice sums of money.
       effects:
       - Effect: 0
         EffectValue: -10

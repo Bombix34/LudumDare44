@@ -30,17 +30,17 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 0
     CustomSongId: 0
-    Message: After years in the shadow of his eldest son eating his brake, $charactername
-      succumbs to his sick jealousy. You find it above your heir's mutilated corpse,
+    Message: After years in the shadow of his elder brother, $charactername succumbs
+      to his sick jealousy. You find your child above your heir's mutilated corpse,
       with a knife in hand.
     ProposalOne:
       CustomSongId: 0
       Choice: You scream in pain at the sight of the flesh of your inert flesh before
         you, and you have the traitor arrested by your personal guard.
       Response: Suddenly, something changes in the look of $charactername, you've
-        never seen it so disturbed before. When the guards arrived to control him,
-        he moved like a snake in the room and managed to assassinate the two guards
-        without any difficulty. He then disappears into the shadow of the night.
+        never seen him so disturbed before. At the moment the guards came to control
+        him, he moved like a snake in the room and managed to assassinate the two
+        guards without any difficulty. He then disappears into the shadow of the night.
       effects:
       - Effect: 5
         EffectValue: 1
@@ -48,11 +48,15 @@ MonoBehaviour:
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 7
-      Choice: Tell him that you understand, but have no choice but to deny him and
-        exclude him from the family.
-      Response: He suddenly seems much paler. He had not considered this possibility
-        at all. However, he is completely trapped, and for a few days, he leaves on
-        his own, not without crying.
+      Choice: Devastated by the loss of a child, you decide to forgive him so you
+        do not to lose a second one. You're spreading rumors about the elder's strange
+        disappearance to cover up the murder.
+      Response: You thought it was just fraternal jealousy, but it seems that $charactername
+        is driven by a completely different motive. He doesn't even seem really interested
+        in the heir responsibility, and his head is always elsewhere, even when you
+        talk to him. A little more than a year after the event, another member of
+        your family dies, bleeding while sleeping. You can't prove it, but you're
+        sure it is actually $charactername...
       effects:
       - Effect: 4
         EffectValue: 0

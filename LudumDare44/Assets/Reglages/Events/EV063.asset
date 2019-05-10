@@ -27,17 +27,17 @@ MonoBehaviour:
       Choice: You have no shame in humiliating him in front of the guests by asking
         him to empty his pockets.
       Response: 'Obviously, $charactername panics, and runs through the whole room.
-        In the heat of the moment, you try to catch up with him, which results in
-        a ridiculous scene that makes you lose credibility in everyone''s eyes. '
+        In the heat of the moment, you try to catch him up, which results in a ridiculous
+        scene that makes you lose credibility in everyone''s eyes. '
       effects:
       - Effect: 0
         EffectValue: 15
     ProposalTwo:
       CustomSongId: 0
       Choice: You pretend you didn't see anything.
-      Response: Even if you wanted to be discreet, someone else will do it for you
-        later in the evening, and will scream at the thief. You propose to return
-        his stolen manpower, and to add a small amount of coins in addition....
+      Response: Even if you wanted to be discreet, someone else later in the evening,
+        will scream at the thief. You propose to return his stolen manpower, and to
+        add a small purse of gold in addition....
       effects:
       - Effect: 0
         EffectValue: -10

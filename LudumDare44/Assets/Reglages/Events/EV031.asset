@@ -20,12 +20,12 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 0
     CustomSongId: 0
-    Message: "You just learned that $charactername was kidnapped by bandits! These
-      scoundrels are asking for a ransom of \"x\" \xE9cus! Such a sum cannot be taken
-      lightly."
+    Message: You just learned that $charactername was kidnapped by bandits! These
+      scoundrels are asking for a ransom ! You cannot just hands them such an amount
+      of money, so lightly.
     ProposalOne:
       CustomSongId: 0
-      Choice: Pay the ransom with resentment.
+      Choice: Pay the ransom with regrets.
       Response: At the time of paying the ransom, one of the blackmailers lets a sleeve
         of his garment stick out, revealing a crest belonging to a rival house. Once
         the transaction is completed, and the incident is over, you directly threaten

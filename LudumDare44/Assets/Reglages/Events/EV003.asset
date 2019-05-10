@@ -20,15 +20,15 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 3
     CustomSongId: 5
-    Message: One of the allied kingdoms goes to war with a distant dynasty and asks
-      for your help. The whole world is focused on you, the outcome of the war depending
-      on what you are going to do...
+    Message: One of your allies goes to war with a distant dynasty and asks for your
+      help. The whole world is focused on you, the outcome of the war depending on
+      what you are going to do...
     ProposalOne:
       CustomSongId: 0
       Choice: You send $charactername to the front to save the honor of your dynasty.
-      Response: Despite an iron will and fierce anger, $charactername passed from
-        life to death under enemy waves. His shredded body was brought back to the
-        palace under the praise of the people.
+      Response: Despite an iron will and fierce anger, $charactername goes from life
+        to death under enemy waves. His shredded body was brought back to the palace
+        under the praise of the people.
       effects:
       - Effect: 2
         EffectValue: 0

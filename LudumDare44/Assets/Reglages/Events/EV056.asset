@@ -29,8 +29,9 @@ MonoBehaviour:
       Choice: You use $charactername to create a relationship between your family
         and the Thief Guild. This will ensure that you do not suffer a burglary and
         you may even expect lucrative business.
-      Response: Rather reluctant to see his family universe mix with his secret universe,
-        $charactername categorically refuses. You are obviously not up to the task.
+      Response: Rather reluctant to see his family world and his secret world blend
+        one into another, $charactername categorically refuses. You are obviously
+        not up to the task in his eyes.
       effects:
       - Effect: 0
         EffectValue: -10
@@ -39,9 +40,9 @@ MonoBehaviour:
       Choice: You blackmail $charactername to pay you a percentage of what he earns
         every time he goes on a night expedition.
       Response: He seems almost insulted, and does not hesitate for a second to do
-        the same for you. If you ask him for gold again, he will give you up to custody
-        by showing them clear evidence that you are actually the thief. You're very
-        embarrassed and so forget about this story.
+        the same for you. If you ask him for gold again, he will give you up to higher
+        autority by showing them clear evidence that you are actually the thief. You're
+        very embarrassed and forget about this story.
       effects:
       - Effect: 1
         EffectValue: 0

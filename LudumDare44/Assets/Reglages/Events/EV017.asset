@@ -20,16 +20,16 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 0
     CustomSongId: 0
-    Message: During your weekly popular grievance session, a ten-year-old child approaches
-      you and declares in front of everyone that he is the fruit of your adventure
-      with a former servant of the castle.
+    Message: During your weekly crowd request session, a ten-year-old child approaches
+      you and declares in front of everyone that he is the fruit of an adventure you
+      supposedly had with a former servant of your family.
     ProposalOne:
       CustomSongId: 0
-      Choice: You pretend not to know this person and make sure that you are more
-        loyal than anyone else.
-      Response: The story of the hidden bastard travels around the kingdom faster
-        than a trail of powder and rumours persist about you, to the point that your
-        spouse ends up being suspicious.
+      Choice: You pretend not to know this person and declare publicly that you are
+        more loyal than anyone else.
+      Response: The story of the hidden bastard spreads around the kingdom faster
+        than a wildfire and gossips persist about you, to the point that your other
+        half ends up being suspicious.
       effects:
       - Effect: 0
         EffectValue: -20

@@ -25,21 +25,21 @@ MonoBehaviour:
       Choice: Refuse! You are not going to exchange a family member for goods.
       Response: Outraged, the Lord declares that you will hear from him again. You
         then challenge him to a duel, and to your surprise, he accepts! He is actually
-        a great fencing master, and keeps you busy so fast that your family doesn't
-        even have time to be surprised...
+        a great swordsman, and he kills you so fast that your family doesn't even
+        have time to be surprised...
       effects:
       - Effect: 4
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 0
-      Choice: Immediately exchange a cup of cervoise with them to celebrate the upcoming
-        wedding! The ambition to become an aristocrat makes you wander a little while
-        while you take a sip.
+      Choice: Immediately exchange a cup of ale with them to celebrate the upcoming
+        wedding! The ambition to possess some property at the end of the world makes
+        you fantasize a little while while you take a sip of your cup.
       Response: A few days later, a messenger announces a delegation from the Lord.
-        This one is actually a formidable warlord. You understand this when you find
-        yourself in front of whole crates of weapons of all kinds. If you are not
-        served immediately, the rumour will spread that we will have to think about
-        it before insulting you from now on.
+        He is in fact a formidable warlord. You understand this when you find yourself
+        in front of whole crates of weapons of all kinds. The weapons won't be helpful
+        for now, but the rumour will spread that one would have to think twice before
+        insulting you from now on.
       effects:
       - Effect: 2
         EffectValue: 0

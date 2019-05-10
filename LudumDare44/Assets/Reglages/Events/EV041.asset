@@ -20,8 +20,8 @@ MonoBehaviour:
       ConditionTrait: 10
       inheritorCondition: 0
     CustomSongId: 5
-    Message: One fine morning, $charactername comes to you to share with you his desire
-      to join the national war, to cover your house with glory.
+    Message: One sunny morning, $charactername comes to you to share his desire to
+      join the national war, to cover your house with glory.
     ProposalOne:
       CustomSongId: 0
       Choice: You let him know that you are very proud, and that you totally approve
@@ -30,8 +30,8 @@ MonoBehaviour:
       Response: After more than two years, you still haven't seen $charactername again.
         You are convinced that he is now dead and buried and that no one has ever
         heard of your family. However, a few days later, you receive a letter telling
-        you that $charactername was adoubated at the royal court. It still proudly
-        bears your name, and covers you with more glory than you could have imagined.
+        you that $charactername was adoubated at the royal court. He still proudly
+        carry your name, and covers you with more glory than you could have imagined.
       effects:
       - Effect: 1
         EffectValue: -1000

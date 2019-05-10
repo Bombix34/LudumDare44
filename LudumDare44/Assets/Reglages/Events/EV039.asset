@@ -20,13 +20,13 @@ MonoBehaviour:
       ConditionTrait: 4
       inheritorCondition: 3
     CustomSongId: 0
-    Message: $charactername is talking to you at length to let you know about a difficult
-      decision. He chose to abandon the couple's life that the dynasty imposed on
-      him and to leave with a commoner for love.
+    Message: $charactername asks to talk to you about a difficult decision. He chose
+      to abandon the couple's life that the dynasty imposed on him and leave with
+      a commoner for love.
     ProposalOne:
       CustomSongId: 0
       Choice: Prevent him from leaving the room, and accuse him loud and clear of
-        a fact that he did not commit so that your henchmen can hear the scene from
+        a crime that he did not commit so that your guards can hear the scene from
         the outside.
       Response: Panicked, and totally terrified, $charactername knelt in front of
         him, and begged you to spare him. He admits that finally this love is not
@@ -36,8 +36,8 @@ MonoBehaviour:
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 0
-      Choice: Tell him that you understand, but have no choice but to deny him and
-        exclude him from the family.
+      Choice: Tell them that you understand, but have no choice but to disown and
+        exclude them from the family.
       Response: He suddenly seems much paler. He had not considered this possibility
         at all. However, he is completely trapped, and for a few days, he leaves on
         his own, not without crying.

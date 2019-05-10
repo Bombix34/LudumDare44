@@ -20,28 +20,28 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 3
     CustomSongId: 0
-    Message: 'You notice that at the moment, your eldest and youngest children are
-      very often in conflict. You don''t understand where this hatred comes from,
-      but they seem to blame themselves more for their wrongs than if they were perfect
-      rivals. '
+    Message: 'You notice that lately, your eldest and youngest children are very often
+      in conflict. You don''t understand where this hatred comes from, but they seem
+      to blame themselves more than real life ennemies. '
     ProposalOne:
       CustomSongId: 0
       Choice: You decide to conduct your investigation, perhaps by understanding the
         cause of their conflict, you could help them get along?
       Response: 'By looking around, you discover that everyone''s pattern was initiated
-        by $charactername, your Benjamin. It doesn''t take you any longer to understand:
-        This one was played off against each other for the sole purpose of becoming
-        your heir. Seeing this, you deny it but manage to reconcile the other two.'
+        by $charactername, your youngest heir. It doesn''t take you any longer to
+        understand: $charactername was driving the two of them mad for the sole purpose
+        of becoming your heir. Seeing this, you disown $charactername but manage to
+        force the two other sons to make it up.'
       effects:
       - Effect: 2
         EffectValue: 0
     ProposalTwo:
       CustomSongId: 0
       Choice: You propose that they settle this dispute the "old-fashioned way". You
-        place them in a pen made of wood, explaining to them that whoever beat the
+        place them in a arena made of wood, explaining to them that whoever beat the
         other will be right. You hope that the fear of harm will win them over, so
         that they will understand the uselessness of such a family conflict.
-      Response: You barely had time to close the enclosure when your two children
+      Response: You barely had time to close the enclosure that your two children
         are fighting fiercely, with violence that you can't really understand. Both
         will come out covered with injuries, which will certainly be noticed by those
         around you...

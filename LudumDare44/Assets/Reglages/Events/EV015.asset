@@ -20,14 +20,14 @@ MonoBehaviour:
       ConditionTrait: 0
       inheritorCondition: 0
     CustomSongId: 0
-    Message: During an alcoholic evening in a bar to be raved about with a stranger,
+    Message: During an alcoholic evening in a bar, while you talk with a stranger,
       he invites you to his daughter's wedding the next day.
     ProposalOne:
       CustomSongId: 0
       Choice: 'Completely drunk, you accept and go buy an expensive tiara to offer
-        the bride. '
+        to the bride. '
       Response: When you arrive at the ceremony, you realize that the unknown person
-        in question is none other than the king of the neighbouring kingdom. The latter,
+        in question is none other than the lord of the neighbouring kingdom. The latter,
         delighted to see you keep your commitment, spends the day introducing you
         to his closest friends.
       effects:
@@ -41,7 +41,7 @@ MonoBehaviour:
         man out of nowhere. There's no way you're damaging your reputation by officially
         posting yourself with a stranger!
       Response: The next day, you learn that one of the continent's most prominent
-        kings is marrying his daughter, and you decompose in front of your fireplace
+        lords is marrying his daughter, and you decompose in front of your fireplace
         understanding the immense opportunity you have just missed.
       effects: []
     ProposalSpecial:

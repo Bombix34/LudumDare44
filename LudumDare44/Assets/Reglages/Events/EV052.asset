@@ -22,14 +22,15 @@ MonoBehaviour:
     CustomSongId: 0
     Message: 'You are a candidate to lead the merchant guild, but the matriarch of
       a large rival family seems to be much more favorite than you. You cannot let
-      it take such an economic lead over you, at the risk of falling far behind. '
+      her take such an economic lead over you, at the risk of falling far behind in
+      terms of money. '
     ProposalOne:
       CustomSongId: 0
       Choice: You know one of the current members of the guild very well and you are
-        close enough to him to be able to plan a plan to discredit the said matriarch.
-      Response: Behind your back, the matriarch has doubled you, paying your guild
-        member friend big time. You have made a bit of a fool of yourself in your
-        approach, and you have missed a great opportunity to become a guild master.
+        friends enough to be able to plan something to discredit the matriarch.
+      Response: Behind your back, the matriarch has made a fool out of you, paying
+        your guild member friend big time. You are now ridiculous, and you have missed
+        a great opportunity to become a guild master.
       effects:
       - Effect: 0
         EffectValue: -10
@@ -38,8 +39,8 @@ MonoBehaviour:
       Choice: You use your influence to bring a large number of foreign merchants
         into the city to create potential new trade routes.
       Response: The matriarch was far too far ahead of you anyway, you were not chosen.
-        However, being the guarantor of all these new trade routes, you make sure
-        you have a certain amount of money that satisfies you a little.
+        However, being the creator of all these new trade routes, you welcome yourself,
+        because you now have a great amount of money.
       effects:
       - Effect: 0
         EffectValue: -10

@@ -21,14 +21,14 @@ MonoBehaviour:
       inheritorCondition: 0
     CustomSongId: 0
     Message: You just learned that $charactername was kidnapped by bandits! These
-      scoundrels are asking for a ransom of "x" gold coins ! Such an amount of money
-      cannot be taken lightly.
+      scoundrels are asking for a ransom ! You cannot just hands them such an amount
+      of money, so lightly.
     ProposalOne:
       CustomSongId: 0
       Choice: Pay the ransom with regrets.
       Response: Without delay, you contacted the bandits and begged them to give you
-        your child back. They kept their end of the bargain while laughing at you
-        and your weakness of mind.
+        your child back. They kept their promise as they laugh at you and your weakness
+        of mind.
       effects:
       - Effect: 0
         EffectValue: -10

@@ -17,30 +17,39 @@ MonoBehaviour:
     - Condition: 0
       ConditionValue: 0
       ConditionBoolValue: 0
-      ConditionTrait: 14
+      ConditionTrait: 3
+      inheritorCondition: 0
+    - Condition: 1
+      ConditionValue: 3
+      ConditionBoolValue: 0
+      ConditionTrait: 3
       inheritorCondition: 0
     CustomSongId: 2
-    Message: During a banquet organized by a local celebrity, you see $charactername
-      sneak out and then come back with slight bulges in his pockets.
+    Message: On returning from a country walk, $charactername is proud to introduce
+      its new pet, an adorable little rodent.
     ProposalOne:
       CustomSongId: 0
-      Choice: You have no shame in humiliating him in front of the guests by asking
-        him to empty his pockets.
-      Response: Penaud, $charactername then extracts a multitude of expensive jewellery.
-        Far from damaging your reputation, the honesty of your reaction evokes respect
-        in the assembly.
+      Choice: You pet the cute little animal and go back to your business.
+      Response: You didn't pay attention and the rodent slipped into your office one
+        day, and enjoyed some of your property titles. In an outburst of anger you
+        crush the rodent with one vengeful foot. Since then, $charactername has been
+        completely grief-stricken.
       effects:
       - Effect: 0
-        EffectValue: 10
+        EffectValue: 0
     ProposalTwo:
       CustomSongId: 0
-      Choice: You pretend you didn't see anything.
-      Response: When you return to your home, $charactername then reveals its hold,
-        exposing a mutltude of expensive jewellery, which shellily replenishes your
-        cash flow.
+      Choice: You ask him to take it back to where he found it, you wouldn't want
+        to have allergies because of a pet.
+      Response: $charactername shares his sadness with you, then he goes to the forest
+        to let it resume his normal life. Not seeing him come back after a few hours,
+        you will see where he may well be, and there, in a horror vision, you see
+        that he is there, lying on the ground strewn with leaves, his body completely
+        lacerated. He wasn't a fine head, but you would never have thought he could
+        be murdered by a rodent...
       effects:
-      - Effect: 1
-        EffectValue: 1000
+      - Effect: 2
+        EffectValue: 0
     ProposalSpecial:
       CustomSongId: 0
       Choice: 

@@ -17,13 +17,13 @@ MonoBehaviour:
     CustomSongId: 6
     Message: 'One evening, as you enter your room, a sharp pain runs through your
       heart. Before you can do anything, you find yourself on the ground, unable to
-      breathe regularly. '
+      breathe with regularity. '
     ProposalOne:
       CustomSongId: 0
-      Choice: You cry out for help for your life, crying, and screaming at death.
-      Response: Several members of your family, alerted by your cries, manage to get
-        you upright and go for a doctor as quickly as possible. You're saved, but
-        not very well.
+      Choice: You scream out for help for your life, crying, and screaming at death.
+      Response: Several members of your family, alerted by your screams, manage to
+        get you up and go search for a doctor's help as quickly as possible. You're
+        saved, but your reputation may have been a bit hit.
       effects:
       - Effect: 0
         EffectValue: -5

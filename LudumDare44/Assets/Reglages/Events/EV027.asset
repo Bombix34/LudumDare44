@@ -29,8 +29,8 @@ MonoBehaviour:
       Choice: You use $charactername to create a relationship between your family
         and the Thief Guild. This will ensure that you do not suffer a burglary and
         you may even expect lucrative business.
-      Response: 'First surprised, $charactername is quite happy to become an intermediary
-        between your family and the guild. This promises a fruitful collaboration! '
+      Response: 'First surprised, $charactername is quite happy to become an intermediate
+        between your family and the guild. This promises a lucrative collaboration! '
       effects:
       - Effect: 0
         EffectValue: 10
@@ -40,8 +40,8 @@ MonoBehaviour:
       CustomSongId: 0
       Choice: You blackmail $charactername to pay you a percentage of what he earns
         every time he goes on a night expedition.
-      Response: Dumbfounded that you could prove guilty of such low standards, $charactername
-        reluctantly accepts the market.
+      Response: Stunned that you could prove yourself guilty of such low standards,
+        $charactername reluctantly accepts the market.
       effects:
       - Effect: 1
         EffectValue: 1500

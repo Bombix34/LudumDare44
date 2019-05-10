@@ -25,12 +25,12 @@ MonoBehaviour:
       ConditionTrait: 15
       inheritorCondition: 0
     CustomSongId: 0
-    Message: During an alcoholic evening in a bar to be raved about with a stranger,
+    Message: During an alcoholic evening in a bar, while you talk with a stranger,
       he invites you to his daughter's wedding the next day.
     ProposalOne:
       CustomSongId: 0
-      Choice: 'With the help of alcohol, you promise him all the wonders for his daughter.
-        You are comfortable with money right now, and you are as happy as he is. '
+      Choice: 'Completely drunk, you accept and go buy an expensive tiara to offer
+        to the bride. '
       Response: As you began to regret your decision the day before at the altar of
         the stranger's daughter, the latter, more than touched by your gesture, announces
         to everyone that his family to come, and his wealth will now be your vassals,
